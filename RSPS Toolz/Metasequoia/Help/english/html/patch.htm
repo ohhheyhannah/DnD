@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Patches</title>
+</head>
+
+<body>
+
+<h2>Patches</h2>
+<p>You can make smooth patches from rough polygons automatically by setting a patch in the property of the
+<a href="objpanel.htm">object panel</a>. There are three types of a patch in this version.</p>
+<p>When you use [Spline Type 1] and [Spline Type 2], polygons must be <span class="red">quadrangles only</span> as a general 
+rule. A triangle can be mixed, but it must be <span class="red">surrounded by three quadrangles</span>. A hole opens 
+if the neighboring face of a triangle is triangle or there is no face next to it. As two triangles can be connected each 
+other, you can combine them into one quadrangle.</p>
+<p>[Catmull-Clark] can make patches from both triangles and quadrangles. It becomes quite rounded compared to the former 2 
+types. It displays a little slower than other types, and <span class="red">wait is neglected</span>.</p>
+<div class="menuimage">
+	<img height="237" src="image/patch.png" width="494" />
+</div>
+<p>When you want to convert patches to polygons, select <b>menu - Object - Freeze</b>. Patches are mostly frozen automatically 
+when you save a file except MQO format.<br />
+</p>
+<div class="menuimage"><img height="161" src="image/freeze.png" width="324" /></div>
+
+</body>
+
+</html>

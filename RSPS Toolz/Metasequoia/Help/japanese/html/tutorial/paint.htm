@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>マッピング画像のペイント</title>
+</head>
+
+<body>
+
+<h2>マッピング画像のペイント</h2>
+<div class="menu">
+	<h3>1. テクスチャ表示の確認</h3>
+	<div class="rightimage">
+		<img height="253" src="paint1.gif" width="271" /> </div>
+	<p>まず始めに、<b>メニュー［表示］［テクスチャを表示］</b>にチェックがあるかどうか確認します。チェックがなければ選択してチェックをONにしてください。</p>
+	<div style="clear: both; visibility: hidden;">
+	</div>
+</div>
+<div class="menu">
+	<h3>2. 材質の作成</h3>
+	<div class="rightimage">
+		<img height="132" src="paint2.gif" width="128" /> </div>
+	<p><b>メニュー［パネル］［材質パネル］</b>で材質パネルを開き、<b>［新規］</b>ボタンで新しい材質を作ります。</p>
+	<div style="clear: both; visibility: hidden;">
+	</div>
+</div>
+<div class="menu">
+	<h3>3. 材質の設定</h3>
+	<p>材質パネル上の<b>［設定］</b>ボタンを押し、<b>［模様］</b>のところにマッピング用の画像ファイルを指定します。[参照]ボタンを押すと既存の画像ファイルを模様マッピングとして使用できますが、<span class="red">既存ファイルを使わず新規に作成するときは直接ファイル名を拡張子も含めて</span>入力します。</p>
+	<div class="menuimage">
+		<img height="108" src="paint3.gif" width="492" /></div>
+</div>
+<div class="menu">
+	<h3>4. 形状の作成</h3>
+	<div class="rightimage">
+		<img height="191" src="paint4.jpg" width="320" /> </div>
+	<p><b>［基本図形］コマンド</b>で平面または球を配置します。すると右図のように模様マッピングが貼られているはずです。もし貼られていなければ、<b>メニュー［編集］［すべての面を選択］</b>で面を選択し、<b>メニュー［選択部処理］［面に現在の材質を指定］</b>で材質を割り当てます。</p>
+	<p>［基本図形］コマンドを使わずに<b>［面の生成］コマンド</b>などで面を作った場合には、UV値が割り当ててられていません。<b>［UV操作］コマンド</b>でUV値を割り当てる必要があります。</p>
+	<div style="clear: both; visibility: hidden;">
+	</div>
+</div>
+<div class="menu">
+	<h3>5. ペイントの開始</h3>
+	<p><b>［ペイント］コマンド</b>を選ぶと、自動的に<a href="../painter.htm">ペイントパネル</a>が開きます。ここで、3D画面上とペイントパネル上のどちらかを左クリックすると、描画を開始するかどうか確認メッセージが表示されます。ここで「はい」を選択すると、あとは<span class="red">3D画面上とペイントパネル上のどちらでも</span>自由に画像をペイントしていけます。</p>
+</div>
+<div class="menu">
+	<h3>6. 画像の保存</h3>
+	<p>ペイントパネル上の<b>メニュー［ファイル］［ファイルへ保存］</b>で、ディスクへ画像が書き込まれます。ただし、上書きの確認はされないので、誤ってファイルを書き換えないように注意して下さい。</p>
+</div>
+<p>　うまくマッピング画像が表示されない場合には、<a href="../qanda/mapping.htm">Ｑ＆Ａのマッピング</a>を参照して下さい。</p>
+
+</body>
+
+</html>

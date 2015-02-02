@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>コマンドパネル</title>
+</head>
+
+<body>
+
+<h2>コマンドパネル</h2>
+<p>コマンドパネルはさまざまな操作の指定やオプション・表示設定を行います。</p>
+<p>６つのグループがありますが、すべてのグループが画面内におさまらない場合は、グループでない部分をドラッグすればスクロールします。</p>
+<hr />
+<div class="menu">
+<h3>システム</h3>
+<img src="image/com_system.png" style="float:left" width="135" height="125"/>
+<div style="margin-left:145px">
+<p>ファイル入出力、オブジェクトや材質の設定などを行います。<a href="menu/file.htm">メニュー</a>上のものと同じです。</p>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>編集</h3>
+<img src="image/com_edit.png" style="float:left" width="135" height="163"/>
+<div style="margin-left:145px">
+<p>操作の取り消し、選択、面を隠したりします。<a href="menu/file.htm">メニュー</a>上のものと同じです。</p>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>コマンド</h3>
+<img src="image/com_command.png" style="float:left" width="134" height="146"/>
+<div style="margin-left:145px">
+<p>3D画面上で行う操作を指定します　<a href="command/command.htm">［詳細］</a></p>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3><a name="edit_option"></a>編集オプション</h3><p>移動・回転・拡大などのコマンドでのオプションを設定します</p>
+<img height="108" src="image/com_editoption.png" width="135" style="float:left"/>
+<div style="margin-left:145px">
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td>X,Y,Z</td>
+		<td>各軸方向への編集を可能にします。<br />
+		コマンドによってはH,P,B（ヘッド、ピッチ、バンク）に変わることもあります。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td style="height: 23px">L</td>
+		<td style="height: 23px">移動などのコマンドで、ローカル座標での編集を行います。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>W</td>
+		<td>移動などのコマンドで、ワールド座標での編集を行います。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>S</td>
+		<td>移動などのコマンドで、スクリーン座標での編集を行います。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>点</td>
+		<td>頂点の選択ができるようにします。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>辺</td>
+		<td>辺の選択ができるようにします。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>面</td>
+		<td>面の選択ができるようにします。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>範</td>
+		<td>直方体による範囲指定で、選択ができるようにします。<br />
+		特に［面］オプションを外したときに役に立ちます。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>縄</td>
+		<td>投げ縄（フリーハンド）を用いた範囲指定での選択ができるようにします。<br />
+		特に［面］オプションを外したときに役に立ちます。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>現物</td>
+		<td>現在のオブジェクトのみ選択できるようにします。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>グリッド</td>
+		<td>グリッドへの吸着を有効にします。グリッドのオプション設定は<b>メニュー［表示］［グリッドの設定］</b>でします。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>対称</td>
+		<td><a href="symmetry.htm">左右対称編集</a>を行います。</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>表示</h3><p>透視図・三面図の表示の設定を行います</p>
+<img height="92" src="image/com_view.png" width="135" style="float:left"/>
+<div style="margin-left:145px">
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td nowrap="">表示モード</td>
+		<td>透視図と三面図でそれぞれ表示モードを設定することができます。<br />
+		表示上の不具合や動作の安定性に問題がない限りはDirect3Dを使用してください。 
+		<dl>
+			<dt>ソフトウェア (ソフト)</dt>
+			<dd>ビデオカードの機能を利用しないCPUのみによるレンダリングで描画を行います。</dd>
+			<dt>Direct3D (D3D)</dt>
+			<dd>Direct3Dを利用した描画を行います。ビデオカードのハードウェア機能を利用するため、高速な表示を行うことができます。</dd>
+			<dt>OpenGL (GL)</dt>
+			<dd>OpenGLを利用した描画を行います。ビデオカードのハードウェア機能を利用するため、高速な表示を行うことができます。</dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td nowrap="">YZ,ZX,XY</td>
+		<td>透視図上の各平面のメッシュを表示します。<br />
+		メッシュの大きさと間隔はメニュー［表示］［グリッドの設定］で設定できます。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td nowrap="">軸</td>
+		<td>X/Y/Z座標軸を表示します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td nowrap="">Mesh</td>
+		<td>三面図上にメッシュを表示します。</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>照光</h3>
+<img height="171" src="image/com_light.png" width="134" style="float:left"/>
+<div style="margin-left:145px">
+<p>球体の上をクリックまたはドラッグすると、光源の方向を変更できます。</p>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td>+</td>
+		<td>光源を追加します。最大３つまで登録できます。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>-</td>
+		<td>光源を削除します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>&lt; &gt;</td>
+		<td>向き・色を変更する光源を切り替えます。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>逆光</td>
+		<td>光源の方向を前後逆方向にします。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>色</td>
+		<td>光源の色を設定します。</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+
+</body>
+
+</html>

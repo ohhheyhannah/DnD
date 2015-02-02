@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>選択</title>
+</head>
+
+<body>
+
+<h2>選択</h2>
+<p>3D画面上で直接選択したい頂点・辺・面を指定します。</p>
+<img height="179" src="select.png" width="86" />
+<div class="menu">
+	<h3>通常</h3>
+	<p>通常の選択操作を行います。</p>
+	<p>Shiftキーを押しながら頂点・面をドラッグすると、連続的に選択・非選択できます。（辺に対しての選択は出来ません）</p>
+</div>
+<div class="menu">
+	<h3>接続面</h3>
+	<p>頂点・面を指定し、その面につながっているすべての面を選択・非選択します。（辺に対しての選択は出来ません）<br />
+		<img height="166" src="sel_join.gif" width="260" /></p>
+</div>
+<div class="menu">
+	<h3>ベルト</h3>
+	<p>辺を指定して、その辺を持つ面からベルト状に頂点・面に対して選択・非選択を行います。面の選択オプションがOFFのときは辺が選択されます。<br />
+		<img height="164" src="sel_belt.gif" width="256" /></p>
+</div>
+<div class="menu">
+	<h3>連続辺</h3>
+	<p>クリックまたはドラッグした辺につながっている辺を連続的に選択します。</p>
+	<p>クリック時には最も遠くまでつながっている辺まで一括して選択し、ドラッグ時には開始位置の辺から徐々に範囲を広げながら選択します。</p>
+</div>
+<div class="menu">
+	<h3>拡張</h3>
+	<p>ドラッグ開始位置から、ドラッグする距離によって頂点・面を選択する範囲を徐々に広げていきます。</p>
+</div>
+<div class="menu">
+	<h3>ルート</h3>
+	<p>頂点・辺・面のいずれかを２か所以上クリックすると、最短経路上の頂点・辺・面が選択されます。右クリックまたはダブルクリックで選択を終了します。</p>
+</div>
+<div class="menu">
+	<h3>現物指定</h3>
+	<p>指定した頂点・辺・面のオブジェクトを現在のオブジェクトにします。</p>
+</div>
+<div class="menu">
+	<h3>ブラシ選択</h3>
+	<p>ドラッグによってマウスカーソル付近の頂点を選択します。</p>
+</div>
+
+</body>
+
+</html>

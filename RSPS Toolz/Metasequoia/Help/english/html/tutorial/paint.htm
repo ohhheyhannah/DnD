@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Paint a mapping image</title>
+</head>
+
+<body>
+
+<h2>Paint a mapping image</h2>
+
+<div class="menu">
+	<h3>1. Display a texture</h3>
+	<div class="rightimage">
+		<img height="299" src="paint1.png" width="343" />
+	</div>
+	<p>First, confirm a check of <b>menu - 'View' - 'Show textures'</b>. If it isn't checked, you check it.</p>
+	<div style="clear:both; visibility:hidden;"></div>
+</div>
+<div class="menu">
+	<h3>2. Create a material</h3>
+	<div class="rightimage">
+		<img height="178" src="paint2.png" width="132" />
+	</div>
+	<p>Open a material panel from <b>menu - 'Panel' - 'Material 
+Panel'</b>, and push a <b>New</b> button on the material panel for creating a new material.</p>
+	<div style="clear:both; visibility:hidden;"></div>
+</div>
+<div class="menu">
+	<h3>3. Set a material</h3>
+	<p>Push a <b>'Prop'</b> button on the material panel, and specify am image file of <b>'Texture'</b> mapping. Push a 'Ref' button 
+and select the existing image file, or <span class="red">input a file name (including file extension) directly for creating 
+a new image</span>.</p>
+	<div class="menuimage"><img height="111" src="paint3.png" width="489" /></div>
+</div>
+<div class="menu">
+	<h3>4. Create a shape</h3>
+	<div class="rightimage">
+		<img height="191" src="paint4.jpg" width="320" />
+	</div>
+	<p>Put a plane or a sphere with <b>[Primitive] command</b>. 
+Then, a texture mapping is wrapped like a right figure. If a texture mapping isn't wrapped, select faces with <b>menu - 
+Edit - 'Select all faces'</b> and call <b>menu - 'Selected' - 'set material to faces'</b>.</p>
+<p>When you use not [Primitive] command but <b>[Create] command</b>, it isn't assigned the UV mapping. You must assign it with
+<b>[UV] command</b>.</p>
+	<div style="clear:both; visibility:hidden;"></div>
+</div>
+<div class="menu">
+	<h3>5. Begin painting</h3>
+	<p>When you select <b>[Paint] command</b>, a <a href="../painter.htm">paint panel</a> is opened automatically. Then, click 
+either on the 3D view or on the paint panel, and it displays that confirm to begin painting. You select 'Yes' and it's all 
+right. You can paint a mapping image <span class="red">both on the 3D view and on the paint panel</span>.</p>
+</div>
+<div class="menu">
+	<h3>6. Save an image</h3>
+	<p>Call <b>menu - File - Save</b> in the paint panel, and a mapping image is saved to a disk. Be careful that it doesn't confirm 
+overwriting a file.</p>
+</div>
+<p>See a <a href="../qanda/mapping.htm">FAQ</a> if you trouble that a texture mapping isn't displayed.</p>
+
+</body>
+
+</html>

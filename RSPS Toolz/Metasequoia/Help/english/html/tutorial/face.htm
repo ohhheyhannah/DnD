@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>How to make faces</title>
+</head>
+
+<body>
+
+<h2>How to make faces</h2>
+<p>Modeling starts with making faces. There are some ways to make faces and I will introduce them to you here.</p>
+<img height="386" src="face.png" width="128" style="float:left" />
+<div style="margin-left:145px">
+<div class="menu">
+	<h3>1. <a href="../command/create.htm">[Create] command</a></h3>
+	<p>Click four times on the 3D view, and a new face is created. Or, click three times and click a right button, and a 
+	new triangle is created.</p>
+	<p>When you click near the existing vertex, a vertex of the new face is shared with the existing face. It is 
+	certain to share vertices while pressing the Ctrl key.</p>
+</div>
+<div class="menu">
+	<h3>2. <a href="../command/pullface.htm">[Pull] command</a></h3>
+	<p>[Create] command requires four clicks, and it's a little troublesome. When a face has already existed, select a line and drag it 
+	in <b>[Pull] command</b>. It is very easy to make a face that contains first selected line.</p>
+</div>
+<div class="menu">
+	<h3>3. <a href="../command/wire.htm">[Wire] command</a></h3>
+	<p>[Pull] 
+	command makes a quadrangle, and <b>[Create a triangle]</b> in <b>[Wire] command</b> makes a triangle. Select a line 
+	and drag it, and it makes a new triangle that contains first selected line.</p>
+</div>
+<div class="menu">
+	<h3>4. <a href="../command/primitive.htm">[Primitive] command</a></h3>
+	<p>You can make a basic shape like a cube, a sphere, a 
+	cylinder and so on by [Primitive] command.</p>
+</div>
+<div class="menu">
+	<h3>5. <a href="../command/metaball.htm">[Blob] command</a></h3>
+	<p>You can create smooth faces like pulling against each other when you use&nbsp; <b>
+	[Blobs] command</b>.</p>
+	<p>You must <b>polygonize</b> them after putting blobs.</p>
+	<div class="menuimage"><img height="164" src="face4.gif" width="277" /></div>
+</div>
+<div class="menu">
+	<h3>6. Patches</h3>
+	<p>It can make smooth patches from polygons for 
+	realtime. (<font color="#C00000">Faces must be quadrangles fundamentally</font> except Catmull-Clark.)</p>
+	<p>Select the <b>menu - [Panel] - [Object Panel]</b> and push a 'Property] button. A setting dialog is shown, so 
+	select 'Spline Type1/2' or 'Catmull-Clark' in 'Patch' group, and push a OK button. Polygon are displayed as smooth 
+	patches. It is possible to operate as before, you can edit an object easily.</p>
+	<p>If you want to convert patches to polygons, select <b>menu - [Object] - [Freeze]</b> and freeze them with 
+	checking a 'Patch'.</p>
+	<div class="menuimage"><img height="162" src="face6.gif" width="183" /></div>
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>オブジェクト</title>
+</head>
+
+<body>
+
+<div class="header">
+	<a href="file.htm">ファイル</a> &nbsp; <a href="edit.htm">編集</a> &nbsp;
+	<a href="selattr.htm">選択部属性</a> &nbsp; <a href="select.htm">選択部処理</a> &nbsp;
+	<a href="object.htm">オブジェクト</a> &nbsp; <a href="view.htm">表示</a> &nbsp;
+	<a href="panel.htm">パネル</a> &nbsp; <a href="help.htm">ヘルプ</a>
+</div>
+<hr />
+<h2>オブジェクト</h2>
+<p>現在指定されているオブジェクトに対して操作します（現在のオブジェクトの指定は<a href="../objpanel.htm">オブジェクトパネル</a>で行います）</p>
+<div class="menu">
+	<h3>作成－凸凹地形<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>画像ファイルまたはフラクタル画像から凸凹な地形メッシュを作成します。</p>
+	<div class="menuimage">
+		<img height="164" src="landscape.gif" width="239" />
+	</div>
+</div>
+<div class="menu">
+	<h3>作成－Create text（プラグイン）<font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>TrueTypeFontを利用して文字列を作成します。</p>
+</div>
+<div class="menu">
+	<h3>曲面・ミラーのフリーズ</h3>
+	<p>曲面やミラーの指定をされている現在のオブジェクトを、完全にポリゴン化します。</p>
+	<div class="menuimage">
+		<img height="161" src="../image/freeze.gif" width="324" />
+	</div>
+</div>
+<div class="menu">
+	<h3>位置合わせ</h3>
+	<p>現在のオブジェクトを各軸方向の指定した位置にそろえます。</p>
+</div>
+<div class="menu">
+	<h3>近接する頂点をくっつける</h3>
+	<p>現在のオブジェクト中の互いに近い距離にある頂点をくっつけていきます。主に、見た目はくっついているようで実は離れているような頂点を接合するために使います。</p>
+</div>
+<div class="menu">
+	<h3>頂点数を減らす</h3>
+	<p>現在のオブジェクトを見栄えは大差ないように頂点を削減します。</p>
+	<p>現バージョンでは結果はそれほど綺麗でなく、またUV値は維持されません。すべての面は三角形になります。精度が良くないため利用範囲は限られますが、メタボール（粘土）はポリゴン化した後は、１～２割程度頂点数を減らした方が綺麗に仕上がると思います。</p>
+	<div class="menuimage">
+		<img height="139" src="reduction.gif" width="340" />
+	</div>
+</div>
+<div class="menu">
+	<h3>面をなめらかにする<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>面数を増やしてなめらかにします。現バージョンでは出来が良くないため、多少でこぼこすることがあります。</p>
+</div>
+<div class="menu">
+	<h3>面の方向を統一する</h3>
+	<p>現在のオブジェクトの面の方向を揃えます。ただし、方向が内側か外側のどちらに揃うかは保証できないので、あとで<b>［面を反転］</b>する必要があるかもしれません。また、すべての面が完全に１つに閉じられていないとうまく統一できません。</p>
+	<p>特にDXFやROKを読み込んだ時などに有効です。</p>
+</div>
+<div class="menu">
+	<h3>重なる面を削除</h3>
+	<p>現在のオブジェクト中で、まったく同じ位置に面が存在する場合、片方の面を削除します。</p>
+</div>
+<div class="menu">
+	<h3>面を片面化する</h3>
+	<p>現在のオブジェクト中で、２つの面として表面と裏面が存在する箇所から片方の面を削除します。どちらが削除されるかはわからないので、あとで<b>［面の方向を統一する］</b>などが必要かもしれません。</p>
+	<p>材質の設定で両面表示になっているものは面が１つだけなので何も処理されません。</p>
+</div>
+<div class="menu">
+	<h3>未着色面に材質を割り当てる</h3><p>現在のオブジェクト中で、材質が割り当てられていない面に、現在の材質を割り当てます。</p>
+</div>
+<div class="menu">
+	<h3>Wired （プラグイン）<font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>すべての辺をライン化して、面を削除します。</p>
+	<p>単なるサンプルプラグインなので、実用性は低いかもしれません。</p>
+</div>
+<div class="menu">
+	<h3>Delete lines （プラグイン）<font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>オブジェクト中のすべてのラインを削除します。</p>
+</div>
+<div class="menu">
+	<h3>ブーリアン （プラグイン）<font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>ブーリアン演算により、２オブジェクトの重なる部分のみの抽出や合成などの操作を行います。詳細はプラグイン上に表示されるヘルプをご参照ください。</p>
+	<p>このプラグインは<a href="http://bomber.xps.jp/" target="_blank">bomber</a>氏のご協力により収録させていただいております。</p>
+</div>
+<div class="menu">
+	<h3>Anguwrap （プラグイン）<font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>選択された辺が境界となるように、UVマッピング用の自動展開を行います。</p>
+	<p>自動展開は現在のオブジェクト内のすべての面に対して行われます。また、辺が選択されていないと自動展開できません。</p>
+	<div class="menuimage">
+		<img src="anguwrap.png" />
+	</div>
+</div>
+
+</body>
+
+</html>

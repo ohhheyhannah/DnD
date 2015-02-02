@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>UV操作</title>
+</head>
+
+<body>
+
+<h2>UV操作</h2>
+<p>展開図上でUV座標を操作します。<br />
+通常は<b>［マッピング］コマンド</b>でUV値を割り当ててから、<b>［UV操作］コマンド</b>でUV座標をマニュアル編集します。</p>
+<div class="menu">
+	<h3>画面オプション</h3>
+<img alt="" height="207" src="uvedit0.gif" width="143" style="float:left;"/>
+<div style="margin-left:153px;">
+	<dl>
+		<dt>Unwrap</dt>
+		<dd>UV展開図を表示します。</dd>
+		<dt>CurObj</dt>
+		<dd>現在のオブジェクトのみのUV展開図を表示します。</dd>
+		<dt>Material</dt>
+		<dd>現在のマテリアルが割り当てられている面のみUVを表示します。</dd>
+		<dt>Texture</dt>
+		<dd>現在のマテリアルと同一の模様マッピングを持つマテリアルのUV展開図を表示します。</dd>
+		<dt>Select</dt>
+		<dd>選択された面のみUV展開図を表示します。</dd>
+		<dt>Repeat</dt>
+		<dd>マッピング画像を複数個で繰り返し表示します。</dd>
+		<dt>Grid</dt>
+		<dd>グリッドを表示します。</dd>
+		<dt>Snap</dt>
+		<dd>UV頂点を移動したときにグリッドにスナップするようにします。</dd>
+		<dt>Object</dt>
+		<dd>ポリゴン形状を表示します。</dd>
+		<dt>Select</dt>
+		<dd>UVが選択されている頂点に枝のような「UVガイド」を表示させます。</dd>
+	</dl>
+</div>
+<div style="clear:both; visibility:hidden;"></div>
+</div>
+<img alt="" height="532" src="uvedit5.png" width="106" style="float:left;"/>
+<table border="1" style="margin-left:116px;">
+	<tr>
+		<td align="center"><a href="#target">頂点 面 面角</a></td>
+		<td align="center"><a href="#normalize">正規化</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">選択</a></td>
+		<td align="center"><a href="#unify">単一化</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#expand">拡張</a></td>
+		<td align="center"><a href="#separate">分離</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#brush">ブラシ</a></td>
+		<td align="center"><a href="#project">焼き込み</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#rect">範囲</a></td>
+		<td align="center"><a href="#align">整列</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#rope">投縄</a></td>
+		<td align="center"><a href="#copy">コピー</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">移動</a></td>
+		<td align="center"><a href="#paste">ペースト</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">回転</a></td>
+		<td align="center"><a href="#sw_rotate">スイッチ回転</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">拡大</a></td>
+		<td align="center"><a href="#sw_reverse">スイッチ反転</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#magnet">マグネット</a></td>
+		<td align="center"><a href="#atlas">自動展開</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#mapping">
+		<img alt="平面" height="28" src="uvedit_flat.gif" width="28" />
+		<img alt="円柱" height="28" src="uvedit_cylinder.gif" width="28" />
+		<img alt="球" height="28" src="uvedit_sphere.gif" width="28" /></a></td>
+		<td align="center"><a href="#output">ファイル出力</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#number">U/V/OK</a></td>
+		<td align="center"><a href="#property">詳細設定</a></td>
+	</tr>
+</table>
+<div style="clear:both; visibility:hidden;"></div>
+<div class="menu">
+	<a name="target"></a>
+	<h3>頂点・面・面角</h3>
+	<p>3Dモデル上の選択方法を指定します。UV展開図上の操作には影響しません。</p>
+</div>
+<div class="menu">
+	<a name="edit"></a>
+	<h3>選択・移動・回転・拡大</h3>
+	<p>UV展開図上の操作方法を指定します。</p>
+	<p>［移動］モードのときのみ、<a href="../command.htm#edit_option">編集オプション</a>の［範］［縄］をONにするとUV展開図上の頂点に対して範囲選択・投げ縄選択ができるようになります。</p>
+</div>
+<div class="menu">
+	<a name="expand"></a>
+	<h3>拡張</h3>
+	<p>UV展開図上でドラッグを開始した位置のUV頂点から、つながっている頂点を連続的に選択します。</p>
+</div>
+<div class="menu">
+	<a name="brush"></a>
+	<h3>ブラシ</h3>
+	<p>UV展開図上でドラッグでなぞった位置付近にあるUV頂点を選択します。</p>
+	<p>Altキーを押しながらドラッグすることで、選択範囲のサイズを変更することができます。</p>
+</div>
+<div class="menu">
+	<a name="rect"></a>
+	<h3>範囲</h3>
+	<p>UV展開図上でドラッグで囲った四角形内のUV頂点を選択します。</p>
+</div>
+<div class="menu">
+	<a name="rope"></a>
+	<h3>投縄</h3>
+	<p>UV展開図上でドラッグで囲ったフリーハンド領域内のUV頂点を選択します。</p>
+</div>
+<div class="menu">
+	<a name="magnet"></a>
+	<h3>マグネット</h3>
+	<p>UV展開図上でドラッグを開始した位置から一定の距離内にある頂点を連続的に移動します。</p>
+</div>
+<div class="menu">
+	<a name="mapping"></a>
+	<h3>新規マッピング</h3>
+	<p>選択されている面に対し、以下の投影方法でUV座標を新しくマッピングします。</p>
+	<table cellpadding="2" cellspacing="0">
+		<tr>
+			<td><img alt="" height="28" src="uvedit_flat.gif" width="28" /></td>
+			<td>平面マッピング</td>
+		</tr>
+		<tr>
+			<td>
+			<img alt="" height="28" src="uvedit_cylinder.gif" width="28" /></td>
+			<td>円筒マッピング</td>
+		</tr>
+		<tr>
+			<td>
+			<img alt="" height="28" src="uvedit_sphere.gif" width="28" /></td>
+			<td>球マッピング</td>
+		</tr>
+	</table>
+	<dl>
+		<dt>Apply</dt>
+		<dd>現在のマッピング状態で選択面に対してUV投影します。</dd>
+		<dt>Move</dt>
+		<dd>投影マッピングの基点を移動します。</dd>
+		<dt>Rotate</dt>
+		<dd>投影マッピングを回転します。</dd>
+		<dt>Scale</dt>
+		<dd>投影マッピングを拡大します。</dd>
+		<dt>Fit</dt>
+		<dd>選択されている面にちょうどフィットするサイズに拡大率を調整します。</dd>
+		<dt>Property</dt>
+		<dd>投影マッピングの位置・大きさ・角度を数値入力で調整します。</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="number"></a>
+	<h3>数値入力 (U/V/OK)</h3>
+	<p>選択したUV頂点の座標を直接数値入力して決定します。</p>
+</div>
+<div class="menu">
+	<a name="normalize"></a>
+	<h3>正規化</h3>
+	<p>UV頂点の位置が0～1の範囲外にある場合に、強制的に範囲内に位置するように移動します。マッピングの見た目の貼り具合は変わりません。</p>
+	<div class="menuimage">
+		<img alt="" height="147" src="uvedit1.gif" width="447" /></div>
+</div>
+<div class="menu">
+	<a name="unify"></a>
+	<h3>単一化</h3>
+	<p>選択されたUV頂点を結合します。</p>
+	<div class="menuimage">
+		<img alt="" height="174" src="uvedit2.gif" width="379" /></div>
+</div>
+<div class="menu">
+	<a name="separate"></a>
+	<h3>分離</h3>
+	<p>選択されたUV頂点を分離します。</p>
+	<div class="menuimage">
+		<img alt="" height="163" src="uvedit8.gif" width="355" /></div>
+</div>
+<div class="menu">
+	<a name="project"></a>
+	<h3>焼き込み</h3>
+	<p>ポリゴン面の３Ｄ画面上の位置がそのままUV展開図上の位置に写り込むようにUV頂点位置を移動します。</p>
+	<div class="menuimage">
+		<img alt="" height="181" src="uvedit3.gif" width="416" /></div>
+</div>
+<div class="menu">
+	<a name="align"></a>
+	<h3>整列</h3>
+	<p>選択されたＵＶ頂点の位置を縦または横方向に一直線に並ぶよう整列します。［整列］ボタンを押すと、並べる方向を自動的に決定します。［U］ボタンまたは［V］ボタンを押すと、明示的に横または縦方向に揃べることができます。</p>
+	<div class="menuimage">
+		<img alt="" height="200" src="uvedit4.gif" width="450" /></div>
+</div>
+<div class="menu">
+	<a name="copy"></a>
+	<h3>コピー</h3>
+	<p>選択されている面のUV値を内部に記録します。（下の［ペースト］も参照）</p>
+</div>
+<div class="menu">
+	<a name="paste"></a>
+	<h3>ペースト</h3>
+	<p>［コピー］で記録されたUV値を、現在選択されている面に割り当てます。コピー元とペースト先の面の頂点数は同じである必要があります。</p>
+</div>
+<div class="menu">
+	<a name="sw_rotate"></a>
+	<h3>スイッチ回転</h3>
+	<p>ポリゴン面内頂点のUV値を１つずつ時計回りに回転するように入れ替えます。</p>
+	<div class="menuimage">
+		<img alt="" height="140" src="uvedit6.gif" width="295" /></div>
+</div>
+<div class="menu">
+	<a name="sw_reverse"></a>
+	<h3>スイッチ反転</h3>
+	<p>ポリゴン面内頂点のUV値を逆方向に反転するように入れ替えます。</p>
+	<div class="menuimage">
+		<img alt="" height="140" src="uvedit7.gif" width="295" /></div>
+</div>
+<div class="menu">
+	<a name="atlas"></a>
+	<h3>自動展開</h3>
+	<p>展開図上でUV面が重ならないように自動的にUVを割り当てます。</p>
+	<p>現バージョンでは細切れになりやすいという欠点があります。</p>
+</div>
+<div class="menu">
+	<a name="output"></a>
+	<h3>ファイル出力</h3>
+	<p>展開図をBMPやJPEGなどの画像ファイルとして出力します。</p>
+</div>
+<div class="menu">
+	<a name="property"></a>
+	<h3>詳細設定</h3>
+	<dl>
+		<dt>UVガイドの長さ </dt>
+		<dd>オブジェクトのSelectで表示される枝の長さを指定します。 </dd>
+		<dt>グリッド分割数 </dt>
+		<dd>マッピング画像に対してグリッドをどれだけ分割するかを指定します。 </dd>
+		<dt>繰り返し表示数 </dt>
+		<dd>[Repeat]モードにしたときにマッピング画像をどれだけ並べて表示するかを指定します。 </dd>
+		<dt>グリッドの中心にスナップ </dt>
+		<dd>[Snap]モードにしたときに、グリッドの交差点上ではなく格子の中心にスナップさせるようにします。 </dd>
+		<dt>オブジェクト上でUV値を移動する </dt>
+		<dd>オブジェクト上でドラッグしたときに、直接UV値を移動操作できるようにします。 </dd>
+		<dt>マッピング画像の明度 </dt>
+		<dd>展開図として表示されるマッピング画像の明るさを指定します。明るすぎてUV展開図が見づらい場合は、明度を小さくしてください。 </dd>
+	</dl>
+</div>
+
+</body>
+
+</html>

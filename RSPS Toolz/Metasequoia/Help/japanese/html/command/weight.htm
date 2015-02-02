@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>ウェイト</title>
+</head>
+
+<body>
+
+<h2>ウェイト</h2>
+<p>曲面の指定がされているオブジェクトの頂点に対してウェイトを、または辺に対して折れ目を設定することにより、角を付けて滑らかでない形状を得ることができます。</p>
+<p>曲面タイプ１または２では頂点に対してウェイトを指定します。設定可能なウェイトの範囲は-1.0から1.0までです。選択した面の上でマウスドラッグするとリアルタイムで形状が変化します。</p>
+<img height="166" src="weight.gif" width="277" />
+<p>頂点のウェイトはCatmull-Clark曲面には適用されません。</p>
+<p>Catmull-Clark曲面では辺に対して折れ目を指定します。辺をクリックすると、その辺の折れ目のON/OFFが切り替わり、折れ目指定がONになった辺はハイライト表示されます。下図は上側の面を構成する４つの辺に折れ目を指定した例です。</p>
+<img src="weight_crease.png" />
+<p>折れ目は「メニュー - 選択部処理 - 曲面にエッジを付ける・消す」でも指定することができます。</p>
+<p>曲面タイプ１・２では辺の折れ目は適用されません。
+
+</body>
+
+</html>

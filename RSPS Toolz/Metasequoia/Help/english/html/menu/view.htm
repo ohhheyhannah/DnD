@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>View</title>
+</head>
+
+<body>
+
+<div class="header">
+	<a href="file.htm">File</a> &nbsp; <a href="edit.htm">Edit</a> &nbsp;
+	<a href="selattr.htm">Attribute</a> &nbsp; <a href="select.htm">Selected</a> &nbsp;
+	<a href="object.htm">Object</a> &nbsp; <a href="view.htm">View</a> &nbsp;
+	<a href="panel.htm">Panel</a> &nbsp; <a href="help.htm">Help</a>
+</div>
+<hr />
+<h2>View</h2>
+<p>Settings for displays</p>
+<div class="menu">
+	<h3>Document Information</h3>
+	<p>It shows document information and sets up the light source.</p>
+</div>
+<div class="menu">
+	<h3>Set View</h3>
+	<p>It can numerically input the direction of the viewpoint and initialize 
+	the viewpoint.</p>
+	<p>When you choose this menu with pushing the shift key, the viewpoint is 
+	initialized without showing the dialog.</p>
+</div>
+<div class="menu">
+	<h3>Grid</h3>
+	<p>It sets up the intervals of grids, the applicable axes, and intervals of 
+	plane meshes.</p>
+</div>
+<div class="menu">
+	<h3>Set background images</h3>
+	<p>It sets up the image file arranged in each three orthographic views.</p>
+	<p>You can set up the arranging location and size of background image with 	<a href="../command/bkimage.htm">
+	[BkImg] command</a>..<br />
+	</p>
+</div>
+<div class="menu">
+	<h3>Show precisely</h3>
+	<p>It precisely shows the effect of the light source performed in <b>
+	[Document Information]</b>. It delays a little to show.<br />
+	</p>
+</div>
+<div class="menu">
+	<h3>Show textures</h3>
+	<p>It shows the texture mapping.</p>
+</div>
+<div class="menu">
+	<h3>Smooth shading</h3>
+	<p>It can show the surface of the object smoothly. It delays a little to 
+	show.</p>
+	<p>It is not available for a patch (type1/2) and blob without polygonization.<br />
+	</p>
+</div>
+<div class="menu">
+	<h3>Show only faces in a current object</h3>
+	<p>It shows only faces in a current object.</p>
+</div>
+<div class="menu">
+	<h3>Show lines of uncurrent objects</h3>
+	<p>It specifies how to show vertices and lines of objects excluding a 
+	current object.</p>
+	<dl>
+		<dt><b>Normal</b></dt>
+		<dd>It shows vertices and lines with the assigned color to the object. </dd>
+		<dt><b>Dark</b> </dt>
+		<dd>It shows vertices and lines with the color specified in 'Dark' in 
+		Configuration. </dd>
+		<dt><b>Hidden</b> </dt>
+		<dd>It hides vertices and lines.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<h3>Show selected parts only</h3>
+	<p>It shows the selected vertices and lines only, and hides the unselected 
+	part.</p>
+</div>
+<div class="menu">
+	<h3>Lines overwrite faces</h3>
+	<p>It always shows vertices and lines overwrite faces without considering 
+	for the z-order.</p>
+</div>
+
+</body>
+
+</html>

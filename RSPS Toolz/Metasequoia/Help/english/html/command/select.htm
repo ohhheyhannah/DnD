@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Select</title>
+</head>
+
+<body>
+
+<h2>Select</h2>
+<p>It select vertices, lines and faces on the view. Several method for selection can be switched.</p>
+<img height="179" src="select.png" width="86" />
+<div class="menu">
+	<h3>Normal</h3>
+	<p>It selects a vertex, line or face normally.</p>
+	<p>You can select or deselect continually with dragging of left button. (Cannot 
+	select a line.)</p>
+</div>
+<div class="menu">
+	<h3>Joined face</h3>
+	<p>All joined faces with clicked vertex or face are selected or unselected. 
+	(Cannot select a line.)</p>
+	<div class="menuimage"><img height="166" src="sel_join.png" width="260" /></div>
+</div>
+<div class="menu">
+	<h3>Belt</h3>
+	<p>Click a line, and it selects or unselects belted vertices and faces. 
+	It selects lines when the [Fc] button in the edit option is not pushed.<br /></p>
+	<div class="menuimage"><img height="164" src="sel_belt.png" width="256" /></div>
+</div>
+<div class="menu">
+	<h3>Edge loop</h3>
+	<p>
+	It continuously selects lines joined to the clicked or dragged line. When 
+	the line has been clicked, lines from the clicked to the farthest are 
+	selected together. When the line has been dragged, it selects while 
+	gradually spread.</p>
+</div>
+<div class="menu">
+	<h3>Growing</h3>
+	<p>It selects vertices/faces while gradually spread by dragging.</p>
+</div>
+<div class="menu">
+	<h3>Route</h3>
+	<p>Please click two or more vertices, lines or faces. And vertices, lines or faces on the shortest path through the clicked points are selected. Please click a right button or double click when you want to finish the selection.</p>
+</div>
+<div class="menu">
+	<h3>CurObj</h3>
+	<p>The object that contains the clicked vertex, line, or face is made 
+	current.</p>
+</div>
+<div class="menu">
+	<h3>Brush</h3>
+	<p>The vertices traced by dragging are selected.</p>
+</div>
+
+</body>
+
+</html>

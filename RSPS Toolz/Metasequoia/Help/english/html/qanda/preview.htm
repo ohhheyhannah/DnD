@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>FAQ - Preview</title>
+</head>
+
+<body>
+
+<h2>FAQ - Preview</h2>
+<p>In preview by Direct3D or OpenGL, many problems arise caused by like a bug or 
+compatibility of the video card driver. As reported problems are also mentioned 
+on the home page, please see them together with the following points.</p>
+<p>It is recommend to obtain the latest driver from the maker of video cards or chips 
+and use it to avoid problems. </p>
+<div>
+	<a href="#Q1">Q1. I cannot use Direct3D preview at all</a><br />
+	<a href="#Q2">Q2. I cannot use OpenGL preview at all</a><br />
+	<a href="#Q3">Q3. Application error or blue screen is occurred when Direct3D is used</a><br />
+	<a href="#Q4">Q4. Texture is not shown</a><br />
+	<a href="#Q5">Q5. Selection of alpha mapping in Material Property cannot work on 3D screen</a><br />
+	<a href="#Q6">Q6. Overlapped semi-transparent polygon is not shown correctly</a><br />
+	<a href="#Q7">Q7. Selection of bump mapping in Material Property cannot work 
+	on 3D screen</a><br />
+	<a href="#Q8">Q8. Background image is not shown</a><br />
+	<a href="#Q9">Q9. How to save preview pictures in the file</a><br />
+	<a href="#Q10">Q10. Vertices, lines or faces are not shown</a><br />
+</div>
+<div class="menu">
+	<a name="Q1"></a>
+	<h3>Q1. I cannot use Direct3D preview at all.</h3>
+	<dl>
+		<dt>A1-1. DirectX 9.0 runtime has not been installed</dt>
+		<dd>Please get and install DirectX 9 or later from the Microsoft DirectX 
+		site it if you use WindowsXP(no SP or SP1).</dd>
+		<dt>A1-2. Unsupport hardware rendering</dt>
+		<dd>Some old PCs do not support a hardware rendering. And some 
+		virtual environments like as VirtualPC or remote desktop do not support Direct3D. Please 
+		us other view mode in these cases because the Direct3D display mode is 
+		not supported.</dd>
+		<dt>A1-3. Bugs of the display driver</dt>
+		<dd>Please get and install the latest display driver.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q2"></a>
+	<h3>Q2. I cannot use OpenGL preview at all</h3>
+	<dl>
+		<dt>A2-1. Bugs of the display driver</dt>
+		<dd>Please get and install the latest display driver. If you still cannot solve the problem, reduce the level of hardware 
+		accelerator and switch off the accelerator of OpenGL. (<a href="accelerator.htm">How 
+		to change accelerator</a>)</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q3"></a>
+	<h3>Q3. Application error or blue screen is occurred when Direct3D is used</h3>
+	<dl>
+		<dt>A3-1. Bugs of the display driver</dt>
+		<dd>Please get and install the latest display driver.</dd>
+	</dl>
+	<dl>
+		<dt>A3-2. Problem for hardware</dt>
+		<dd>It may be caused by problem for the hardware such as physical 
+		failure, thermal runaway, and so on.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q4"></a>
+	<h3>Q4. Texture is not shown</h3>
+	<dl>
+		<dt>A4-1. Video memory is insufficient.</dt>
+		<dd>As video memory (VRAM) is limited in Direct3D or OpenGL mode, it cannot 
+		be shown when available capacity becomes insufficient.<br />
+		You can take measures like:
+		<ul>
+			<li>Make the size of the picture for texture smaller. </li>
+			<li>Reduce the resolution or the number of colors of the picture.
+			</li>
+			<li>Change to the video card with more video memory. </li>
+			<li>Reduce the value in [Max resolution of texture] in [Preview] page 
+			of menu [File] [Configuration]. </li>
+		</ul>
+		But the setting itself of mapping image is effective even if it is not shown, 
+		so you do not have to worry about that according to the situation. </dd>
+		<dt>A4-2. Image file for texture is not put in the appropriate folder.</dt>
+		<dd>You need to put image folder in the folder selected in [Folder of mapping 
+		bitmaps] in menu [File] [Configuration].</dd>
+		<dt>A4-3. [Texture] is not checked.</dt>
+		<dd>Texture is not shown if there is not a check in menu [View] [Texture].</dd>
+		<dt>A4-4. Bugs of the display driver</dt>
+		<dd>Same as A1-3.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q5"></a>
+	<h3>Q5. Selection of alpha mapping in Material Property cannot work on 3D screen.</h3>
+	<dl>
+		<dt>A5-1. Video memory is insufficient.</dt>
+		<dd>Same as A4-1.</dd>
+		<dt>A5-2. Image file for texture is not put in the appropriate folder.</dt>
+		<dd>Same as A4-2.</dd>
+		<dt>A5-3. View Property is not checked.</dt>
+		<dd>Please check in menu [View] [Show precisely] and [Show textures].</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q6"></a>
+	<h3>Q6. Overlapped semi-transparent polygon is not shown correctly.</h3>
+	<dl>
+		<dt>A6. It's a specification</dt>
+		<dd>As data processing cost becomes very large in order to show front and 
+		back of 
+		semi-transparent polygon. Semi-transparent polygon is not always shown 
+		correctly because high speed is regarded as more important even if it is 
+		incorrect. You can make more accurate the following: <br />
+		<ul>
+			<li>Separate semi-transparent polygon into another object</li>
+			<li>Replace the object at the back with the forward in object panel</li>
+		</ul>
+		</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q7"></a>
+	<h3>Q7. Selection of bump mapping in Material Property cannot work on 3D screen.</h3>
+	<dl>
+		<dt>A7. It's a specification</dt>
+		<dd>Bump mapping cannot be shown in any view mode in this version. It is not reflected on the 
+		result in [Rendering]. It will be possible to be supported in future.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q8"></a>
+	<h3>Q8. Background image is not shown.</h3>
+	<dl>
+		<dt>A8. [Img] button is not selected.</dt>
+		<dd>Press the [Img] button at the title of each view. </dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q9"></a>
+	<h3>Q9. How to save preview pictures in the file?</h3>
+	<dl>
+		<dt>A9-1. Copy with the [Print Screen] key.</dt>
+		<dd>Capture the whole screen with the [Print Screen] key in the function 
+		of Windows and [Paste] from the clipboard with other picture editing software.
+		</dd>
+		<dt>A9-2. menu - [Rendering]</dt>
+		<dd>You can save them by widely used picture format like BMP or JPG as rendering 
+		function is loaded. </dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q10"></a>
+	<h3>Q10. Vertices, lines or faces are not shown</h3>
+	<dl>
+		<dt>A10-1. [Pt][Ln][Fc] buttons are not pushed.</dt>
+		<dd>Please push [Pt][Ln][Fc] buttons above the each view.
+		</dd>
+		<dt>A10-2. It displays the current object only.</dt>
+		<dd>Please confirm if the menu - View - Show only faces in a current 
+		object, or Show lines of uncurrent objects are checked. </dd>
+		<dt>A10-3. The visibility of the object is hidden in the object panel.</dt>
+		<dd>Please confirm that an icon of each object in the object panel is 
+		visible.</dd>
+	</dl>
+</div>
+
+</body>
+
+</html>

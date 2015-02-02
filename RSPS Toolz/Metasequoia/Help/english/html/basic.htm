@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Basic Concepts</title>
+</head>
+
+<body>
+
+<h2>Basic Concepts</h2>
+<div class="menu">
+	<h3>Coordinate axes</h3>
+	<img height="80" src="image/name3.gif" width="80" style="float:right" />
+	<div style="margin-right:90px">
+	<p>Metasequoia's 3D coordinate axis 
+		is organized as in the diagram on the right. It is a right-handed coordinate system. X is horizontal, 
+		Y is vertical, and Z is into and out of the screen. Notice the color coding: X is red, Y is green, and Z is blue.</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>Document model</h3>
+	<p>A Metasequoia document contains objects and materials.</p>
+	<p>It is necessary to run multiple copies of Metasequoia if you want to edit more than 
+		one Metasequoia document at once. You can use the Cut, Copy, and Past commands to exchange data between the 
+	different documents when you run two or more copies of the same version of Metasequoia.</p>
+</div>
+<div class="menu">
+	<h3>Objects</h3>
+	<img height="116" src="image/name2.png" width="136" style="float:right" />
+	<div style="margin-right:146px">
+	<p>One document can contain two 
+		or more objects. <a href="objpanel.htm">Object panel</a> You can use the object panel to perform &quot;layer&quot;-like 
+		operations, where some parts of your document are visible, but inactive, while other parts can be freely edited.</p>
+	<p>Objects are made up of three parts: vertices, edges, and faces. (Abbreviated V, E, and F.) 
+	Only front side of faces are displayed, and <font color="#ff0000">back side of faces are not visible.</font> Only triangles and quads are allowed. <font color="#ff0000">
+	Polygons with more than four edges are not allowed.</font></p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>Materials</h3>
+	<p>Each face can be assigned a material, and the same material can be assigned to many faces. The
+		<a href="matpanel.htm">Material Property Panel</a> can be used to edit a material's properties (such as its color 
+		or texture). Any faces that don't have a material assigned to them automatically get a default material.</p>
+</div>
+<div class="menu">
+	<h3>Texture mapping and UV coordinates</h3>
+	<p>Texture mapping is used to add realism and/or details to your models. UV coordinates are used to control which 
+		part of a texture is mapped to a face. Metasequoia contains several commands which allow you to edit the UV 
+	coordinates 
+		of an object's faces.
+		<p>Texture maps can be specified using the <a href="matpanel.htm">Material Property Panel</a>. The texture's data can 
+		be edited by using the <a href="painter.htm">Paint Panel</a>. In addition, you can edit the texture by drawing directly 
+		on the 3D object in the 3D window, by using the Paint command.<br />
+		<div align="center">
+			<img border="0" height="147" src="image/uvmap.png" width="400" /></div>
+		</p>
+</div>
+<div class="menu">
+	<h3>World / Screen / Local Coordinates</h3>	
+	<img src="image/wsoption.png" width="129" height="107" style="float:right"/>
+	<div style="margin-right:142px">
+	<p>With some commands, such as the &quot;Move&quot; 
+	command, you can choose which coordinate system to use to perform the command. You can switch between 
+	coordinate systems by pressing the &quot;W&quot; and &quot;S&quot; buttons in the &quot;Edit Option&quot; panel.</p>
+	<p>You can edit along axes displayed at the base point in world coordinates, and you can edit horizontally or 
+	vertically 
+	on the screen in screen coordinates. Local coordinate is assigned to each object, and you can edit along the axes in 
+	local coordinates by [Move] command and so on after setting the local coordinates by [Local] command.</p>
+	<div class="menuimage"><img height="233" src="image/wldscn.png" width="416" /></div>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+
+</body>
+
+</html>

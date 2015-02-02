@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>FAQ -Edit</title>
+</head>
+
+<body>
+
+<h2>FAQ - Edit</h2>
+<div>
+	<a href="#Q1">Q1. It is difficult to select vertices or lines.</a><br />
+	<a href="#Q2">Q2. I cannot select vertices, lines, or faces with a click.</a><br />
+	<a href="#Q3">Q3. Shape of the object is broken in symmetric editing.</a><br />
+	<a href="#Q4">Q4. The area close to or remote from the viewpoint is not shown or shown in twisted shape.</a><br />
+	<a href="#Q5">Q5. Buttons on command panel are too small to press.</a><br />
+	<a href="#Q6">Q6. Movement cannot be done towards Y axis on world coordinate.</a><br />
+	<a href="#Q7">Q7. I clicked a mouse on area with nothing, but I cannot release the selection of vertices/lines/faces.</a><br />
+	<a href="#Q8">Q8. It is difficult to edit objects because the view rotates around the origin.</a><br />
+	<a href="#Q9">Q9. Objects become twisted when I select patch and lathe.</a><br />
+	<a href="#Q10">Q10. I want to customize shortcut keys.</a><br />
+	<a href="#Q11">Q11. I cannot push buttons like as [Symmetry] and [Rect] in [Edit option] group</a><br />
+	<a href="#Q12">Q12. Middle button of mouse does not do anything</a><br />
+</div>
+<div class="menu">
+	<a name="Q1"></a>
+	<h3>Q1. It is difficult to select vertices or lines.</h3>
+	<dl>
+		<dt>A1. The distance to select is small.</dt>
+		<dd>When you use the high resolving power, it sometimes be difficult to select vertices or lines. Increase the value 
+		of [Distance to select] in Configuration. </dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q2"></a>
+	<h3>Q2. I cannot select vertices, lines, or faces with a click.</h3>
+	<dl>
+		<dt>A2-1. Objects are prohibited to select.</dt>
+		<dd>If there is a key mark on the left side of the name column on object panel, that object is prohibited to edit. 
+		Click the key mark or remove the check of prohibiting edit in Object Property. </dd>
+		<dt>A2-2. [Sel Lock] mode is selected.</dt>
+		<dd>When [Sel Lock] is highlighted on the right side of the status bar, you cannot release selection. Switch ON and OFF 
+		in menu [Edit] [Lock selection] or with a space key on the keyboard. </dd>
+		<dt>A2-3. [CurObj] mode is selected.</dt>
+		<dd>When [CurObj] is ON in Edit option on command panel, you cannot edit objects except the current one. Make [CurObj] 
+		option OFF or activate the object which you want to select in object panel. </dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q3"></a>
+	<h3>Q3. Shape of the object is broken in symmetric editing.</h3>
+	<dl>
+		<dt>A3-1. A pair of the vertices does not exist.</dt>
+		<dd>A pair of the vertices is always necessary for a symmetric editing. A vertex without a pair is moved to X=0 
+		and is fixed at the position if you set [Fix X=0] for [Move non-symmetry vertex] in Configuration, and it 
+		helps you to arrange it the symmetric center.</dd>
+		<dt>A3-2. Command is not available with symmetric editing.</dt>
+		<dd>All commands are not available with symmetric editing. Please confirm which command is available with the 
+		symmetric editing.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q4"></a>
+	<h3>Q4. The area close to or remote from the viewpoint is not shown or shown in twisted shape.</h3>
+	<dl>
+		<dt>A4-1. The problem of parameters of a camera</dt>
+		<dd>Twist caused by perspective occurs when 3D space objects are projected into 2D plane. If the distance from the 
+		camera to the target object becomes shorter in bigger view angle, twist seems to be conspicuous. So, change perspective 
+		and view angle in [View] command or select initialization in menu [View] [Set View].</dd>
+		<dt>A4-2. Use dolly</dt>
+		<dd>Assign [Dolly] for such as Wheel in Configuration. When you enlarge or reduce view, field of view is not 
+		changed 
+		and the distance from the view point changes in dolly.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q5"></a>
+	<h3>Q5. Buttons on command panel are too small to press.</h3>
+	<dl>
+		<dt>A5. Change style file</dt>
+		<dd>Select &quot;DefLarge.style&quot; in [Style] in Layout in Configuration.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q6"></a>
+	<h3>Q6. Movement cannot be done towards Y axis on world coordinate.</h3>
+	<dl>
+		<dt>A6. Press the Ctrl key</dt>
+		<dd>You can do movement towards Y axis with the Ctrl key.<br />
+		It makes movement towards Z axis with the Ctrl key when you set [XY] in [Plane of world coordinate] in Configuration.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q7"></a>
+	<h3>Q7. I clicked a mouse on area with nothing, but I cannot release the selection of vertices/lines/faces.</h3>
+	<dl>
+		<dt>A7-1. [Joined Face] mode in [Select] command is selected.</dt>
+		<dd>When you click the selected object twice, the selection is released. Or release selection in menu [Edit] [unselect 
+		all] (Ctrl+D).</dd>
+		<dt>A7-2. [Sel Lock] mode is selected.</dt>
+		<dd>You cannot release the selection when [Sel Lock] is highlighted on the right side of the status bar. Switch ON and 
+		OFF in menu [Edit] [Lock selection] or the space key on the keyboard.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q8"></a>
+	<h3>Q8. It is difficult to edit objects because the view rotates around the origin.</h3>
+	<dl>
+		<dt>A8. Make the selected part to the center of the rotation of the viewpoint.</dt>
+		<dd>Select a vertex, a line, or a face near the position you want to make it center and select menu [Selected] [Set 
+		center of rotation (Ctrl+W). Then you can make that position to the center of the rotation of the viewpoint. And 
+		if you also select menu [Selected] [Fit to view] (Ctrl+F), it becomes convenient because the screen fits to the selected 
+		area.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q9"></a>
+	<h3>Q9. Objects become twisted when I select patch and lathe.</h3>
+	<dl>
+		<dt>A9. Because lathe applies to both sides.</dt>
+		<dd>It is a specification. Freeze lathe in menu [Object] [Freeze] and unify its face in menu [Object] [Unify 
+		faces], and apply a patch to the object.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q10"></a>
+	<h3>Q10. I want to customize shortcut keys.</h3>
+	<dl>
+		<dt>A10. Change in Configuration</dt>
+		<dd>You can customize by clicking [Customize shortcut keys] in 'Keyboard' in Configuration. But, this is only assigned 
+		to some specific buttons or keys. Operation of mouse buttons can be set up in 'Mouse' page in Configuration.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="Q12"></a>
+	<h3>Q12. Middle button of mouse does not do anything</h3>
+	<dl>
+		<dt>A12. Mouse driver or utility assigns other action</dt>
+		<dd>Some mouse driver or utility can assign other actions to mouse buttons, and middle button is not available in the condition. Please assign an original action to midlle button in the mouse utility or uninstall the mouse utility.</dd>
+	</dl>
+</div>
+
+</body>
+
+</html>

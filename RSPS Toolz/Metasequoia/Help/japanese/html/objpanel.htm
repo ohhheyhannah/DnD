@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>オブジェクトパネル</title>
+</head>
+
+<body>
+
+<h2>オブジェクトパネル</h2>
+<p>オブジェクトパネルは、オブジェクトの管理を行います。</p>
+<p><b>メニュー［パネル］［オブジェクトパネル］</b>で表示・非表示を切り替えます。</p>
+<p>タイトル部分をドラッグしながらメインウインドウの右端へ持っていくと、メインウインドウにドッキングされますが、Ctrlキーを押しながらだと独立したままにすることができます。</p>
+<img height="237" src="image/objpanel.gif" width="155" style="float:left"/>
+<div style="margin-left:165px">
+<p>「現在のオブジェクト」は色がハイライト表示されます。（左図の場合"obj1"が現在のオブジェクト）</p>
+<p>オブジェクトの名前の部分をキーボードと併用すると以下の操作が行われます。</p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader">Ctrl</td>
+		<td bgcolor="#ffffff">リストの選択、または選択を解除します。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Shift</td>
+		<td bgcolor="#ffffff">リストを範囲選択します。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Alt</td>
+		<td bgcolor="#ffffff">オブジェクトの頂点・面を選択します。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Alt+Ctrl</td>
+		<td bgcolor="#ffffff">オブジェクトの頂点・面の選択を解除します。</td>
+	</tr>
+</table>
+<p>また、ドラッグすることにより、オブジェクトの順番の入れ替えや、他のオブジェクトとの合成が出来ます。</p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader"><img border="0" height="17" src="image/obj_visible.gif" width="17" /></td>
+		<td bgcolor="#ffffff">目のマークがついているとオブジェクトは表示されます。<br />
+		Altキーを押しながらクリックすると、そのオブジェクトのみ、またはすべてのオブジェクトを表示します。</td>
+	</tr>
+	<tr>
+		<td class="tableheader"><img border="0" height="17" src="image/obj_lock.gif" width="17" /></td>
+		<td bgcolor="#ffffff">鍵マークがついているとオブジェクトは固定され、編集禁止になります。<br />
+		Altキーを押しながらクリックすると、そのオブジェクトのみ、またはすべてのオブジェクトを編集可能にします。</td>
+	</tr>
+	<tr>
+		<td class="tableheader"><img border="0" height="16" src="image/obj_color.gif" width="16" /></td>
+		<td bgcolor="#ffffff">オブジェクトの頂点・辺の表示色を示します。[設定]から変更可能です。</td>
+	</tr>
+	<tr>
+		<td class="tableheader"><img border="0" height="17" src="image/obj_folder.gif" width="17" /></td>
+		<td bgcolor="#ffffff">オブジェクトパネル内で子オブジェクトの表示を折りたたむかどうか指定します。<br />
+		下向きのときはすべて表示、右向きの場合は子オブジェクトは隠されます。<br />
+		（左図の場合は"obj3"の下に"obj4"が隠れている）</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+<p></p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader">新規</td>
+		<td>新規オブジェクトを作成します。<br>Ctrlキーを押しながらボタンをクリックすると、現在選択しているオブジェクトのすぐ下に新規オブジェクトが作成されます。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">複製</td>
+		<td>現在のオブジェクトを複製したオブジェクトを作成します。<br>Ctrlキーを押しながらボタンをクリックすると、現在選択しているオブジェクトのすぐ下に新規オブジェクトが複製されます。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">削除</td>
+		<td>選択されているオブジェクトを削除します。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">設定</td>
+		<td>オブジェクトの設定を行います。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">&lt;&gt;</td>
+		<td>オブジェクトの階層を一つ上または下へ移動します。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">他</td>
+		<td>可視状態や編集不可の設定を行います。 
+		<dl>
+			<dt>カレントオブジェクトのみ表示する</dt>
+			<dd>　現在のオブジェクトのみ表示し、他は非表示にします。 </dd>
+			<dt>すべてのオブジェクトを表示する</dt>
+			<dd>　すべてのオブジェクトを表示します。 </dd>
+			<dt>カレントオブジェクトのみ編集可能にする</dt>
+			<dd>　現在のオブジェクトのみ編集可能にし、他は編集禁止にします。 </dd>
+			<dt>すべてのオブジェクトを編集可能にする</dt>
+			<dd>　すべてのオブジェクトを編集可能にします。 </dd>
+			<dt>すべてのオブジェクトを一つに合成する</dt>
+			<dd>　すべてのオブジェクトを一つに合成します。 </dd>
+			<dt>可視オブジェクトを一つに合成する</dt>
+			<dd>　表示状態にあるオブジェクトを一つに合成します。非表示オブジェクトはそのままになります。 </dd>
+			<dt>選択オブジェクトを一つに合成する</dt>
+			<dd>　リスト上で選択されている複数のオブジェクトを一つに合成します。非表示オブジェクトはそのままになります。 </dd>
+			<dt>頂点・面を選択</dt>
+			<dd>　現在のオブジェクト中の頂点・面をすべて選択します。 </dd>
+			<dt>頂点・面を非選択</dt>
+			<dd>　現在のオブジェクト中の頂点・面の選択をすべて解除します。 </dd>
+			<dt>色を表示する</dt>
+			<dd>　オブジェクトパネル内のリスト上に個々のオブジェクトの色を表示するかどうか指定します。 </dd>
+			<dt>階層表示を行う</dt>
+			<dd>　子オブジェクトを階層化して表示するかどうか指定します。OFFにした場合、親子関係にかかわらずすべてのオブジェクトが同列に表示されます。 </dd>
+			<dt>下の階層に影響する</dt>
+			<dd>　可視・編集禁止状態の変更を子オブジェクトと連動させるかどうかを指定します。 </dd>
+			<dt>標準オブジェクトとして設定</dt>
+			<dd>現在選択しているオブジェクトの各パラメータを、新規作成されるオブジェクトの初期値として登録します。</dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<hr />
+<h3>オブジェクトの設定</h3>
+<img height="462" src="image/objprop.gif" width="510" />
+<div class="menu">
+	<h3>基本情報</h3>
+	<p>オブジェクトの名前、色、可視状態、編集の可否を設定します。</p>
+	<p>色の部分に×が付いているときには環境設定で指定されている色、×がない場合にはここで指定した色が適用されます。×がない状態で<font color="#ff0000">右クリック</font>すると再び×印が付きます。</p>
+</div>
+<div class="menu">
+	<h3>曲面制御</h3>
+	<p>オブジェクトに対して、どのように面を制御するかを指定します。曲面の指定をしたオブジェクトは、<b>メニュー［オブジェクト］［曲面のフリーズ］</b>により、曲面を通常の平面へと変換できます。</p>
+	<img height="180" src="image/patch0.gif" width="223" style="float:left"/>
+	<div style="margin-left:233px">
+		<p>
+		<b>曲面を生成しない</b><br />
+		　通常の平面です。三角形面、四角形面の両方が使用可能です。
+		</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+	<p></p>
+	<img height="180" src="image/patch1.gif" width="223" style="float:left"/>
+	<div style="margin-left:233px">
+		<p>
+		<b>曲面タイプ１</b><br />
+		　基本的には四角形面にのみ曲面が適用されます。三角形面は、三方が四角形面に囲まれている場合にのみ曲面化されます。<br />
+		　閉じていない開曲面の端の部分は頂点・辺から離れた部分に位置します。完全な閉曲面に対しては「曲面タイプ２」とまったく同じになります。</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+	<p></p>
+	<img height="180" src="image/patch2.gif" width="223" style="float:left" />
+	<div style="margin-left:233px">
+		<p>
+		<b>曲面タイプ２</b><br />
+		　基本的には四角形面にのみ曲面が適用されます。三角形面は、三方が四角形面に囲まれている場合にのみ曲面化されます。<br />
+		　閉じていない開曲面の端の部分は頂点・辺に近い部分に位置します。完全な閉曲面に対しては「曲面タイプ１」とまったく同じになります。</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+	<p></p>
+	<img height="182" src="image/patch3.gif" width="203" style="float:left" />
+	<div style="margin-left:233px">
+		<p>
+		<b>Catmull-Clark</b><br />
+		　三角形・四角形両方に適用可能です。<br />
+		　[三角形を保持]をONにすると、曲面化前の元の形状で三角形のところは複数の三角形に分割されます。三角形を保持して曲面化したほうが、三角形と四角形の面の境界付近で凸凹しない滑らかな曲面を得ることができます。<br />
+		　丸め具合は曲面タイプ１・２のいずれとも異なりますが、Catmull-Clark曲面をサポートしている多くの他のソフトと互換性があるため、曲面をフリーズせずに出力しても他のソフト上で同じ曲面を再現できます。<br />
+		（※ソフトによっては曲面化の結果が異なるものがあります。また、先鋭化されたエッジや閉じていない開曲面、三角形の保持については結果が異なりますので、事前に互換性を検証してください）<br />
+		</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>ミラーリング</h3>
+	<p>リアルタイムに表示される鏡面を指定します。ワイヤー構造のデータは片側だけで済みます。</p>
+	<p><b>［左右を分離した鏡面］</b>では反対側に同じ面が作成されるだけで、左右はバラバラな面として扱われます。</p>
+	<p><b>［左右を接続した鏡面］</b>では反対側に作成される面に加え、元々の面と接続するような面も作成されます。接続距離を制限した場合には、対称となる境界（例えばX軸方向に鏡面を作る場合にはYZ平面）から指定した距離以上に面が離れていると、左右を接続する面は作成されません。<br />
+	</p>
+	<img height="200" src="image/mirror.gif" width="500" />
+</div>
+<div class="menu">
+	<h3>回転体</h3>
+	<p>リアルタイムに表示される回転体を指定します。オブジェクト中の辺を、指定した軸を中心にして回転した形状が得られます。</p>
+	<img height="197" src="image/lathe.gif" width="359" />
+</div>
+<div class="menu">
+	<h3>スムージング</h3>
+	<p>面を滑らかに表示するかどうかを指定します。メニュー［表示］［スムージング表示］がチェックされていると、スムージング指定されているオブジェクトは面の角度に応じて滑らかに表示されます。</p>
+	<img height="192" src="image/smooth.gif" width="286" /> 
+</div>
+
+</body>
+
+</html>

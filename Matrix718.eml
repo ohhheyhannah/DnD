@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="1.7" jdk_type="JavaSDK">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="FileStore.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/data/libs/FileStore.jar!/"/>
+	</lib>
+	<lib name="netty-3.5.2.Final.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/data/libs/netty-3.5.2.Final.jar!/"/>
+	</lib>
+</component>

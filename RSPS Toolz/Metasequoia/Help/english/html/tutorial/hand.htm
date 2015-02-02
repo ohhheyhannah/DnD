@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Let's make a hand</title>
+</head>
+
+<body>
+
+<h2>Let's make a hand</h2>
+<p>This tutorial shows how to make a right hand with <b>[Extrude]</b> and <b>[Knife]</b> based 
+on a primitive without using [Create] command. It seems to be easy to model a hand as you can directly watch your hand and 
+you know it very well.<br />
+</p>
+<div class="menu">
+	<h3>1. Setting a Patch</h3>
+	<div style="float:right">
+		<img height="121" src="hand1.png" width="197" />
+	</div>
+	<p>Select the <b>menu [Panel] [Object Panel]</b>, and push a <b>[Property] button</b> 
+on the object panel. And choose 'Spline Type 2' as a patch setting. (You can also use 'Catmull-Clark' instead.)</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>2. Create a palm</h3>
+	<div style="float:right">
+		<img height="311" src="hand2.png" width="322" />
+	</div>
+	<p>First, make a palm.</p>
+	<p>Select the <b>[Primitive]</b> command and push the 'property' button to open dialog. Set a segment, X=4, Y=1, 
+Z=1, and the size of Y to 50 and make a primitive.</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>3. Create four fingers</h3>
+	<div style="float:right">
+		<img height="149" src="hand3_1.gif" width="223" />
+	</div>
+	<p>First, make the little finger.</p>
+	<p>Select a face like a right figure, set the offset about 150 in <b>menu [Selected][Extrude faces]</b>. (You can do 
+	the same with (<b>[Extrude] command</b>.)</p>
+	<div style="clear:both; visibility:hidden"></div>
+	<div style="float:right">
+		<img height="179" src="hand3_2.gif" width="250" />
+	</div>
+	<p>Then do in the same way to 
+make the third finger, the middle finger, and the first finger. Set the offset to 180, 200, 180 for each and 
+you can make like the figure on the right.</p>
+	<div style="clear:both; visibility:hidden"></div>
+	<div style="float:right">
+		<img height="194" src="hand3_3.gif" width="188" />
+	</div>
+	<p>Move the faces of the figertips 
+a little to separate four fingers with [<b>Move] command</b>.</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>4. Create a joint of a finger</h3>
+	<div style="float:right">
+		<img height="191" src="hand4.gif" width="209" />
+	</div>
+	<p>Make a cut for a joint of a 
+finger with <b>[Cut with a knife]</b> in [<b>Knife] command</b> in the top view. Please be careful 
+not to make wire touch other fingers this time.</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>5. Create a thumb</h3>
+	<div style="float:right">
+		<img height="195" src="hand5_1.gif" width="177" />
+	</div>
+	<p>In making a thumb, the base of the thumb becomes big if you directly extrude the side of the palm. It is necessary 
+to divide the palm into front and back.</p>
+	<p>Make a cut in the figure point with <b>[Cut with a knife]</b> in [<b>Knife] command</b>.</p>
+	<div style="clear:both; visibility:hidden"></div>
+	<div style="float:right">
+		<img height="170" src="hand5_2.gif" width="213" />
+	</div>
+	<p>Select the face like the figure 
+and extrude the face with <b>menu [Selected][Extrude faces]</b> to make the base of the thumb.</p>
+	<div style="clear:both; visibility:hidden"></div>
+	<div style="float:right">
+		<img height="171" src="hand5_3.gif" width="207" />
+	</div>
+	<p>Move the extruded face. And select and extrude the face to make a thumb like the figure.</p>
+	<div style="clear:both; visibility:hidden"></div>
+	<div style="float:right">
+		<img height="207" src="hand5_4.gif" width="260" />
+	</div>
+	<p>Make joints in fingers with
+	<b>[Cut with a knife]</b> in <b>[Knife] command</b> as shown in the figure.</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>6. Create a wrist</h3>
+	<div style="float:right">
+		<img height="133" src="hand6_1.gif" width="209" />
+	</div>
+	<p>Next, make a wrist.</p>
+	<p>Select four faces at the back and extrude them with <b>menu [Selected] [Extrude faces]</b> 
+like the figure.</p>
+	<div style="clear:both; visibility:hidden"></div>
+	<div style="float:right">
+		<img height="153" src="hand6_2.gif" width="231" />
+	</div>
+	<p>As four faces at the back 
+are no more needed, delete them with <b>[Delete] command</b> or <b>menu [Selected] [Delete]</b> after 
+selecting faces.</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>7. Finishing</h3>
+	<div style="float:right">
+		<img height="180" src="hand7.gif" width="218" />
+	</div>
+	<p>Arrange the shape by making 
+the base of fingers bony or making fingertips slender or making the wrist rather round with [<b>Bevel]</b> 
+in <b>[Extrude] command</b>.</p>
+	<p>Then, open Material Panel with <b>menu [Panel] [Material Panel]</b> and make 2 materials 
+with <b>[New] button</b> and select color with <b>[Prop] button</b>. And, attach to faces with
+<b>[Material] command</b>.</p>
+	<p>Finally, change curved surfaces to polygon with <b>menu [Object] [Freeze]</b> and 
+check <b>menu [View] [Smooth shading]</b>. 
+Then you can make the fine object like the figure.</p>
+	<p>The number of vertices:1781 and the number of faces:1760 before freeze are attached as hand.mqo.</p>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+
+</body>
+
+</html>

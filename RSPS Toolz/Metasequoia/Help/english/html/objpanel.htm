@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Object Panel</title>
+</head>
+
+<body>
+
+<h2>Object Panel</h2>
+<p>&quot;Object Panel&quot; controls objects.
+You can select ON or OFF with <b>menu [Panel] [Object Panel]</b>.</p>
+<p>When you move the mouse to the right edge of the main window dragging the title, it will be joined to the main window. But 
+you can make it independent if do this together with pressing the Ctrl key.</p>
+<img height="214" src="image/objpanel.png" width="136" style="float:left"/>
+<div style="margin-left:146px">
+<p>Color is shown with highlight in the Current object. (&quot;obj1&quot; is the current object in the left picture.)</p>
+<p>When you click the name of the object pressing a keyboard, the following operation is performed.</p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader">Ctrl</td>
+		<td bgcolor="#ffffff">It selects or deselects on the list.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Shift</td>
+		<td bgcolor="#ffffff">It makes a range selection on the list.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Alt</td>
+		<td bgcolor="#ffffff">Vertices and faces in the object are selected.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Alt+Ctrl</td>
+		<td bgcolor="#ffffff">Vertices and faces in the object are deselected.</td>
+	</tr>
+</table>
+<p>And you can change the order of objects or merge it with other objects.</p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader"><img border="0" height="17" src="image/obj_visible.gif" width="17" /></td>
+		<td>Objects are shown when the eye mark in ON.<br />
+		When you click the object dragging the Alt key, only that or all objects are shown.</td>
+	</tr>
+	<tr>
+		<td class="tableheader"><img border="0" height="17" src="image/obj_lock.gif" width="17" /></td>
+		<td>Objects are fixed and cannot be edited when the key mark in ON.<br />
+		When you click the object pressing the Alt key, only that object or all objects become to be able to be edited.</td>
+	</tr>
+	<tr>
+		<td class="tableheader"><img border="0" height="16" src="image/obj_color.gif" width="16" /></td>
+		<td>It shows the display color of vertices and lines of the object. You can change from [Property].</td>
+	</tr>
+	<tr>
+		<td class="tableheader"><img border="0" height="17" src="image/obj_folder.gif" width="17" /></td>
+		<td>It selects whether to fold the display of children-objects in the object panel.<br />
+		Child-objects are all shown when it is looking down and they are hided when it is looking right.<br />
+		(&quot;obj4&quot; is hided under &quot;obj3&quot; in the left picture.)</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+<p></p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader">New</td>
+		<td>It creates a new object.<br>When you click the button pressing the Ctrl key, a new object is inserted after the current selected object.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Clone</td>
+		<td>It creates a cloned object of the current object.<br>When you click the button pressing the Ctrl key, new objects are inserted after the current selected object.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Delete</td>
+		<td>It deletes the selected objects.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Property</td>
+		<td>It sets up the objects.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">&lt; &gt;</td>
+		<td>It moves the hierarchy level of the object by one upward or downward.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Misc</td>
+		<td>It sets up the visibility or the editing.
+		<dl>
+			<dt>Show only current</dt>
+			<dd>It only shows the current object and does not show other objects.</dd>
+			<dt>Show all</dt>
+			<dd>It shows all objects.</dd>
+			<dt>Lock non-current</dt>
+			<dd>It makes only the current object to be edited and locks others to be edited.</dd>
+			<dt>Unlock all</dt>
+			<dd>It makes all objects to be able to be edited.</dd>
+			<dt>Merge all</dt>
+			<dd>It merges all objects into one.</dd>
+			<dt>Merge all visible</dt>
+			<dd>It merges the objects with display status into a single object. Objects which are not shown are untouched.</dd>
+			<dt>Merge selected</dt>
+			<dd>It merges the selected object in the list into a single object. Objects which are not shown are untouched.</dd>
+			<dt>Select vertices/faces</dt>
+			<dd>It selects all vertices and faces in the current object.</dd>
+			<dt>Unselect vertices/faces</dt>
+			<dd>It unselects all vertices and faces in the current object.</dd>
+			<dt>Show color</dt>
+			<dd>It selects whether to show the color of each object on the list in the object panel.</dd>
+			<dt>Show folder</dt>
+			<dd>It selects whether to show a hierarchical child objects. All objects are shown in the same line in 
+			spite of a parent-child relationship when you select OFF.</dd>
+			<dt>Edit also children</dt>
+			<dd>It selects whether the change of the status of visibility or locking is synchronized to child objects.</dd>
+			<dt>Set as default</dt>
+			<dd>It registers parameters in the selected object as default values.</dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<hr />
+<h3>Object Property</h3>
+<p><img height="488" src="image/objprop.png" width="544" /></p>
+<div class="menu">
+	<h3>Object's name</h3>
+	<p>It sets up the name, color, visibility, and the possibility of the editing.</p>
+	<p>The color selected in Configuration is applied when a cross mark is put on the colored section and the color selected here 
+		is applied when a cross mark is not shown. If you <font color="#ff0000">click the right side </font>when a cross 
+	mark is not shown, it 
+		is put again.</p>
+</div>
+<div class="menu">
+	<h3>Patch</h3>
+	<p>It selects how to control faces of objects. Objects selected as patch can be changed to their patch into normal 
+		plane by <b>menu [Object] [Freeze]</b>.</p>
+		<img height="180" src="image/patch0.gif" width="223" style="float:left"/>
+		<div style="margin-left:233px">
+		<p>
+		<b>Flat</b><br />
+		It shows normal planes. It can be used for both triangles and quadrangles.
+		</p>
+		</div>
+		<div style="clear:both; visibility:hidden"></div>
+		<p></p>
+		<img height="180" src="image/patch1.gif" width="223" style="float:left"/>
+		<div style="margin-left:233px">
+		<p>
+		<b>Patch type 1</b><br />
+	Basically, patch is applied to only quadrangles. It is applied to only triangles whose three sides are surrounded by 
+		quadrangles.<br />
+		The edge of the unclosed patch is located away form vertices and lines. It becomes exactly same as &quot;Patch type 
+		2&quot; for a complete closed patch.</p>
+		</div>
+		<div style="clear:both; visibility:hidden"></div>		
+		<p></p>
+		<div style="float:left">
+		<img height="180" src="image/patch2.gif" width="223"/>
+		</div>
+		<div style="margin-left:233px">
+		<p>
+		<b>Patch type 2</b><br />
+		Basically, patch is applied to only quadrangles. It is applied to only triangles whose three sides are surrounded 
+		by quadrangles.<br />
+		The edge of the unclosed patch is located near vertices and lines. It becomes exactly same as &quot;Patch type 1&quot; 
+		for a complete closed patch.</p>
+		</div>
+		<div style="clear:both; visibility:hidden"></div>		
+		<p></p>
+		<img height="182" src="image/patch3.gif" width="203" style="float:left"/>
+		<div style="margin-left:233px">
+		<p>
+		<b>Catmull-Clark</b><br />
+		It can be applied to both triangles and quadrangles.<br>
+		When the [Reserve triangles] is ON, triangles in the original object will be subdividied into multiple triangles. Subdividing with reversing triangles can make a smooth patch around the border between a triangle and a quadrangle.<br />
+		A Catmull-Clark subdivision makes different patches from Patch type 1 or 2. But it may give the same shape in other software because a Catmull-Clark subdivision has a compatibility with many other software that supports a Catmull-Clark subdivision.<br />
+		(Caution: Please confirm a compatibility with an other software because some software make different patches from Metasequoia, and creased edges or open edges also make different patches.)</p>
+		</div>
+		<div style="clear:both; visibility:hidden"></div>		
+</div>
+<div class="menu">
+	<h3>Mirroring</h3>
+	<p>It selects the mirror shown in real time. You only need one side of the data of wire structure. </p>
+	<div class="menuimage">
+	<img height="200" src="image/mirror.png" vspace="12" width="500" /></div>
+	<p><b>In [Separated]</b>, the copied face is created on the other side and each face is treated individually.</p>
+	<p><b>In [Joined]</b>, in addition to the face created on the other side, the face which can connect to the original 
+	face is created. When you put a limit on the joining distance, the face connecting both sides of the faces is not 
+	created if the faces are located in farther than the selected distance from the symmetrical boundary (XZ plane, 
+	when you make the mirror in the direction of X axis, for example). </p>
+</div>
+<div class="menu">
+	<h3>Lathe</h3>
+	<p>It selects lathe displayed in real time. You can make the rotated form of the line in the object around the 
+		selected axis.</p>
+	<div class="menuimage">
+	<img height="197" src="image/lathe.png" width="359" />
+	</div>
+</div>
+<div class="menu">
+	<h3>Smoothing</h3>
+	<p>It selects whether to make faces smooth. When menu [View] [Smoothing] is checked, objects which are selected 
+	on smoothing are displayed smoothly according to the angle of the faces.</p>
+	<div class="menuimage">
+		<img height="192" src="image/smooth.png" width="286" /> </div>
+</div>
+
+</body>
+
+</html>

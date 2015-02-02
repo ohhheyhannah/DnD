@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>UV edit</title>
+</head>
+
+<body>
+
+<h2>UV edit</h2>
+<p>It operates the UV axis on the atlas.</p>
+<p>Usually, please edit the UV axis manually after assigning UV value by using 
+[Mapping] command.</p>
+<div class="menu">
+	<h3>Screen options</h3>
+<img alt="" height="207" src="uvedit0.gif" width="143" style="float:left;"/>
+<div style="margin-left:153px;">
+	<dl>
+		<dt>Unwrap</dt>
+		<dd>It shows a UV atlas.</dd>
+		<dt>CurObj</dt>
+		<dd>It shows a UV atlas of the current object only.</dd>
+		<dt>Material</dt>
+		<dd>It shows UV of only faces to which the current material is assigned.</dd>
+		<dt>Texture</dt>
+		<dd>It shows a UV atlas of material which has the same texture mapping 
+		as the current material.</dd>
+		<dt>Select</dt>
+		<dd>It shows a UV atlas of only selected faces.</dd>
+		<dt>Repeat</dt>
+		<dd>It repeatedly shows a mapping image in plural.</dd>
+		<dt>Grid</dt>
+		<dd>It shows a grid.</dd>
+		<dt>Snap</dt>
+		<dd>It sets up to snap grid when the UV vertex is moved.</dd>
+		<dt>Object</dt>
+		<dd>It shows 3D objects.</dd>
+		<dt>Select</dt>
+		<dd>It shows 'UV guide' like branches on vertices on which UV is 
+		selected.</dd>
+	</dl>
+</div>
+<div style="clear:both; visibility:hidden;"></div>
+</div>
+<img alt="" height="532" src="uvedit5.png" width="106" style="float:left;"/>
+<table border="1" style="margin-left:116px;">
+	<tr>
+		<td align="center"><a href="#target">Vertex/Face/Apex</a></td>
+		<td align="center"><a href="#normalize">Normalize</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">Select</a></td>
+		<td align="center"><a href="#unify">Unify</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#expand">Expand</a></td>
+		<td align="center"><a href="#separate">Separate</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#brush">Brush</a></td>
+		<td align="center"><a href="#project">Projection</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#rect">Rect</a></td>
+		<td align="center"><a href="#align">Align</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#rope">Rope</a></td>
+		<td align="center"><a href="#copy">Copy</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">Move</a></td>
+		<td align="center"><a href="#paste">Paste</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">Rotate</a></td>
+		<td align="center"><a href="#sw_rotate">SW Rotate</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#edit">Scaling</a></td>
+		<td align="center"><a href="#sw_reverse">SW Invert</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#magnet">Magnet</a></td>
+		<td align="center"><a href="#atlas">Atlas</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#mapping">
+		<img alt="Flat" height="28" src="uvedit_flat.gif" width="28" />
+		<img alt="Cylinder" height="28" src="uvedit_cylinder.gif" width="28" />
+		<img alt="Sphere" height="28" src="uvedit_sphere.gif" width="28" /></a></td>
+		<td align="center"><a href="#output">Export</a></td>
+	</tr>
+	<tr>
+		<td align="center"><a href="#number">U/V/OK</a></td>
+		<td align="center"><a href="#property">Configuration</a></td>
+	</tr>
+</table>
+<div style="clear:both; visibility:hidden;"></div>
+<div class="menu">
+	<a name="target"></a>
+	<h3>Vertex / Face / Apex</h3>
+	<p>It settles how to select on 3D model. It does not effect on the operation 
+	on the UV atlas.</p>
+</div>
+<div class="menu">
+	<a name="edit"></a>
+	<h3>Select / Move / Rotate / Scale</h3>
+	<p>It settles how to operate on the UV atlas.</p>
+	<p>In [Move] mode only, you can select vertices on the UV atlas with rectangle 
+	and with rope when you press [Rect] or [Rope] in
+	<a href="../command.htm#edit_option">Edit option</a>.</p>
+</div>
+<div class="menu">
+	<a name="expand"></a>
+	<h3>Expand</h3>
+	<p>It selects continuous vertices from the UV vertex specified on the UV atlas.</p>
+</div>
+<div class="menu">
+	<a name="brush"></a>
+	<h3>Brush</h3>
+	<p>It selects the traced UV vertices by dragging on the UV atlas.</p>
+	<p>The size of the selection range can be changed by dragging with the Alt key.</p>
+</div>
+<div class="menu">
+	<a name="rect"></a>
+	<h3>Rect</h3>
+	<p>It selects UV vertices in the rectangle by dragging on the UV atlas.</p>
+</div>
+<div class="menu">
+	<a name="rope"></a>
+	<h3>Rope</h3>
+	<p>It selects UV vertices in the freehand region by dragging on the UV atlas.</p>
+</div>
+<div class="menu">
+	<a name="magnet"></a>
+	<h3>Magnet</h3>
+	<p>It moves UV vertices continuously within the distance from the position of the UV vertex specified on the UV atlas.</p>
+</div>
+<div class="menu">
+	<a name="mapping"></a>
+	<h3>New mapping</h3>
+	<p>You can newly assign UV coordinate for the selected face by the 
+	following projection methods.</p>
+	<table cellpadding="2" cellspacing="0">
+		<tr>
+			<td><img alt="" height="28" src="uvedit_flat.gif" width="28" /></td>
+			<td>Plane mapping</td>
+		</tr>
+		<tr>
+			<td>
+			<img alt="" height="28" src="uvedit_cylinder.gif" width="28" /></td>
+			<td>Cylinder mapping</td>
+		</tr>
+		<tr>
+			<td>
+			<img alt="" height="28" src="uvedit_sphere.gif" width="28" /></td>
+			<td>Sphere mapping</td>
+		</tr>
+	</table>
+	<dl>
+		<dt>Apply</dt>
+		<dd>It does UV projection towards the selected faces under the current 
+		mapping condition. </dd>
+		<dt>Move</dt>
+		<dd>It moves the base point of projection mapping.</dd>
+		<dt>Rotate</dt>
+		<dd>It rotates projection mapping.</dd>
+		<dt>Scale</dt>
+		<dd>It scales up projection mapping.</dd>
+		<dt>Fit</dt>
+		<dd>It adjusts the scale-up ratio to the size just fits to the selected 
+		faces.</dd>
+		<dt>Property</dt>
+		<dd>It adjusts position, size, and angle of projection mapping with a 
+		numerical input.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<a name="number"></a>
+	<h3>Numerical input (U/V/OK)</h3>
+	<p>It sets the coordinate of the selected UV vertex with a numerical input.</p>
+</div>
+<div class="menu">
+	<a name="normalize"></a>
+	<h3>Normalize</h3>
+	<p>It compulsory moves the position of UV vertices within the proper range 
+	when they are located outside the range of 0 - 1. It does not change a 
+	visible tension of mapping.</p>
+	<div class="menuimage">
+		<img alt="" height="147" src="uvedit1.gif" width="447" /></div>
+</div>
+<div class="menu" name="unify">
+	<h3>Unify</h3>
+	<p>It joints the selected UV vertices.</p>
+	<div class="menuimage">
+		<img alt="" height="174" src="uvedit2.gif" width="379" /></div>
+</div>
+<div class="menu">
+	<a name="separate"></a>
+	<p>It separates the selected UV vertices.</p>
+	<div class="menuimage">
+		<img alt="" height="163" src="uvedit8.gif" width="355" /></div>
+</div>
+<div class="menu">
+	<a name="project"></a>
+	<p>It moves the position of UV vertices like the position of polygon faces 
+	on 3D screen can be projected on the position of the UV atlas.</p>
+	<div class="menuimage">
+		<img alt="" height="181" src="uvedit3.gif" width="416" /></div>
+</div>
+<div class="menu">
+	<a name="align"></a>
+	<h3>Align</h3>
+	<p>It aligns the position of the selected UV vertices in a straight line 
+	vertically or horizontally. [Align] buttons automatically determines the direction to align whether horizontal or 
+	vertical. [U] button or [V] button enables to specify the direction manually.</p>
+	<div class="menuimage">
+		<img alt="" height="200" src="uvedit4.gif" width="450" /></div>
+</div>
+<div class="menu">
+	<a name="copy"></a>
+	<h3>Copy</h3>
+	<p>It 
+	records the UV coordinate of the selected face. (See the following [Paste].)</p>
+</div>
+<div class="menu">
+	<a name="paste"></a>
+	<h3>Paste</h3>
+	<p>It 
+	assigns the recorded UV coordinate with [Copy] to the currently selected face. 
+	The number of vertices of the source face and the destination face must be same.</p>
+</div>
+<div class="menu">
+	<a name="sw_rotate"></a>
+	<h3>SW Rotate</h3>
+	<p>It 
+	replaces the UV value of the vertices in the polygon face one by one as 
+	rotating clockwise.</p>
+	<div class="menuimage">
+		<img alt="" height="140" src="uvedit6.gif" width="295" /></div>
+</div>
+<div class="menu">
+	<a name="sw_reverse"></a>
+	<h3>SW Invert</h3>
+	<p>It 
+	replaces the UV value of the vertices in the polygon face as inverting to 
+	the reverse direction.</p>
+	<div class="menuimage">
+		<img alt="" height="140" src="uvedit7.gif" width="295" /></div>
+</div>
+<div class="menu">
+	<a name="atlas"></a>
+	<h3>Atlas</h3>
+	<p>It automatically assigns UV coordinates not to overlap UV faces on the atlas.<br />
+	There is a defect that it is apt to become scraps in this version.</p>
+</div>
+<div class="menu">
+	<a name="output"></a>
+	<h3>Export</h3>
+	<p>It 
+	exports the atlas as the image file like BMP or JPEG.</p>
+</div>
+<div class="menu">
+	<a name="property"></a>
+	<h3>Config</h3>
+	<dl>
+		<dt>Length of guide</dt>
+		<dd>It selects the length of branches shown in Select in Object. </dd>
+		<dt><b>Grid</b></dt>
+		<dd>It selects how many to divide grid for mapping image. </dd>
+		<dt>Repeat</dt>
+		<dd>It selects how many to place mapping image in [Repeat] mode. </dd>
+		<dt>Snap to the center of grid</dt>
+		<dd>It snaps not on the crossing of grid but on the center of lattice of 
+		grid in [Snap] mode. </dd>
+		<dt>Move UV on the object</dt>
+		<dd>It can directly move UV value when you drag on the object. </dd>
+		<dt>Brightness of mapping image</dt>
+		<dd>It 
+		selects brightness of mapping image shown as the atlas. Lower brightness 
+		if it is hard to see the UV atlas when it is too bright. </dd>
+	</dl>
+</div>
+
+</body>
+
+</html>

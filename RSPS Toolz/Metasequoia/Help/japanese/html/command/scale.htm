@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>拡大</title>
+</head>
+
+<body>
+
+<h2>拡大</h2>
+<p>選択された頂点・辺・面を拡大・縮小するように移動します。</p>
+<div class="menu">
+	<h3>拡大</h3>
+	<div style="float:left">
+		<img height="222" src="scale.png" width="86" />
+	</div>
+	<div style="margin-left: 96px">
+	<dl>
+		<dt>ハンドル</dt>
+		<dd>ＸＹＺそれぞれ３方向に矢印が表示され、これをドラッグすることでそれぞれの軸方向に拡大することができます。</dd>
+		<dt>等比変形</dt>
+		<dd>X、Y、Z軸の各方向とも同じ比率で拡大・縮小します。</dd>
+		<dt>スクリーン</dt>
+		<dd>現在のスクリーン上での見た目の縦横の比率で変形します。あくまでスクリーンでの見た目であるため、パースがかかっていると実際の形状は歪むようになります。</dd>
+		<dt>X、Y、Z軸</dt>
+		<dd>各軸方向のみに拡大・縮小します。</dd>
+		<dt>数値設定</dt>
+		<dd>X、Y、Z軸の各方向の変形率を数値入力によって指定します。</dd>
+	</dl>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+
+	<div style="float:left">
+		<img height="224" src="scale_prop.png" width="199" />
+	</div>
+	<div style="margin-left: 207px">
+	[数値設定]ダイアログでは拡大率の数値入力や拡大の方法を詳細に指定することができます。
+	<dl>
+		<dt>拡大率</dt>
+		<dd>X、Y、Z軸の各方向の拡大率をそれぞれ数値で指定します。</dd>
+		<dt>倍率</dt>
+		<dd>元の状態を1として、拡大する縮尺を倍率で指定します。</dd>
+		<dt>サイズ</dt>
+		<dd>選択領域全体のサイズが指定した数値となるように拡大が行われます。</dd>
+		<dt>1に初期化</dt>
+		<dd>拡大率を1に戻します。</dd>
+		<dt>基準位置</dt>
+		<dd>X、Y、Z軸の各方向の拡大の基準となる中心位置を数値で指定します。</dd>
+		<dt>0に初期化</dt>
+		<dd>基準位置を原点(0,0,0)に戻します。</dd>
+		<dt>ローカル</dt>
+		<dd>基準位置を現在のオブジェクトが持つローカル座標の原点に戻します。</dd>
+		<dt>選択中心</dt>
+		<dd>基準位置を現在選択されている頂点・辺・面の中心位置に戻します。</dd>
+	</dl>
+	</div>
+</div>
+
+</body>
+
+</html>

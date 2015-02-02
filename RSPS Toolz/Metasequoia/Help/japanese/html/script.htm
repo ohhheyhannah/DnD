@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>スクリプトエディタ</title>
+</head>
+
+<body>
+
+<h2>スクリプトエディタ</h2>
+<p align="center"><img height="486" src="image/script.gif" width="612" /></p>
+<p>スクリプトエディタは、Pythonスクリプトを編集して実行することにより、独自の機能を追加することが出来ます。<br />
+</p>
+<p>エディタ上にはPython固有のキーワードや文字列・コメントが色分けされて表示されます。</p>
+<p>Metasequoia用に独自に追加されたクラスについてはメニュー[ヘルプ][目次]を参照してください。Python言語の一般的な文法・関数の使用方法については、<a href="http://www.python.org/" target="_blank">Python公式サイト</a>や<a href="http://www.python.jp/Zope/" target="_blank">日本Pythonユーザ会</a>などのWebサイトから配布されているオンラインドキュメントや、市販の解説本などをご参照ください。Pythonのバージョンは2.23（日本語環境用インストーラ版）となっています。</p>
+<h3>メニュー</h3>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td align="left" bgcolor="#e1ffe1" rowspan="4">ファイル</td>
+		<td>新規作成</td>
+		<td>編集中のスクリプトを消去して、一からスクリプトを作成します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>開く</td>
+		<td>Pythonスクリプトのファイルを読み込みます。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>上書き保存</td>
+		<td>既に付けられているファイル名で上書きしてファイルを保存します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>別名で保存</td>
+		<td>別のファイル名をつけてPythonスクリプトを保存します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td bgcolor="#e1ffe1" rowspan="7">編集</td>
+		<td>元に戻す</td>
+		<td>直前の編集結果を無効にして、元に戻します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>やり直し</td>
+		<td>「元に戻す」の操作を取り消して、再び編集後の状態に復帰します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>切り取り</td>
+		<td>テキストの選択された領域を切り取り、またクリップボードへ転送します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>コピー</td>
+		<td>テキストの選択された領域をクリップボードへ転送します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>貼り付け</td>
+		<td>クリップボードの内容のテキストを貼り付けます。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>すべて選択</td>
+		<td>編集中のテキストをすべて選択します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>矩形選択モード</td>
+		<td>行の末端の位置と関係なく、矩形にテキストの選択を行います。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td bgcolor="#e1ffe1" rowspan="3">検索</td>
+		<td>検索</td>
+		<td>編集中のスクリプトから、指定した文字列と一致する箇所を探します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>次を検索</td>
+		<td>直前の「検索」を連続して実行します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>置換</td>
+		<td>編集中のスクリプトから、指定した文字列と一致する箇所を違う文字列に置き換えます。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td bgcolor="#e1ffe1" rowspan="4">表示</td>
+		<td>ログ</td>
+		<td>画面下側に実行したスクリプトから出力されたメッセージ・エラーを表示します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>行番号</td>
+		<td>画面左側に行番号を表示します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>タブ</td>
+		<td>タブ文字を絵記号で表示します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>登録スクリプト一覧</td>
+		<td>ウィンドウ右側に登録されたスクリプトをボタンで一覧表示します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td bgcolor="#e1ffe1" rowspan="2">スクリプト</td>
+		<td>実行</td>
+		<td>編集されたPythonスクリプトを実行します。</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>ログの消去</td>
+		<td>画面下側に表示されるログの内容を消去します。</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td bgcolor="#e1ffe1">ヘルプ</td>
+		<td>目次</td>
+		<td>Metasequoia内部の情報にアクセスするクラスを解説したヘルプを表示します。</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

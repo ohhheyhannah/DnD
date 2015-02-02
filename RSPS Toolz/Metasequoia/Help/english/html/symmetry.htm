@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Symmetry vs Mirroring</title>
+</head>
+
+<body>
+
+<h2>Symmetry vs Mirroring</h2>
+<p>Two functions, &quot;Symmetric editing&quot; and &quot;Mirroring&quot;, are provided as the methods to create bilateral 
+symmetric objects which are very effective in making like characters.</p>
+<div style="float:left">
+	<img src="image/sym1.png" width="130" height="105" />
+</div>
+<p>Symmetric editing becomes effective when you press the [Sym] button in the edit option group on command panel.</p>
+<p>Be sure to know that this symmetric editing does not create the other side of the object in real time. When you 
+		operate with some command like [Create] [Move] [Scale] [Rotate] [Magnet], it searches the pairs of vertices or faces 
+		selected on the spot and it gives operations to the pair at the same time. It takes time to process when the number 
+		of vertices are large because it tries to find pairs on the occasion.</p>
+<p>When [Sym] button is being pressed, the unsymmetrical object which does not have pair vertices becomes 
+		destroyed if it is moved. This is the function to make the unsymmetrical point fixed at 0 point in the X direction. 
+		By using this, you can easily arrange the vertex at the center of the boundary of symmetry.</p>
+<p>The mirrored face is shown in real time by selecting mirroring in the dialogue of object property. This means that only 
+one side is saved in data and both sides are only shown when it is displayed. As only one side is saved in data, symmetry 
+is maintained for all commands without fail. You can make the other side of the datum with menu [Object] [Freeze] and it 
+is usually frozen automatically when you export it in the files other than MQO.</p>
+<p>Commands like [UVedit] [Primitive] [Lattice] [Knife-Cut straight faces] [Weight] 
+[Vertex color] are <span class="red">not available with symmetric editing.</span></p>
+
+</body>
+
+</html>

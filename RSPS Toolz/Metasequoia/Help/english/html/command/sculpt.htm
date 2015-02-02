@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Sculpt</title>
+</head>
+
+<body>
+
+<h2>Sculpt</h2>
+<img alt="Sub panel for sculpt command" height="283" src="sculpt.png" width="134" style="float:left" />
+<div style="margin-left:116px">
+<p>
+[Sculpt] command provides an edit function like a painting software by heaping a 
+surface up or inflating for the dragged part.</p>
+  <p>This command supports a pen tablet(*) that has a perception of a pressure. 
+  You can edit in detail with a pen tablet.</p>
+  <p>(*) It is required to support Wintab. Tablet PC is not supported.</p>
+</div>
+<div style="clear:both; visibility:hidden;"></div>
+<div class="menu">
+	<h3>Draw</h3>
+	<p>It arranges vertices so that they are heaped up or down with dividing 
+	polygons along with the trajectory by dragging.</p>
+	<p>You can specify whether to heap up or down by the [Reverse] check.</p>
+	<div class="menuimage">
+	  <img alt="&#25551;&#12367;" src="sculpt_draw.png" height="218" width="401" /></div>
+</div>
+<div class="menu">
+	<h3>Smooth</h3>
+	<p>It moves vertices so that the surface become smooth.</p>
+</div>
+<div class="menu">
+	<h3>Inflate</h3>
+	<p>It generates polygons and arranges vertices so that the dragged part will 
+	be gradually grown in the front direction of the viewpoint.</p>
+	<p>It heaps up gradually if the pressure is weak. If the pressure is strong, 
+	you trace the grown part in detail and you can generate an object like a 
+	horn.</p>
+	<div class="menuimage">
+	  <img alt="&#33192;&#12425;&#12414;&#12377;" src="sculpt_inflate.png" height="220" width="250" /></div>
+</div>
+<div class="menu">
+	<h3>Flatten</h3>
+	<p>It moves vertices so that the surface become flat.</p>
+</div>
+<div class="menu">
+	<h3>Grab</h3>
+	<p>It moves vertices so that the dragged part is pulled.</p>
+	<p>
+	When [Auto subdivision] is unchecked, it will be almost same as [Magnet] 
+	command. When [Auto subdivision] is checked, an extend line will be divided 
+	and an area of each face will be adjusted so that it become to some extent 
+	uniform.</p>
+</div>
+<div class="menu">
+	<h3>Brush size</h3>
+	<p>It specifies the range for a creation of polygons and a movement of 
+	vertices.</p>
+	<p>This size is a relative value to the zoom rate in the view. The actual 
+	influenced range will be changed by a zoom or a dolly.</p>
+</div>
+<div class="menu">
+	<h3>Pressure</h3>
+	<p>It influences to the movement moment of vertices by dragging.</p>
+</div>
+<div class="menu">
+	<h3>Auto subdivision</h3>
+	<p>It specifies whether to move vertices with subdividing polygons 
+	automatically when you operate with this command.</p>
+	<p>
+	When the automatic subdivision is enabled, you can draw in detail without caring 
+	about the roughness of the original 
+	polygons. But the number of vertices and one of faces are increased rapidly. 
+	When the automatic subdivision is disabled, this command only moves vertices 
+	and the number is not changed , but it is difficult to draw in detail.</p>
+	<p>In this version, long and slender polygons are often generated near the 
+	boundary of the circle of the brush after subdividing polygons, and they 
+	will make wrinkes.</p>
+	<div class="menuimage"><img alt="&#33258;&#21205;&#20998;&#21106;&#12398;&#20363;" height="258" src="sculpt_autodiv.png" width="484" /></div>
+</div>
+<div class="menu">
+	<h3>Subdivision level</h3>
+	<p>It specifies the level of the subdivision when the automatic subdivision 
+	is enabled. If the knob of a slider is moved to the left, faces will be 
+	divided in detail. And if it is moved to the right, they will be divided 
+	roughly.</p>
+	<div class="menuimage"><img alt="&#20998;&#21106;&#12524;&#12505;&#12523;&#12398;&#35519;&#25972;&#20363;" src="sculpt_divlevel.png" height="250" width="496" /></div>
+</div>
+
+</body>
+
+</html>

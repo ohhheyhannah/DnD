@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>ローカル</title>
+</head>
+
+<body>
+
+<h2>ローカル</h2>
+<p>オブジェクトごとのローカル座標を操作します。</p>
+<p>[ローカル]コマンドは親子関係を考慮した変形や、ローカル座標に沿った正確な平面上の頂点操作を可能にします。例えば通常の[回転]コマンドのみを用いると、一度回転させたら回転角がリセットされるため、回転後の軸に沿って移動させることは難しくなりますが、ローカル座標を回転させた場合には編集オプションの[L]をONにしてから[移動]コマンドを使うと、そのローカル座標の軸に沿った移動を行うことが出来ます。</p>
+<p><img alt="" height="183" src="local1.gif" width="86" /></p>
+<div class="menu">
+	<h3>形状変形</h3>
+	<p>ハンドルを操作したとき、頂点も連動して位置が動くようにするかどうかを指定します。中心点の位置・向きだけを変えたい場合にはOFFにします。</p>
+</div>
+<div class="menu">
+	<h3>子に適用</h3>
+	<p>親子関係にあるオブジェクトがある状態で、親オブジェクトの操作に連動して子オブジェクトも操作されるかどうかを指定します。</p>
+</div>
+<div class="menu">
+	<h3>移動</h3>
+	<p>ハンドルを移動して、ローカル座標の中心点を設定します。</p>
+</div>
+<div class="menu">
+	<h3>拡大</h3>
+	<p>ハンドルの操作により、オブジェクトを拡大・縮小させます。</p>
+</div>
+<div class="menu">
+	<h3>回転</h3>
+	<p>ハンドルの操作により、オブジェクトを回転させます。</p>
+</div>
+<div class="menu">
+	<h3>中心基点</h3>
+	<p>現在のオブジェクトの頂点群の中心となる位置を、ローカル座標の基点として設定しなおします。</p>
+</div>
+<div class="menu">
+	<h3>詳細設定</h3>
+	<p>ローカル座標を数値入力によって設定します。</p>
+</div>
+
+</body>
+
+</html>

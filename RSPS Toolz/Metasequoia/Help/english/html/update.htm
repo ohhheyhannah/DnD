@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Release note</title>
+</head>
+
+<body>
+
+<h2>Release note</h2>
+<div class="menu">
+	<h3>What's new in Ver3.1.5</h3>
+	<ul>
+		<li>Improved
+		<ul>
+			<li>Anguwrap can unwrap correctly for an image with different width and height.</li>
+		</ul>
+ 		</li>
+		<li>Bug fixes
+		<ul>
+			<li>A zoom for an orthographic view is changed after changing the selection when [Selected part] is selected for [Center of rotation] in the configuration.</li>
+			<li>A right/left is reversed for STL exporter.</li>
+			<li>'Anguwrap' occurres an error in the specific condition.</li>
+			<li>'power' for a material cannot be set in Python script.</li>
+		</ul>
+ 		</li>
+	</ul>
+	<h3>What's new in Ver3.1.4</h3>
+	<ul>
+		<li>Changed
+		<ul>
+			<li>[Simple] button is always off at the startup time whether it was on or off at the last running time.</li>
+		</ul>
+ 		</li>
+		<li>Bug fixes
+		<ul>
+			<li>A preview for a bevel will be displayd incorrectly when the [Extrude faces] menu is called after the [Extrude] command.</li>
+			<li>An application crashes when the Anguwrap plug-in is called without selections of any lines.</li>
+		</ul>
+ 		</li>
+	</ul>
+	<h3>What's new in Ver3.1.3</h3>
+	<ul>
+		<li>Bug fixes
+		<ul>
+			<li>An unique ID of the object is broken after canceling the [Round] menu.</li>
+			<li>[Edge crease for Catmull-clark] sometimes does not change anything when an edge in a triangle is selected.</li>
+			<li>A mirroring object is not updated in the view after switching [Smoothing shading] by the right-click menu in the object panel.</li>
+			<li>A painting over a border of a non-square image in the paint panel sometimes makes an invalid stroke.</li>
+			<li>A face and a vertex on a mouse cursor is not highlighted when [Apex] is selected in [Vertex color] command.</li>
+			<li>Selected faces in a patch of Spline Type 1/2 are not displayed correctly in a Direct3D display when [Change the colors of lines in selected faces] is off.</li>
+			<li>OpenGL does not display double-sided faces correctly.</li>
+			<li>An edge crease is not loaded correctly in the case of setting a vertex color in loading a .mqo file</li>
+			<li>MQMateria::GetMaterialFromUniqueID() returns an invalid material.</li>
+		</ul>
+ 		</li>
+	</ul>
+	<h3>What's new in Ver3.1.2</h3>
+	<ul>
+		<li>Bug fixes
+		<ul>
+			<li>An error sometimes occurs by an undo or a redo after creating or deleting an object.</li>
+		</ul>
+	</ul>
+	<h3>What's new in Ver3.1.1</h3>
+	<ul>
+		<li>Improvement
+		<ul>
+			<li>.obj files include group names in the utf-8 encoding can be loaded normally.</li>
+			<li>Parameters for multiple directional lights can be get and set with the new plug-in SDK.</li>
+			<li>An operation for a selection in the object/material is compatible with Ver3.0  when &quot;ListMultiSelectionWithAlt=1&quot; is written in &quot;metaseq.ini&quot;.</li>
+		</ul>
+		<li>Bug fixes
+		<ul>
+			<li>UVs are broken after executing the [Mesh smoothing] menu.</li>
+			<li>The selection in an object/material panel is not restored after an undo.</li>
+			<li>A hozitontal/vertical rotation of the view with Shift + right button dragging cannot be performed in the [Select] command.</li>
+			<li>UVs are broken after executing the [Bevel] command.</li>
+			<li>A size of a brush in the [Vertex color] command cannot be changed.</li>
+			<li>Loading a .rsd file sometimes causes an error.</li>
+			<li>The 'lightAttenuation' property for an object cannot be set in the Python script.</li>
+		</ul>
+	</ul>
+	<h3>What's new in Ver3.1.0</h3>
+	<ul>
+		<li>System<ul>
+			<li>The window position at the time of the last quit will be restored correctly regardless of the position 
+			of the task bar.</li>
+		</ul>
+		</li>
+		<li>Configuration<ul>
+			<li>Added a specification method of a file path for a mapping image. It can be selected from [Auto], [Absolute path] or [Relative path].</li>
+			<li>A file can be associated without an administrator privileges at the time of the running on Windows Vista 
+			or later version of Windows.</li>
+		</ul>
+		</li>
+		<li>Panel<ul>
+			<li>Multiple items can be selected in the object panel and material panel.</li>
+			<li>Selection of vertices, lines or faces in the object panel or material panel has been changed to Alt key, and deselect has been changed to Ctrl+Alt keys.</li>
+			<li>A new object or material will be created just under the current one when the [New] or [Copy] button in the object and material panel is pushed with Ctrl key.</li>
+			<li>Children are moved together when a parent object is duplicated or a hierarchy of the parent object is changed.</li>
+			<li>Added [Merge selected] and [Set as default] on the [Misc] menu in the object panel.</li>
+			<li>Added [Reserve triangles] for the Catmull-Clark patch on the right-click menu in the object panel and in the object property.</li>
+			<li>A parameter for multiple objects can be changed together by selecting multiple objects on the list in the object property.</li>
+			<li>A duplicated object or material inherits a name from the original one.</li>
+			<li>A bump map image or a normal map image can be specified for the [Bump] mapping in the material property.</li>
+			<li>Added [Double sided] in the material property.</li>
+			<li>Pan can be operated by dragging with a space key in the paint panel.</li>
+			<li>Added [Convert to normal map] in the menu of the paint panel.</li>
+		</ul>
+		</li>
+		<li>Command<ul>
+			<li>A selection is not cleared when you click the place which does not have anything with Shift key.</li>
+			<li>A selection is toggled with Shift key for all operations except Brush in [Select].</li>
+			<li>Lines are selected by [Belt] in [Select] when [Face] in the edit options is off.</li>
+			<li>A new selection will be not over the selected lines by [Edge loop] in [Select].</li>
+			<li>An operation for [Route] in [Select] is changed from a drag to clicks.</li>
+			<li>Selections in the other objects will be cleared when a current object is changed by [CurObj] in [Select] and so on.</li>
+			<li>Lines can be selected by [Route] in [Select].</li>
+			<li>Faces can be selected by [Brush] in [Select].</li>
+			<li>An operation can be performed with opening the numeric dialog in [Rotate].</li>
+			<li>A center position of the handle will be not changed after inputting a rotation angle and pushing OK button in [Rotate].</li>
+			<li>A wire between the mouse position and the vertex is displayed while you create a new face in [Create].</li>
+			<li>A vertex can be placed horizontally or vertically with Shift key in [Create] or [Pull].</li>
+			<li>A vertex can be snapped to the grid in [Pull].</li>
+			<li>UV coordinates will be hardly changed from the original shape by [Bevel] or the bevel mode in [Extrude].</li>
+			<li>[Twist], [Bend], [Shear] and [Weight] support a symmetric editing.</li>
+			<li>A vertex will be snapped to the nearest one when you click a right button while dragging a start point or an end one in [Twist].</li>
+			<li>A preview will be refreshed after modifying an alpha channel when a texture mapping with an alpha channel is edited in [Paint].</li>
+			<li>A creased edge for Catmull-Clark patch can be specified by [Weight].</li>
+		</ul>
+		</li>
+		<li>Menu<ul>
+			<li>A rendered image can be sent to the clipboard in [Rendering].</li>
+			<li>UV coordinates will be hardly changed to appearance after executing [Mesh smoothing].</li>
+			<li>A coordinate of the base position can be specified in [Align faces].</li>
+			<li>Added [Show subdivision wires] to display wires for a Catmull-Clark patch.</li>
+			<li>Added [Edge crease for Catmull-Clark] to make a creased edge.</li>
+			<li>An efficient unwrapping of UV coordinates can be performed by the 'Anguwrap' plug-in.</li>
+		</ul>
+		</li>
+		<li>Preview<ul>
+			<li>Patch of spline type 1/2 can be displayed with a smoothing.</li>
+			<li>A high power of a specular does not produce an exposure in OpenGL preview.</li>
+		</ul>
+		</li>
+		<li>Export/Import files<ul>
+			<li>TIFF images can be imported and exported.</li>
+		</ul>
+		</li>
+		<li>Compatibility<ul>
+			<li>An opening edge makes the same Catmull-Clark subdivision surface as Ver3.0 when &quot;KeepOpenEdgeVertex=1&quot; is written in 
+			&quot;metaseq.ini&quot;.</li>
+			<li>[Continuous face], [Belt] and [Continuous line] in [Select] command selects an unselected face 
+			additionally at the time of clicking it without pressing Shift-key when &quot;ReserveSelectionWithoutShift=1&quot; is 
+			written in &quot;metaseq.ini&quot;.</li>
+		</ul>
+		</li>
+	</ul>
+	<h3>What's new in Ver3.0.5</h3>
+	<ul>
+		<li>Bug fixes
+		<ul>
+			<li>An error was occurred when a .mqo file including a back-light is loaded.</li>
+		</ul>
+		</li>
+		<li>SDK fixes
+		<ul>
+			<li>An operated scene is returned to OnUpdateScene() at the time of a zoom or a pan.</li>
+			<li>GetVertexRelatedFaces() for a clone object returns a correct number.</li>
+		</ul>
+		</li>
+	</ul>
+	<h3>What's new in Ver3.0.4</h3>
+	<ul>
+		<li>Bug fixes
+		<ul>
+			<li>An object name or a material name can be entered exceeds the limit number of characters.</li>
+			<li>[Invert a vertex] in [Wire] inserts a vertex at an invalid position.</li>
+		</ul>
+		</li>
+	</ul>
+	<h3>What's new in Ver3.0.3</h3>
+	<ul>
+		<li>Improvement
+		<ul>
+			<li>A FOV is restored when you change an orthogonal view to a perspective view.</li>
+			<li>When you specify a mapping image with a relative path in the Material Panel, the path will be shown as 
+			an initial folder.</li>
+			<li>Supported exporting STL files.</li>
+		</ul>
+		</li>
+		<li>Bug fixes
+		<ul>
+			<li>A route selection in [Select] command sometimes causes an error.</li>
+			<li>[Bevel] command sometimes causes an error.</li>
+			<li>A non-highlight line is sometimes selected in [Knife] or [Wire] commands.</li>
+			<li>A texture in a background image is not interpolated with a Direct3D display.</li>
+		</ul>
+		</li>
+	</ul>
+	<h3>What's new in Ver3.0.2</h3>
+	<ul>
+		<li>Improvement
+		<ul>
+			<li>When you specify a mapping image file at the same or under folder of the .mqo file, the file name is set 
+			as a relative path.</li>
+			<li>The V direction can be changed when you export a .dae file.</li>
+		</ul>
+		</li>
+		<li>Bug fixes
+		<ul>
+			<li>The file insert dialog is behind the main window when you drop a file from Explore.</li>
+			<li>A mirroring shape is not updated when you change a local coordinate without a shape interlock in [Local] 
+			command.</li>
+			<li>An application freezes when you drag an item for a long time in the Object Panel or the Material Panel.</li>
+			<li>A view is not updated when you change a type of a mirroring by a right-button clicked menu in the Object 
+			Panel.</li>
+		</ul>
+		</li>
+	</ul>
+	<h3>What's new in Ver3.0.1</h3>
+	<ul>
+		<li>Improvement
+		<ul>
+			<li>The folder that contains the editing file is set as an initial one when 'Save As' is called.</li>
+		</ul>
+		</li>
+		<li>Bug fixes
+		<ul>
+			<li>A Catmull-Clark patch causes an error when the same vertex in the one face is shared.</li>
+		</ul>
+		</li>
+	</ul>	
+	<h3>What's new in Ver3.0.0</h3>
+	<ul>
+		<li>System 
+		<ul>
+			<li>Improvement of a memory management.</li>
+			<li>A direction of a dolly by a wheel is reversed.</li>
+			<li>A dolly can be operated in the larger range.</li>
+		</ul>
+		</li>
+		<li><a href="config.htm">Configuration</a><ul>
+			<li>Added a font setting.</li>
+			<li>Added a selection of a format for help files.</li>
+			<li>Added a transparency for lines in back side of faces.</li>
+			<li>Added an anti-alias setting for Direct3D.</li>
+			<li>Added view operation settings for Alt + Left/Middle/Right buttons.</li>
+			<li>Added an inverse of an direction of a mouse operation for zoom or dolly.</li>
+			<li>Added a setting for a method of moving non-symmetry vertices.</li>
+			<li>Deprecated settings for text drawing in Direct3D and coordinate transformation in OpenGL.</li>
+			<li>Added a setting for a size of a handle.</li>
+		</ul>
+		</li>
+		<li>Panel<ul>
+			<li>A non-symmetry vertex is not snapped to the X=0 when the vertex is scaled in the edit panel.</li>
+			<li>Multiple materials can be selected and the properties of them are changed together in the material 
+			panel.</li>
+			<li>Supported three parallel lightings.</li>
+		</ul>
+		</li>
+		<li>Command<ul>
+			<li>Added [Growing], [Route] and [Edge loop] modes in <a href="command/select.htm">[Select]</a> command.</li>
+			<li>When a handle is moved in <a href="command/scale.htm">[Scale]</a>, <a href="command/rotate.htm">[Rotate]</a> 
+			command, it is snapped to the position based on the center.</li>
+			<li>The center position for scaling or rotating by [Scale] or [Rotate] command can be selected from a center 
+			position of a local coordinate, a zero point and a center position of selected parts.</li>
+			<li>A handle can be rotated correctly when the parent object is scaled in the <a href="command/local.htm">
+			[Local]</a> command.</li>
+			<li>Separation to the left or right by mirroring becomes less likely to occur by rotating in [Local] 
+			command.</li>
+			<li>A front side of face is always created when the new face are pulled from a line in 			<a href="command/pullface.htm">[Pull]</a> and <a href="command/wire.htm">[Wire - 
+			Create a triangle]</a> command.</li>
+			<li>A new triangle can be created by dragging between the edges of the two lines that share the same vertex 
+			in [Wire - Create a triangle] command.</li>
+			<li>The numeric display in the property of [Local] command is updated when the hierarchy is changed in the 
+			object panel.</li>
+			<li>Vertices are not separated&nbsp; at the same position, and a hole is not made by 			<a href="command/bevel.htm">[Bevel]</a> command.</li>
+			<li>Supported to twist by 15 degrees by dragging with Shift key in <a href="command/twist.htm">[Twist]</a> command.</li>
+			<li>Added [Magnet], [Brush], [Expand], [Rect], [Rope], [Align U] and [Align V] modes in
+			<a href="command/uvedit.htm">[UV edit]</a> command.</li>
+			<li>Supported symmetry editing in [Move], [Scale] and [Rotate] mode in [UV edit] command.</li>
+			<li>UV vertices are shift along U or V direction only with dragging the Shift key by [Move] and [Magnet] 
+			mode in [UV edit] command.</li>
+			<li>UV vertices are rotated or scaled along the dragged vertex by [Rotate] and [Scale] mode in [UV edit] 
+			command.</li>
+			<li>Supported rotation of the initial lattice in <a href="command/lattice.htm">[Lattice]</a> command.</li>
+			<li>Supported aligning the direction along the local coordinate in [Lattice] command.</li>
+			<li>Added a brush mode in <a href="command/vertcolor.htm">[Vertex color]</a> command.</li>
+			<li>Added <a href="command/sculpt.htm">[Sculpt]</a> command.</li>
+		</ul>
+		</li>
+		<li>Menu<ul>
+			<li>FOV is not changed when a [Fit to view] menu is called.</li>
+		</ul>
+		</li>
+		<li>Preview<ul>
+			<li>Improvement the displaying of flat, cylinder and sphere mapping on the curved surface by patch type 1/2.</li>
+			<li>Support Direct3D displaying using DirectX 9.0.</li>
+			<li>Support displaying textures in three orthogonal views.</li>
+			<li>Back side of lines are thinly displayed.</li>
+		</ul>
+		</li>
+		<li>Export/Import files<ul>
+			<li>Fixed loading 8-bit .tga files with alpha palette.</li>
+			<li>Supported exporting .dae(COLLADA 1.4) files.</li>
+			<li>When a file except .MQO is loaded, textures are loaded with the relative path based on a folder contains 
+			the file.</li>
+			<li>Files supported by Import plug-ins are displayed when [All supported files] is selected in the file 
+			import dialog.</li>
+			<li>Supported PSD files loading for mapping images and background images. (Read only)</li>
+		</ul>
+		</li>
+	</ul>
+</div>
+
+</body>
+
+</html>

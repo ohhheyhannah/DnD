@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>基本要素</title>
+</head>
+
+<body>
+
+<h2>基本要素</h2>
+<div class="menu">
+	<h3>座標軸</h3>
+	<img height="80" src="image/name3.gif" width="80" style="float:right"/>
+	<div style="margin-right:90px">
+	<p>座標軸は右図のように、左右がX軸、上下がY軸、奥行きがZ軸を示します。色はそれぞれ赤、緑、青に統一されています。</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>ドキュメント</h3>
+	<p>ドキュメントはオブジェクト、視点、材質などの情報を管理します。</p>
+	<p>Metasequoiaは１つのウインドウで１つのドキュメントを扱います。複数のドキュメントを編集するには複数のMetasequoiaを起動する必要があります。使用バージョンが同一である場合は、メニュー上の［切り取り］［コピー］［ペースト］を使えば、相互にデータをやりとり出来ます。</p>
+</div>
+<div class="menu">
+	<h3>オブジェクト</h3>
+	<img height="116" src="image/name2.gif" width="136" style="float:right"/>
+	<div style="margin-right:90px">
+	<p>１つのドキュメントは複数のオブジェクトを扱うことが出来、<a href="objpanel.htm">オブジェクトパネル</a>上では、いわゆるレイヤーのような操作が出来ます。</p>
+	  <p>オブジェクトの形状を構成する要素は、<b>頂点・辺・面</b>の３つです。面は表裏がある片面で、<font color="#ff0000">裏側からは見えません</font>。使用できる面は<font color="#ff0000">三角形か四角形のみ</font>であり、多角形は扱えません。</p>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+	<h3>材質</h3>
+	<p>オブジェクトの面には材質を割り当てることができます。材質を指定することにより、色やマッピング画像が表示されます。材質を割り当てていないと、<font color="#ff0000">未着色面</font>として扱われます。</p>
+	<p>材質の設定は<a href="matpanel.htm">材質パネル</a>上で行います。</p>
+</div>
+<div class="menu">
+	<h3>マッピング画像・ＵＶ値</h3>
+	<p>材質にはマッピング画像を指定でき、面に模様や凸凹感を与えることにより質量感のあるものが出来ます。面には<b>UV値</b>という属性があり、それによりマッピング画像のどの部分を貼り付けるかを設定できます。UV値は［ＵＶ操作］コマンドで展開図上で編集します。</p>
+	<p>材質へのマッピング画像の指定は<a href="matpanel.htm">材質パネル</a>上で行いますが、その画像に対しては<a href="painter.htm">ペイントパネル</a>上で編集することができます。また、［ペイント］コマンドにより３Ｄ画面上で直接描いていくことも出来ます。</p>
+	<div class="menuimage">
+		<img height="147" src="image/uvmap.gif" width="400" />
+	</div>
+</div>
+<div class="menu">
+	<h3>ワールド/スクリーン座標/ローカル座標</h3>
+	<img height="108" src="image/wsoption.gif" width="132" style="float:right"/>
+	<div style="margin-right:142px">
+	<p>［移動］などいくつかのコマンドでは、コマンドパネル上の編集オプショングループ内<b>[L]［W］［S］</b>を切り替えることによってワールド・スクリーン・ローカル座標系での操作を指定することが出来ます。</p>
+	  <p>ワールド座標系は原点から表示されている軸に沿った操作を行い、スクリーン座標系は見た目での縦横方向への操作を行います。ローカル座標はオブジェクトごとに基点と向きを持たせるもので、[ローカル]コマンドで設定した後、[移動]コマンドなどで傾けた軸に沿った編集操作を行うことが出来ます。	</p>
+	<div class="menuimage">
+		<img height="203" src="image/wldscn.gif" width="322" />
+	</div>
+	</div>
+	<div style="clear:both; visibility:hidden"></div>
+</div>
+
+</body>
+
+</html>

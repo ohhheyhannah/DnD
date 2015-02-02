@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>彫刻</title>
+</head>
+
+<body>
+
+<h2>彫刻</h2>
+<img alt="彫刻コマンドでのサブパネル" height="283" src="sculpt.png" width="134" style="float:left" />
+<div style="margin-left:116px">
+<p>
+彫刻コマンドでは、なぞった箇所のポリゴン表面を盛り上げたり、膨らましたりすることによって、ペイントソフトのような感覚でポリゴン形状を編集することができます。</p>
+  <p>彫刻コマンドは筆圧感知型のペンタブレット(*)に対応しています。タブレットを使用することで、より細かい描きこみを行うことができます</p>
+  <p>(*)Wintabに対応している必要があります。Tablet PCの筆圧感知には対応していません。</p>
+</div>
+<div style="clear:both; visibility:hidden;"></div>
+<div class="menu">
+	<h3>描く</h3>
+	<p>ドラッグした軌跡に沿ってポリゴンを分割しながら、頂点を盛り上げる、または盛り下げるように配置します。</p>
+	<p>盛り上げるか盛り下げるかは［凸凹反転］チェックによって指定します。</p>
+	<div class="menuimage">
+	  <img alt="描く" src="sculpt_draw.png" height="218" width="401" /></div>
+</div>
+<div class="menu">
+	<h3>滑らか</h3>
+	<p>表面が滑らかになるよう頂点を移動します。</p>
+</div>
+<div class="menu">
+	<h3>膨らます</h3>
+	<p>ドラッグした箇所が視点の手前方向に徐々に膨らむよう、ポリゴンを生成しながら頂点を配置します。</p>
+	<p>筆圧を弱くすれば徐々に盛り上げることができます。筆圧を強くして膨らんだ箇所を細かくなぞると、角をはやしたような形状を作成できます。</p>
+	<div class="menuimage">
+	  <img alt="膨らます" src="sculpt_inflate.png" height="220" width="250" /></div>
+</div>
+<div class="menu">
+	<h3>平らに</h3>
+	<p>表面が平らになるよう頂点を移動します。</p>
+</div>
+<div class="menu">
+	<h3>つまむ</h3>
+	<p>ドラッグした箇所を引っ張るように頂点を移動します。</p>
+	<p>
+	自動分割がOFFの場合は［マグネット］コマンドとほとんど変わりませんが、自動分割をONにすると辺が伸びた部分が分割されて各面の面積がある程度均一になるよう調整されます。</p>
+</div>
+<div class="menu">
+	<h3>ブラシサイズ</h3>
+	<p>ポリゴン生成、頂点移動の対象となる範囲を指定します。</p>
+	<p>このサイズは視野の拡大率に対しての相対的な値で、ズーム・ドリーによって実際に影響する範囲が変化します。</p>
+</div>
+<div class="menu">
+	<h3>筆圧</h3>
+	<p>ドラッグ操作による頂点の移動量に影響します。</p>
+</div>
+<div class="menu">
+	<h3>面の自動分割</h3>
+	<p>各操作を行ったときに、ポリゴンを自動的に分割しながら頂点の移動を行うかどうかを指定します。</p>
+	<p>
+	自動分割を行うと、元のポリゴンの荒さを意識することなく細かい描きこみを行うことができますが、一方で頂点・面数が急激に増えます。自動分割を行わない場合は頂点を移動させるだけなので、頂点・面数は変わりませんが、詳細な描きこみを行うことはできません。</p>
+	<p>また、現バージョンでは自動分割を行うと、ブラシサイズの円の境界付近に細長いポリゴンが生成され、結果的にしわが発生しやすくなっています。</p>
+	<div class="menuimage"><img alt="自動分割の例" height="258" src="sculpt_autodiv.png" width="484" /></div>
+</div>
+<div class="menu">
+	<h3>分割レベル</h3>
+	<p>面の自動分割を行う際の、分割の程度を指定します。スライダーのつまみを左のほうに移動すると細かく分割され、右のほうに移動すると荒い分割となります。</p>
+	<div class="menuimage"><img alt="分割レベルの調整例" src="sculpt_divlevel.png" height="250" width="496" /></div>
+</div>
+
+</body>
+
+</html>

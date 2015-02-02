@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Import file</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h2 align="center">Import file</h2>
+<p>As many kinds of files besides the original format can be imported in Metasequoia, data made in other softwares can be 
+read. But, every information cannot be exchanged with the expansion of functions by version up of the software. Please let 
+me know if you cannot exchange smoothly.<br />
+</p>
+<center>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr>
+		<td bgcolor="#e8ffe8">ok</td>
+		<td bgcolor="#ffffe8">Mostly no problem</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">not good</td>
+		<td bgcolor="#ffffe8">Usable, but many parts are unfinished.</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">NG</td>
+		<td bgcolor="#ffffe8">Not available</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">-</td>
+		<td bgcolor="#ffffe8">The format does not support function.</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">?</td>
+		<td bgcolor="#ffffe8">Unconfirmed</td>
+	</tr>
+</table>
+</center>
+<div class="menu">
+	<h3><b>MQO</b> (Metasequoia)</h3>
+	<p>This is an original file format of Metasequoia and supports all functions.</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>Triangle</td>
+				<td>Quadrangle</td>
+				<td>Polygon</td>
+				<td>Smoothing</td>
+				<td>Material (Color)</td>
+				<td>Mapping</td>
+				<td>UV value</td>
+				<td>Vertex color</td>
+				<td>Metaball</td>
+				<td>Completeness</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>ok</td>
+				<td>ok</td>
+				<td>-</td>
+				<td>ok</td>
+				<td>ok</td>
+				<td>ok</td>
+				<td>ok</td>
+				<td>ok</td>
+				<td>ok</td>
+				<td>very good</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>SUF</b> (DoGA CGA System)</h3>
+	<p>This is the format used in DOGA-L series or PolyEdit.</p>
+	<p>It is mostly available with all functions.</p>
+	<p>A polygon, if it exists, is automatically changed into a triangle or a quadrangle.(*1)</p>
+	<p>Attribute (Material) handles the file which has the same name of extension, ATR.(*2)</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>Triangle</td>
+				<td>Quadrangle</td>
+				<td>Polygon</td>
+				<td>Smoothing</td>
+				<td>Material (Color)</td>
+				<td>Mapping</td>
+				<td>UV value</td>
+				<td>Vertex color</td>
+				<td>Metaball</td>
+				<td>Completeness</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>ok</td>
+				<td>ok</td>
+				<td>ok(*1)</td>
+				<td>NG</td>
+				<td>ok(*2)</td>
+				<td>ok(*2)</td>
+				<td>ok</td>
+				<td>-</td>
+				<td>-</td>
+				<td>ok</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>DXF</b> (AutoCAD)</h3>
+	<p>This can load only files mentioned in &quot;3DFACE&quot;. If DXF file cannot be loaded, please confirm what 
+		information the software of the exporting side is exporting.</p>
+	<p>I cannot highly recommend the exchange in this format because it can hold only data of shape, for this is the format 
+		not only for CG but also for CAD originally.</p>
+	<p>As the format does not have the direction of faces, it is not guaranteed and sometimes needs to be mended.</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>Triangle</td>
+				<td>Quadrangle</td>
+				<td>Polygon</td>
+				<td>Smoothing</td>
+				<td>Material (Color)</td>
+				<td>Mapping</td>
+				<td>UV value</td>
+				<td>Vertex color</td>
+				<td>Metaball</td>
+				<td>Completeness</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>ok</td>
+				<td>ok</td>
+				<td>-</td>
+				<td>-</td>
+				<td>NG</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>-</td>
+				<td>not good</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>LWO</b> (LightWave3D)</h3>
+		<p>It is available with LWOB format up to LightWave3D 5.6 and LWO2 format after LightWave3D 6.0. The file saved 
+		in the format with a layer of 5.x cannot be read.</p>
+	<p>A polygon, if it exists, is automatically changed into a triangle or a quadrangle.(*1)<br />When some UVs by multi-texture are assigned to one face, only one of them can be read.(*2)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td></td>
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Polygon</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV value</td>
+			<td>Vertex color</td>
+			<td>Metaball</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td align="right">LWOB</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok(*1)</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok(?)</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-(?)</td>
+			<td>ok</td>
+		</tr>
+		<tr bgcolor="#ffffe8">
+			<td align="right">LWO2</td>
+			<td align="center">ok</td>
+			<td align="center">ok</td>
+			<td align="center">ok(*1)</td>
+			<td align="center">NG</td>
+			<td align="center">ok</td>
+			<td align="center">ok</td>
+			<td align="center">ok(*2)</td>
+			<td align="center">ok</td>
+			<td align="center">NG</td>
+			<td align="center">ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<h3><b>3DS</b> (3D Studio) <font color="#ff0000" size="2">(only shareware version)</font></h3>
+		<p>There is no guarantee because whether it runs hasn't confirmed enough.</p>
+	<p>The format only keeps triangle faces.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Polygon</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV value</td>
+			<td>Vertex color</td>
+			<td>Metaball</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG(?)</td>
+			<td>-(?)</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<h3><b>ROK</b> (Rokkaku daioh)</h3>
+	<p>As the direction of faces is not defined in the format itself, it is not guaranteed and needs to be mended in 
+		most cases.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Polygon</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV value</td>
+			<td>Vertex color</td>
+			<td>Metaball</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<h3><b>COB</b> (trueSpace)</h3>
+	<p>The file saved in ASCII (text) format cannot be read.</p>
+	<p>As the hole opened by like Boolean cannot be handled, it will be closed. Please triangulate polygons on trueSpace 
+		beforehand in this case.</p>
+	<p>A polygon, if it exists, is automatically changed into a triangle or a quadrangle.(*1)</p>
+	<p>Metaballs with simple shape and polygonization are loaded as polygon objects.(*2)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Polygon</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV value</td>
+			<td>Vertex color</td>
+			<td>Metaball</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok(*1)</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>ok(*2)</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<h3><b>OBJ</b> (Wavefront)</h3>
+	<p>A polygon, if it exists, is automatically changed into a triangle or a quadrangle.(*1)</p>
+	<p>A material library(MTL file) is loaded automatically if it exists in the same folder of OBJ file. It can only keep 
+		the name of material assigned to faces if there isn't the MTL file.(*2)</p>
+	<p>If there exists data written in some lines, it sometimes fails to load them.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Polygon</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV value</td>
+			<td>Vertex color</td>
+			<td>Metaball</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok(*1)</td>
+			<td>NG</td>
+			<td>ok(*2)</td>
+			<td>not good(*2)</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<h3><b>RSD</b> (PlayStation) <font color="#ff0000" size="2">(only shareware versioin)</font></h3>
+	<p>There is no guarantee because whether it runs hasn't confirmed enough.</p>
+	<p>As it changes UV value from integral pixel designated to a ratio with decimal point designated, see resolution of 
+		TIM file (size) in the folder that the relative path to the RSD file is &quot;..\tim&quot;. But as it is used as 
+		mapping image in Texture folder, it is desirable to put the same files to both of them. If TIM file for referring 
+		size cannot be found, size of 64 is used.(*1)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Polygon</td>
+			<td>Smoothing</td>
+			<td>Material(Color)</td>
+			<td>Mapping</td>
+			<td>UV value</td>
+			<td>Vertex color</td>
+			<td>Metaball</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>*1(?)</td>
+			<td>*1(?)</td>
+			<td>ok(?)</td>
+			<td>-</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Material Panel</title>
+</head>
+
+<body>
+
+<h2>Material Panel</h2>
+<p>You can control color or mapping image on Material Panel.</p>
+<p>You can select ON or OFF with <b>menu [Panel] [Material Panel]</b>. When you move the mouse to the left edge of the main 
+window dragging the title, it will be joined to the main window. But you can make it independent if do this together with 
+pressing the Ctrl key.</p>
+<hr />
+<img height="238" src="image/matpanel.png" width="130" style="float:left"/>
+<div style="margin-left:138px">
+<p>A &quot;current material&quot; is shown in the highlight color. (&quot;mat1&quot; is the current material in the left 
+picture.)<br />
+When you click the name with pressing the Shift key, you can select vertices and faces to which the current material is 
+assigned and you can unselect with pressing the Ctrl key.<br />
+When you drag the name of the material to other material, you can mix materials. And if you do this with pressing the Shift 
+key, you can change the order of materials.<br />
+</p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader">New</td>
+		<td>It creates a new material.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Clone</td>
+		<td>It creates a cloned object of the current object. </td>
+	</tr>
+	<tr>
+		<td class="tableheader">Delete</td>
+		<td>It deletes the current object.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Property</td>
+		<td>It sets up the material.</td>
+	</tr>
+	<tr>
+		<td class="tableheader">Others</td>
+		<td>It deletes the unused material or loads and writes the file.
+			<dl>
+				<dt>Delete unused materials</dt>
+				<dd>It deletes materials which are not attached to any faces.</dd>
+				<dt>Delte all</dt>
+				<dd>It deletes all materials.</dd>
+				<dt>Load from file</dt>
+				<dd>It loads materials from a file such as a mqm(Metasequoia Material) file.</dd>
+				<dt>Save to file</dt>
+				<dd>It saves to a supported file.</dd>
+				<dt>Set as default</dt>
+				<dd>It registers parameters in the selected material as default values.</dd>
+				<dt>Select vertices/faces</dt>
+				<dd>It selects vertices and faces that the selected material is attatched.</dd>
+				<dt>Unselect vertices/faces</dt>
+				<dd>It deselects vertices and faces that the selected material is attatched.</dd>
+			</dl>
+		</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+<hr />
+<h3>Property</h3>
+<p><img border="0" height="489" src="image/matprop.png" width="640" /></p>
+<p>Notice:<br />
+All the mapping is correctly shown on the globe of the name, but bump mapping is not shown on 3D picture.</p>
+<div class="menu">
+	<h3>Name</h3>
+	<dl>
+		<dt>Name</dt>
+		<dd>It settles the name of the material and the shader also.</dd>
+		<dt>Shader</dt>
+		<dd>It selects how to show brightness towards light.&nbsp;
+		<table class="menutable">
+			<tr>
+				<td class="tableheader">Classic</td>
+				<td>It is the shader used before Ver2.3.</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Constant</td>
+				<td>The base color is applied.</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Lambert</td>
+				<td>It changes brightness by diffusion light and ambient light.</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Phong</td>
+				<td>Specular highlight is added to Lambert.</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Blinn</td>
+				<td>Specular highlight is applied as same as Phong, but degree of reflection is different.</td>
+			</tr>
+		</table>
+		</dd>
+		<dt>Vertex color</dt>
+		<dd>It uses the color selected [Vertex color] command as the base color for each vertex.</dd>
+		<dt>Double sided</dt>
+		<dd>Both front and back side of faces are shown in the 3D view.<br />
+		    Back side of faces are not always shown when the [Fr] button in the display options is pushed.</dd>
+	</dl>
+</div>
+<div class="menu">
+	<h3>Property</h3>
+	<dl>
+		<dt>Alpha</dt>
+		<dd>It selects how the object opaques. 0 stands for perfect transparency (nothing can be seen), and 1 stands for 
+		perfect opacity.<br />
+		<img border="0" height="96" hspace="16" src="image/col_alp.jpg" vspace="4" width="400" /></dd>
+		<dt>Diffuse</dt>
+		<dd>It selects to what degree it makes the lighted area lighter.<br />
+		<img border="0" height="96" hspace="16" src="image/col_dif.jpg" vspace="4" width="400" /></dd>
+		<dt>Emission</dt>
+		<dd>It selects to what degree it makes lighter irrespective of how the object is lighted.<br />
+		<img border="0" height="96" hspace="16" src="image/col_emi.jpg" vspace="4" width="400" /></dd>
+		<dt>Specular</dt>
+		<dd>It selects to what degree it makes the incident area of light lighter. It can be said in other words like speculum.<br />
+		<img border="0" height="96" hspace="16" src="image/col_spc.jpg" vspace="4" width="400" /></dd>
+		<dt>Specular power</dt>
+		<dd>It selects how wide or how small specular highlight is reflected.<br />
+		<img border="0" height="96" hspace="16" src="image/col_pow.jpg" vspace="4" width="400" /></dd>
+		<dt>Ambient</dt>
+		<dd>It selects to what degree it shows the color of the whole scene. It can be said in other words like environment 
+		light.<br />
+		The color of the ambient light is settled with <b>menu [View] [Document Information]</b>. This example shows 
+		the case when the ambient light is bright red.<br />
+		<img border="0" height="96" hspace="16" src="image/col_amb.jpg" vspace="4" width="400" /></dd>
+	</dl>
+</div>
+<div class="menu">
+	<h3>Mapping</h3>
+	<p>It specifies a file name of a mapping image. When the file name is specified by a relative path, a file is searched in following 
+	order of folders; </p>
+	<ol>
+		<li>The folder (or the lower folder) at the .mqo file.</li>
+		<li>The folder specified in the <a href="config.htm">Configumration</a>.</li>
+	</ol>
+	<p>Please input a file name with an <font color="#ff0000">extension</font> when you want to make a new file.</p>
+	<p>If you select pattern mapping and do not select alpha mapping, some file formats uses alpha channel of pattern mapping as 
+alpha mapping.</p>
+</div>
+
+</body>
+
+</html>

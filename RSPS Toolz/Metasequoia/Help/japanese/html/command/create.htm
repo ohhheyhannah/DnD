@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>面の生成</title>
+</head>
+
+<body>
+
+<h2>面の生成</h2>
+<p>頂点を配置して面を作成します。</p>
+<p>Ctrlキーを押しながら左クリックすると、最もカーソルと近い位置にある頂点に確実に共有することが出来ます。Ctrlを押さない状態では、環境設定の「反応許容距離」により、新しく頂点を作るか、既にある頂点と共有するかどうかが決まります。</p>
+<p>２点目以降でShiftキーを押しながらクリックすると、直前に配置した頂点に対して左右または上下方向にのみ移動した頂点が配置されます。</p>
+<img height="221" src="create.gif" style="float: left" width="106" />
+<div style="margin-left: 116px">
+	<div class="menu">
+		<h3>表面のみ</h3>
+		<p>視点から見て、表になる方向にのみ面を作成します。</p>
+	</div>
+	<div class="menu">
+		<h3>裏面のみ</h3>
+		<p>視点から見て、裏になる方向にのみ面を作成します。</p>
+	</div>
+	<div class="menu">
+		<h3>両面</h3>
+		<p>表裏両方に面を作成します。</p>
+		<p>材質の設定で両面表示をするのとは異なり、面は２つ作成されることになります。</p>
+	</div>
+	<div class="menu">
+		<h3>辺</h3>
+		<p>２点目を指定した時点で自動的にラインを生成します。</p>
+	</div>
+	<div class="menu">
+		<h3>三角</h3>
+		<p>３点目を指定した時点で自動的に三角形面を生成します。</p>
+	</div>
+	<div class="menu">
+		<h3>面</h3>
+		<p>４点指定すれば四角形面、３点目を指定してから右クリックすると三角形面を生成します。</p>
+	</div>
+	<div class="menu">
+		<h3>１つ戻す</h3>
+		<p>誤った位置に点を配置してしまった場合に、１つ前の状態に戻すことが出来ます。</p>
+	</div>
+</div>
+
+</body>
+
+</html>

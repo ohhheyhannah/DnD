@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Export a file</title>
+</head>
+
+<body>
+
+<h2>Export a file</h2>
+<p>Many kinds of files besides the original form can be exported with <a href="menu/saveas.htm">menu [File] [Save As]</a> 
+and can be rendered in other softwares. But as some of them are unfinished or do not meet the requirements of the format, 
+some of information are generally lost. In order not to be confused later to notice that information cannot be transferred 
+smoothly, I recommend you to check how it works beforehand.<br />
+</p>
+<center>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr>
+		<td bgcolor="#e8ffe8">ok</td>
+		<td bgcolor="#ffffe8">Mostly no problem</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">not good</td>
+		<td bgcolor="#ffffe8">Usable, but many parts are incomplete.</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">NG</td>
+		<td bgcolor="#ffffe8">Not available</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">-</td>
+		<td bgcolor="#ffffe8">The format does not support function.</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">?</td>
+		<td bgcolor="#ffffe8">Unconfirmed</td>
+	</tr>
+</table>
+</center>
+<p class="noindent">
+<a href="#MQO">MQO - Metasequoia</a><br />
+<a href="#SUF">SUF - DoGA CGA System</a><br />
+<a href="#DXF">DXF - AutoCAD</a><br />
+<a href="#LWO">LWO - LightWave3D</a><br />
+<a href="#COB">COB - trueSpace</a><br />
+<a href="#3DS">3DS - 3D Studio</a><br />
+<a href="#VRML">WRL - VRML</a><br />
+<a href="#X">X - Direct3D</a><br />
+<a href="#SCE">SCE - SoftF/X</a><br />
+<a href="#OBJ">OBJ - Wavefront</a><br />
+<a href="#RDS">RDS - RayDreamStudio</a><br />
+<a href="#RSD">RSD - PlayStation</a><br />
+<a href="#POV">POV - POV-Ray</a><br />
+<a href="#DAE">DAE - COLLADA</a><br />
+<a href="#RIB">RIB - RenderMan</a><br />
+<a href="#STL">STL - Stereolithography</a><br />
+</p>
+<div class="menu">
+	<a name="MQO"></a>
+	<h3><b>MQO</b> (Metasequoia)</h3>
+	<p>This is an original file format of Metasequoia, and supports all functions.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="SUF"></a>
+	<h3><b>SUF</b> (DoGA CGA System)</h3>
+	<p><img alt="Export SUF" height="359" src="image/export_suf.png" width="385" /></p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Attribute file</dt>
+		<dd>It exports ATR file describing attribute together with SUF file. File name is the same as that of SUF file with 
+		an extension of ATR.(*1)</dd>
+		<dt>Normal (Smooth)</dt>
+		<dd>It exports the direction of faces. If this option is unselected, polygons sometimes become too angular when 
+		loaded.</dd>
+		<dt>UV Mapping</dt>
+		<dd>It exports the coordinates where texture is attached. If this option is unselected, texture cannot sometimes 
+		be attached normally when loaded.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>*1</td>
+			<td>*1</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="DXF"></a>
+	<h3><b>DXF</b> (AutoCAD)</h3>
+	<p><img height="359" src="image/export_dxf.png" width="385" /></p>
+	<p>Plural objects are composed to one object.</p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Object's name is exported as a layer</dt>
+		<dd>If the receiver side of the software is available, It can export each object as an independent layer.</dd>
+		<dt>Triangle have four points</dt>
+		<dd>It saves a triangle as 3DFACE with four points. Some softwares cannot read it normally without making this option 
+		available.</dd>
+		<dt>Return code</dt>
+		<dd>If the appropriate return code for the operating system which importing software runs is not selected, it cannot 
+		sometimes be read normally.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="LWO"></a>
+	<h3><b>LWO</b> (LightWave3D)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p><img height="359" src="image/export_lwo.png" width="386" /></p>
+	<p>It is available with LWO2 form supported in LightWave3D 6.0 and later and LWOB form also supported in LightWave3D 
+	5.x.</p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Not freeze patches </dt>
+		<dd>When you want to use not the subdivision method of Metasequoia but SubPatch (MetaNURBS in LightWave3D 5.x), 
+		select 'ON' and apply 
+		subpatch in LightWave3D side.</dd>
+		<dt>LWO2</dt>
+		<dd>It is the form supported in LightWave3D 6.0 and later. This form can contain the UV coordinates, but a part 
+		of UV coordinates will be lost without LightWave3D 6.5 and later.
+		It can also be read in LightWave3D 5.x. with 'OFF' on this check, but plural objects can be composed to one object 
+		and the number of vertices and that of faces are limited to 65535.</dd>
+		<dt>Absolute file path</dt>
+		<dd>If you select 'ON' in this check, the file name of texture image is expanded to absolute path. If 
+		you check 'OFF', the file name assigned to the material is saved without change. (If originally selected as absolute path, it is 
+		saved without change.)</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td></td>
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td align="right">LWOB</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG(?)</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+		<tr bgcolor="#ffffe8">
+			<td align="right">LWO2</td>
+			<td align="center">ok</td>
+			<td align="center">ok</td>
+			<td align="center">NG</td>
+			<td align="center">ok</td>
+			<td align="center">ok</td>
+			<td align="center">ok</td>
+			<td align="center">ok</td>
+			<td align="center">NG</td>
+			<td align="center">ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="COB"></a>
+	<h3><b>COB</b> (trueSpace)</h3>
+	<p><img height="359" src="image/export_cob.png" width="387" /></p>
+	<p>Compatibility almost have no problem.</p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Texture/Bump map folder</dt>
+		<dd>It selects the folder of mapping image. By selecting the appropriate one, it becomes unnecessary to select again 
+		in trueSpace side.</dd>
+		<dt>Unit</dt>
+		<dd>It selects to which unit the unit system of Metasequoia is converted to.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="3DS"></a>
+	<h3><b>3DS</b> (3D Studio)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p><img height="359" src="image/export_3ds.png" width="385" /></p>
+	<p>It automatically changes to a triangle.(*1)</p>
+	<p>Export is discontinued in case the number of vertices or that of faces exceeds 65535.</p>
+	<p>When the object name exceeds 9 letters, the material name 15 letters, and the texture file name 12 letters (including 
+	an extension), it cannot normally be read in other softwares.<br />
+	This format is used in not 3ds Max but 3D Studio for MS-DOS. The other format is recommended to transfer data to 3ds 
+	Max because this format is very old, has many limitation and is less compatible with 3ds Max.</p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Export UV mapping</dt>
+		<dd>It selects whether to record UV mapping information.</dd>
+		<dt>Freeze patches</dt>
+		<dd>Select 'OFF' in this option in case you want to apply subdivision surface like NURMS in 3ds Max side.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>*1</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>ok?</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>NG</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="VRML"></a>
+	<h3><b>WRL</b> (VRML)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p>The exported form is VRML1.0.</p>
+	<p>The plural objects are composed to one object.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>NG</td>
+			<td>NG(?)</td>
+			<td>-</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="X"></a>
+	<h3><b>X</b> (Direct3D)</h3>
+	<p><img height="359" src="image/export_x.png" width="385" /></p>
+	<p>It is saved as the text form (ASCII) introduced in DirectX 2.</p>
+	<p>The plural objects are composed to one object.</p>
+	<p>It saves the file name only without pass (file name) in texture.(*1)</p>
+	<p>UV coordinates and vertex colors are assigned to each vertex in a .X file. If different UV coordinates or vertex 
+	colors are assigned to each vertex sharing the same face, the number of vertices to be exported will increase when 
+	you select 'ON' in the check of [UV mapping] or [Vertex color].</p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Normal vector</dt>
+		<dd>It selects whether to export normal vectors. If you reset in reading side of the program, the file size lessens 
+		when you unselect this option. </dd>
+		<dt>UV mapping</dt>
+		<dd>It selects whether to export UV mapping necessary for texture. If you don't use texture or reset mapping in 
+		the receiver side of the software, the file size lessens when you unselect this option. </dd>
+		<dt>Vertex color</dt>
+		<dd>It selects whether to export the vertex color. If you don't use the vertex color, the file size lessens when 
+		you unselect this option. </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>*1</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="SCE"></a>
+	<h3><b>SCE</b> (SoftF/X)</h3>
+	<p><img height="359" src="image/export_sce.png" width="385" /></p>
+	<p>The plural objects are composed to one object.</p>
+	<dl>
+		<dt>Export UV mapping</dt>
+		<dd>Make this option available in case you use glue mapping as the method of texture projection. If you don' use 
+		texture or you reset mapping in the program side, the file size lessens when you unselect this option.</dd>
+		<dt>Texture folder</dt>
+		<dd>It selects texture mapping image folder. By selecting the applicable one, it becomes unnecessary to select again 
+		in the SoftF/X side.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>ok?</td>
+			<td>ok?</td>
+			<td>-</td>
+			<td>-</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="OBJ"></a>
+	<h3><b>OBJ</b> (Wavefront)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p><img height="359" src="image/export_obj.png" width="385" /></p>
+	<p>The plural objects are composed to one object.</p>
+	<p>Material is saved as material library in the same extention.mtl file. Please notice the following points concerning 
+	texture when you export material library. </p>
+	<ul>
+		<li>It is necessary to put texture file in the same folder with OBJ file in the receiver side of the software because 
+		only the file name of texture without pass (file name) is exported. </li>
+		<li>The file name of texture must not contain blanks. </li>
+		<li>The receiver side of the software cannot sometimes read the file when the file name of texture includes Japanese.
+		</li>
+		<li>Please export after confirming which file forms can be read as texture in the receiver side of the software.
+		</li>
+	</ul>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>Grouping</dt>
+		<dd>Each object can be picked out as an independent group when the receiver side of the software is available. But,
+		<font color="#ff0000">the receiver side of the software cannot sometimes read the file when the file name of an 
+		object includes multi-bytes language (like Japanese).</font></dd>
+		<dt>Normal vector</dt>
+		<dd>It selects whether to export smooth information. In case you reset in the receiver side of the software, the 
+		file size lessens when you unselect this option.</dd>
+		<dt>UV mapping</dt>
+		<dd>It selects whether to export UV mapping necessary for texture. If you don't use texture or reset mapping in 
+		the receiver side of the software, the file size lessens when you unselect this option. </dd>
+		<dt>Invert V</dt>
+		<dd>As how to arrange values of V(vertical) direction in UV mapping becomes upside down, it becomes necessary to 
+		choose the applicable one.</dd>
+		<dt>Material library</dt>
+		<dd>It exports material library.mtl file containing material and texture information.</dd>
+		<dt>Freeze patches</dt>
+		<dd>Please select &quot;OFF&quot; in this option when you use Subdivision Surface in the receiver side of the software.</dd>
+		<dt>Return code</dt>
+		<dd>It cannot sometimes be read normally when you do not select the new line code of OS available for the receiver 
+		side of the software.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok(*1)</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="RDS"></a>
+	<h3><b>RDS</b> (RayDreamStudio)</h3>
+	<p>RayDreamStudio cannot read when one line is shared by more than three faces.</p>
+	<dl>
+		<dt>UV mapping</dt>
+		<dd>It selects whether to export UV mapping necessary for texture. If you don't use texture or reset mapping in 
+		RayDream side, the file size lessens when you unselect this option. </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="RSD"></a>
+	<h3><b>RSD</b> (PlayStation)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p>There is no guarantee because whether it runs hasn't confirmed enough.</p>
+	<p>Different from import, use the file referring to resolving power (size) in order to change UV value from ratio designate 
+	in a decimal point to a whole number pixel designate within Texture folder now loaded. Size is determined as 64 when 
+	TIM file is not loaded.(*1)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok(?)</td>
+			<td>ok</td>
+			<td>*1(?)</td>
+			<td>*1(?)</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="POV"></a>
+	<h3><b>POV</b> (POV-Ray)</h3>
+	<p><img height="359" src="image/export_pov.png" width="385" /></p>
+	<p>A four-sided face is changed to a triangular face.(*1)</p>
+	<dl>
+		<dt>Visible objects only</dt>
+		<dd>Only visible objects are exported. Invisible objects are ignored.</dd>
+		<dt>UV mapping (3.5)</dt>
+		<dd>It is available for UV mapping supported by POV-Ray Ver3.5 or later. But you sometimes need to amend later because 
+		material information cannot be exported correctly.</dd>
+		<dt>pov</dt>
+		<dd>Shape data is contained in to-be-exported .pov file. It is only available for small shape data.</dd>
+		<dt>inc</dt>
+		<dd>It exports .inc file separately from .pov file and contains shape data there. This is usually used because shape 
+		can be processed as one object.</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>*1</td>
+			<td>ok</td>
+			<td>not good</td>
+			<td>NG</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="DAE"></a>
+	<h3><b>DAE</b> (COLLADA 1.4)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p>A file based on the COLLADA 1.4 specification is exported.</p>
+	<p>Some external software cannot load the .dae file when same file name, object's name or material's name exists.</p>
+	<p>It is equipped as a plug-in and complete source code is included in Plug-in SDK.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="RIB"></a>
+	<h3><b>RIB</b> (RenderMan)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p>The export result is unfavorable. It can be only used for picking out the shape or like that.</p>
+	<p>It is equipped as a plug-in and complete source code is included in Plug-in SDK.</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>ok</td>
+			<td>NG(?)</td>
+			<td>NG</td>
+			<td>NG</td>
+			<td>NG(?)</td>
+			<td>-(?)</td>
+			<td>-(?)</td>
+			<td>not good</td>
+		</tr>
+	</table>
+</div>
+
+<div class="menu">
+	<a name="STL"></a>
+	<h3><a name="STL0"></a><b>STL</b> (Steleolithography)<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p>It outputs a binary format of a STL file.</p>
+	<p>A four-sided face is changed to a triangular face.(*1)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>Triangle</td>
+			<td>Quadrangle</td>
+			<td>Smoothing</td>
+			<td>Material (Color)</td>
+			<td>Mapping</td>
+			<td>UV</td>
+			<td>Vertex color</td>
+			<td>Blobs</td>
+			<td>Completeness</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>ok</td>
+			<td>*1</td>
+			<td>ok</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>-</td>
+			<td>ok</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

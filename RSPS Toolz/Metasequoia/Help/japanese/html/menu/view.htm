@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="Content-Language" content="ja" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>表示</title>
+</head>
+
+<body>
+
+<div class="header">
+	<a href="file.htm">ファイル</a> &nbsp; <a href="edit.htm">編集</a> &nbsp;
+	<a href="selattr.htm">選択部属性</a> &nbsp; <a href="select.htm">選択部処理</a> &nbsp;
+	<a href="object.htm">オブジェクト</a> &nbsp; <a href="view.htm">表示</a> &nbsp;
+	<a href="panel.htm">パネル</a> &nbsp; <a href="help.htm">ヘルプ</a>
+</div>
+<hr />
+<h2>表示</h2>
+<p>表示に関する設定</p>
+<div class="menu">
+	<h3>ドキュメント設定</h3>
+	<p>ドキュメントの情報を見たり、光源の設定を行います。</p>
+</div>
+<div class="menu">
+	<h3>視点の設定</h3>
+	<p>視点の方向を数値入力したり、初期状態に戻すことができます。</p>
+	<p>Shiftキーを押しながらこのメニューを選ぶと、ダイアログを表示することなく視点は初期化されます。</p>
+</div>
+<div class="menu">
+	<h3>グリッドの設定</h3>
+	<p>グリッドの間隔と適用される座標軸、平面メッシュの間隔を設定します。</p>
+</div>
+<div class="menu">
+	<h3>下絵の設定</h3>
+	<p>三面図にそれぞれ配置する画像ファイルを設定します。</p>
+	<p>下絵を配置する位置や大きさの設定は<a href="../command/bkimage.htm">［下絵］コマンド</a>で行います。</p>
+</div>
+<div class="menu">
+	<h3>色・光源を正確に表示</h3>
+	<p><b>［ドキュメント設定］</b>で行う光源による効果を正確に再現します。表示は若干遅くなります。</p>
+</div>
+<div class="menu">
+	<h3>テクスチャを表示</h3>
+	<p>模様マッピングを表示します。</p>
+</div>
+<div class="menu">
+	<h3>スムージング表示</h3>
+	<p>オブジェクトの面を擬似的に滑らかに見せます。表示は若干遅くなります。</p>
+	<p>現バージョンでは曲面（タイプ1/2）やメタボールに対してはポリゴン化しないと適用されません。</p>
+</div>
+<div class="menu">
+	<h3>現在のオブジェクトのみ面を表示</h3>
+	<p>現在のオブジェクト以外は面を表示しないようにします。</p>
+</div>
+<div class="menu">
+	<h3>現在のオブジェクト以外の頂点・辺</h3>
+	<p>現在のオブジェクト以外の頂点・辺をどのように表示するか指定します。</p>
+	<dl>
+		<dt><b>通常表示</b> </dt>
+		<dd>　オブジェクトに割り当てられた色そのままで表示します。 </dd>
+		<dt><b>淡色表示</b> </dt>
+		<dd>　環境設定の「淡色表示」の項目で設定した色で表示します。 </dd>
+		<dt><b>非表示</b> </dt>
+		<dd>　表示しません。 </dd>
+	</dl>
+</div>
+<div class="menu">
+	<h3>選択した頂点・辺のみ表示</h3>
+	<p>選択されている頂点・辺のみを表示して、選択されていない部分は表示しないようにします。</p>
+</div>
+<div class="menu">
+	<h3>頂点・辺は面を上書きして表示</h3>
+	<p>面との前後関係を無視して、常に頂点・辺が面に隠れないように表示します。</p>
+</div>
+
+</body>
+
+</html>

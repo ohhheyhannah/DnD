@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>選択部処理</title>
+</head>
+
+<body>
+
+<div class="header">
+	<a href="file.htm">ファイル</a> &nbsp; <a href="edit.htm">編集</a> &nbsp;
+	<a href="selattr.htm">選択部属性</a> &nbsp; <a href="select.htm">選択部処理</a> &nbsp;
+	<a href="object.htm">オブジェクト</a> &nbsp; <a href="view.htm">表示</a> &nbsp;
+	<a href="panel.htm">パネル</a> &nbsp; <a href="help.htm">ヘルプ</a>
+</div>
+<hr />
+<h2>選択部処理</h2>
+<p>現在選択されている頂点・辺・面に対して操作します</p>
+<div class="menu">
+	<h3>切り取り</h3>
+	<p>選択された頂点・辺・面をクリップボードへ記憶してから削除します。</p>
+</div>
+<div class="menu">
+	<h3>コピー</h3>
+	<p>選択された頂点・辺・面をクリップボードへ記憶します。</p>
+</div>
+<div class="menu">
+	<h3>ペースト</h3>
+	<p>選択された頂点・辺・面をクリップボードから呼び出し、新しいオブジェクト上に複製します。</p>
+</div>
+<div class="menu">
+	<h3>頂点・辺・面を削除</h3>
+	<p>選択された頂点・辺・面を削除します。</p>
+</div>
+<div class="menu">
+	<h3>面を反転</h3>
+	<p>選択された面を反対向きにします。</p>
+</div>
+<div class="menu">
+	<h3>面を両面化</h3>
+	<p>選択された面を表裏両方から見えるように２枚にします。</p>
+</div>
+<div class="menu">
+	<h3>面に現在の材質を指定</h3>
+	<p>選択された面に現在の材質を割り当てます。</p>
+</div>
+<div class="menu">
+	<h3>面を押し出す</h3>
+	<p>選択された面を押し出して浮き出るようにします。動作としては<a href="../command/extrude.htm">［押出］コマンド</a>と同じですが、押し出し量を数値設定できます。<br /></p>
+	<div class="menuimage">
+		<img alt="面を押し出す" height="87" src="pushface.gif" width="270" />
+	</div>
+</div>
+<div class="menu">
+	<h3>面の鏡像を作成</h3>
+	<p>選択された面に対して、YZ・ZX・XY平面のどれかを挟んで逆さまな面を作成します。頂点は既存のものとは共有しないので、必要であれば<b>［近接する頂点をくっつける］</b>をして下さい。</p>
+</div>
+<div class="menu">
+	<h3>面を新規オブジェクトへ</h3>
+	<p>新しくオブジェクトを作成して、選択された面を移動します。</p>
+</div>
+<div class="menu">
+	<h3>２つの三角形面を合成</h3>
+	<p>選択された２つの三角形面を合成して１つの四角形面にします。<a href="../command/wire.htm">［ワイヤー］コマンド</a>の<b>［辺消去で四角形化］</b>でも同様のことができます。</p>
+	<div class="menuimage">
+		<img alt="２つの三角形面を合成" height="67" src="quadric.gif" width="131" />
+	</div>
+</div>
+<div class="menu">
+	<h3>四角形面を三角形化</h3>
+	<p>選択された四角形面を分割してそれぞれ２つの三角形面にします。<a href="../command/wire.htm">［ワイヤー］コマンド</a>の<b>［四角形面を分割］</b>でも同様のことができます。<br /></p>
+	<div class="menuimage">
+		<img height="67" src="triangulate.gif" width="131" />
+	</div>
+</div>
+<div class="menu">
+	<h3>２頂点を対称にする</h3>
+	<p>選択された２頂点を左右対称な位置へ移動します。</p>
+</div>
+<div class="menu">
+	<h3>選択頂点をくっつける</h3>
+	<p>選択された２つ以上の頂点を１つの頂点として接合します。頂点は同一オブジェクト中のものである必要があります。<br /></p>
+	<div class="menuimage">
+		<img alt="" height="91" src="joinvert.gif" width="243" />
+	</div>
+</div>
+<div class="menu">
+	<h3>頂点の位置を揃える</h3>
+	<p>選択された頂点を、ＸＹＺの各軸方向に一列にそろえます。<br /></p>
+	<div class="menuimage">
+		<img alt="" height="131" src="align.gif" width="178" />
+	</div>
+</div>
+<div class="menu">
+	<h3>頂点を平ら・でこぼこにする</h3>
+	<p>凹凸のついた箇所に対し、凸凹を滑らかにするか、または強調するように頂点を移動します。</p>
+</div>
+<div class="menu">
+	<h3>角を丸める</h3>
+	<p>指定した辺を削って丸めた形状にします。数値を変えるごとにリアルタイムで形状が変化します。</p>
+	<div class="menuimage">
+		<img alt="" height="130" src="round.gif" width="276" />
+	</div>
+</div>
+<div class="menu">
+	<h3>Erase vertex color （プラグイン）</h3>
+	<p>選択された頂点に割り当てられた頂点カラーを消去します。</p>
+</div>
+<div class="menu">
+	<h3>Separate faces （プラグイン）</h3>
+	<p>選択された面を切り離し、他の面とは共有しない独立した頂点を保持するようにします。</p>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Command Panel</title>
+</head>
+
+<body>
+
+<h2>Command Panel</h2>
+<p>You can select various operations and settle options or view property in command panel.</p>
+<p>There are six groups. If all groups are not shown in the screen, you can scroll them with dragging the area which is not 
+included in any groups.</p>
+<hr />
+<div class="menu">
+<h3>System</h3>
+<img src="image/com_system.png" style="float:left" width="135" height="126"/>
+<div style="margin-left:145px">
+<p>It imports and exports files and settles object property or material property. This is as same as the one on <a href="menu/file.htm">menu</a>.</p>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>Edit</h3>
+<img src="image/com_edit.png" style="float:left" width="135" height="163"/>
+<div style="margin-left:145px">
+<p>It cancels operation, selects, and hides faces. This is 
+as same as the one on <a href="menu/file.htm">menu</a>.</p>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>Command</h3>
+<img src="image/com_command.png" style="float:left" width="135" height="148"/>
+<div style="margin-left:145px">
+<p>It selects operations done on 3D picture. <a href="command/command.htm">[Details]</a></p>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<a name="edit_option"></a>
+<h3>Edit option</h3><p>It selects options in commands like move, rotate, or scale.</p>
+<img height="106" src="image/com_editoption.png" width="135" style="float:left"/>
+<div style="margin-left:145px">
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td>X,Y,Z</td>
+		<td>It makes editing towards the direction of each axis possible.<br />
+		H,P,B (head, pitch, bank) can substitute in some commands.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>L</td>
+		<td>It edits on the local coordinates in the command like move.</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>W</td>
+		<td>It edits on the world coordinates in the command like move.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>S</td>
+		<td>It edits on the screen coordinates in the command like move.</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td style="height: 26px">Pt</td>
+		<td style="height: 26px">It can select vertices.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>Ln</td>
+		<td>It can select lines.</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>Fc</td>
+		<td>It can select faces.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>Rc</td>
+		<td>It can select with rectangle.<br />
+		It particularly becomes useful when you release [Fc] option.</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>Rp</td>
+		<td>It can select with rope (freehand).<br />
+		It particularly becomes useful when you release [Fc] option.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>CObj</td>
+		<td>It can only select the current object.</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>Grid</td>
+		<td>It enables makes a snap to the grid. Options of grid can be set in <b>menu [View] [Grid]</b>.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>Sym</td>
+		<td>It does the bilateral <a href="symmetry.htm">symmetric editing</a>.</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>View</h3><p>It settles the property of perspective view and three-sided view.</p>
+<img height="92" src="image/com_view.png" width="135" style="float:left"/>
+<div style="margin-left:145px">
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td nowrap="">Display</td>
+		<td>It can independently be settled the display mode in the perspective view and the three-sided view.<br />
+		You had better use Direct3D as long as there are not any problems in the view condition or the stability of behavior.
+		<dl>
+			<dt>Software (soft)</dt>
+			<dd>It draws pictures with rendering only by CPU which does not use video card functions.</dd>
+			<dt>Direct3D (D3D)</dt>
+			<dd>It draws pictures with Direct3D. It can show with high speed as it uses the hardware 
+				function of video cards.</dd>
+			<dt>OpenGL (GL)</dt>
+			<dd>It draws pictures with OpenGL. It can show with high speed as it uses the hardware 
+				function of video cards.</dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td nowrap="" style="height: 45px">YZ,ZX,XY</td>
+		<td style="height: 45px">It shows mesh of each plane on the perspective view.<br />
+		Size and intervals of mesh can be selected in [View] [Grid].</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td nowrap="">Axis</td>
+		<td>It shows the X/Y/Z axes of coordinates.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td nowrap="">Mesh</td>
+		<td>It shows mesh on three orthogonal views.</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+<div class="menu">
+<h3>Lighting</h3>
+<img height="171" src="image/com_light.png" width="134" style="float:left"/>
+<div style="margin-left:145px">
+<p>Click or drag on the sphere to adjust the direction of the light.</p>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr bgcolor="#e1ffff">
+		<td>+</td>
+		<td>It add a light. You can register up to three.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>-</td>
+		<td>It delete a light</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>&lt; &gt;</td>
+		<td>It switch the light to change the direction and the color.</td>
+	</tr>
+	<tr bgcolor="#ffffe1">
+		<td>Backlight</td>
+		<td>It reverses the direction the light front and back.</td>
+	</tr>
+	<tr bgcolor="#e1ffff">
+		<td>Color</td>
+		<td>It changes a color of the light.</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>材質パネル</title>
+</head>
+
+<body>
+
+<h2>材質パネル</h2>
+<p>色やマッピング画像の管理は材質パネル上で行います。</p>
+<p><b>メニュー［パネル］［材質パネル］</b>で表示・非表示を切り替えます。タイトル部分をドラッグしながらメインウインドウの左端へ持っていくと、メインウインドウにドッキングされますが、Ctrlキーを押しながらだと独立したままにすることができます。</p>
+<hr />
+<img height="237" src="image/matpanel.gif" width="128" style="float:left"/>
+<div style="margin-left:138px">
+<p>「現在の材質」は色が反転して表示されます。（左の場合"mat1"が現在の材質）</p>
+<p>名前の部分をShiftキーを押しながらクリックするとその材質が割り当てられた頂点・面を選択、Ctrlキーだと非選択を行います。</p>
+<p>材質名をドラッグして他の材質へ重ねると、材質の合成が出来ます。またShiftを押しながらだと、材質の順序を入れ替えます。</p>
+<table class="menutable">
+	<tr>
+		<td class="tableheader">新規</td>
+		<td>新規材質を作成します。<br>Ctrlキーを押しながらボタンをクリックすると、現在選択している材質のすぐ下に新規材質が作成されます。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">複製</td>
+		<td>現在の材質を複製した材質を作成します。<br>Ctrlキーを押しながらボタンをクリックすると、現在選択している材質のすぐ下に新規材質が複製されます。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">削除</td>
+		<td>現在の材質を削除します。現在の材質が割り当てられている面は未着色面になります。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">設定</td>
+		<td>材質の設定を行います。</td>
+	</tr>
+	<tr>
+		<td class="tableheader">他</td>
+		<td>未使用材質の削除や、ファイルの読み書きなどを行います。
+			<dl>
+				<dt>未使用の材質を削除</dt>
+				<dd>どの面にも割り当てられていない材質を削除します。</dd>
+				<dt>すべての材質を削除</dt>
+				<dd>材質をすべて削除します。</dd>
+				<dt>ファイルから読み込み</dt>
+				<dd>mqm(メタセコイア マテリアル)ファイルなど対応しているファイルから材質を読み込みます。</dd>
+				<dt>ファイルへ保存</dt>
+				<dd>対応している形式のファイルに材質を出力します。</dd>
+				<dt>標準材質として設定</dt>
+				<dd>現在選択している材質の各パラメータを、新規作成される材質の初期値として登録します。</dd>
+				<dt>頂点・面を選択</dt>
+				<dd>現在選択している材質が割り当てられている頂点・面を選択します。</dd>
+				<dt>頂点・面を非選択</dt>
+				<dd>現在選択している材質が割り当てられている頂点・面の選択を解除します。</dd>
+			</dl>
+		</td>
+	</tr>
+</table>
+</div>
+<div style="clear:both; visibility:hidden"></div>
+<hr />
+<h3>材質設定</h3>
+<p><img height="476" src="image/matprop.gif" width="629" /></p>
+<p>注意：<br />
+　名前の部分の球にはすべてのマッピングが正しく表示されますが、３Ｄ画面上には凸凹マッピングは表示されません。</p>
+<p><br />
+</p>
+<div class="menu">
+	<h3>名前</h3>
+	<dl>
+		<dt>名前</dt>
+		<dd>材質名の他、シェーダの指定も行います。</dd>
+		<dt>シェーダ</dt>
+		<dd>光に対する明るさの付き方を指定します。
+		<table class="menutable">
+			<tr>
+				<td class="tableheader">Classic</td>
+				<td>Ver2.3より前のバージョンで使用されていたシェーダです。</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Constant</td>
+				<td>基本色がそのまま適用されます。</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Lambert</td>
+				<td>拡散光と周囲光により明るさが変化します。</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Phong</td>
+				<td>Lambertに反射光が加わったものです。</td>
+			</tr>
+			<tr>
+				<td class="tableheader">Blinn</td>
+				<td>Phongと同様に反射光が適用されますが、反射の度合いが異なります。</td>
+			</tr>
+		</table>
+		</dd>
+		<dt>頂点カラー</dt>
+		<dd>頂点ごとに［頂点カラー］コマンドで指定した色を基本色として扱います。</dd>
+		<dt>両面表示</dt>
+		<dd>表裏関係なく3D画面上に面が表示されるようになります。<br />
+		    両面表示をONにしても、表示オプションの[前]がONの場合は裏面は表示されません。</dd>
+	</dl>
+</div>
+<div class="menu">
+	<h3>諸設定</h3>
+	<dl>
+		<dt>不透明度</dt>
+		<dd>どれだけ透き通らないかを指定します。0で完全な透明（何も見えない）、1で完全な不透明になります。<br />
+		<img border="0" height="96" hspace="16" src="image/col_alp.jpg" vspace="4" width="400" /></dd>
+		<dt>拡散光</dt>
+		<dd>光の当たる部分をどれだけ明るくするかを指定します。<br />
+		<img border="0" height="96" hspace="16" src="image/col_dif.jpg" vspace="4" width="400" /></dd>
+		<dt>自己照明</dt>
+		<dd>照明の当たり具合に関係なくどれだけ明るくするかを指定します。<br />
+		<img border="0" height="96" hspace="16" src="image/col_emi.jpg" vspace="4" width="400" /></dd>
+		<dt>反射光</dt>
+		<dd>光が入射する部分をどれだけ明るくするかを指定します。輝度、スペキュラとも言います。<br />
+		<img border="0" height="96" hspace="16" src="image/col_spc.jpg" vspace="4" width="400" /></dd>
+		<dt>反射の強さ</dt>
+		<dd>反射光がどれだけ広くまたは狭く反射されるかを指定します。<br />
+		<img border="0" height="96" hspace="16" src="image/col_pow.jpg" vspace="4" width="400" /></dd>
+		<dt>周囲光</dt>
+		<dd>シーン全体の色をどれだけ反映するかを指定します。環境光、アンビエントとも言います。<br />
+		　周囲光の色の設定は<b>メニュー［表示］［ドキュメント設定］</b>で行います。この例は周囲光が真っ赤であるときのものです。<br />
+		<img border="0" height="96" hspace="16" src="image/col_amb.jpg" vspace="4" width="400" /></dd>
+	</dl>
+</div>
+<div class="menu">
+	<h3>マッピング</h3>
+	<p>マッピング画像のファイルを指定します。ファイル名が相対パスで指定されている場合、以下の順序でファイルが探索されます。</p>
+	<ol>
+		<li>mqoファイルと同じ（またはその下にある）フォルダ</li>
+		<li><a href="config.htm">環境設定</a>で指定されているフォルダ</li>
+	</ol>
+	<p>新規ファイルを作成する場合は、<font color="#ff0000">拡張子付き</font>でファイル名を入力します。</p>
+	<p>模様マッピングを設定して透明マッピングを指定しない場合、ファイル形式によっては模様マッピングのアルファチャネルが透明マッピングとして使用されます。</p>
+	<p>凸凹マッピングには高さを明暗で指定したバンプマップ、または法線方向をRGBで表示した法線マップを指定できます。指定されたファイルが8bitのグレースケール画像の場合はバンプマップとして、それ以外の場合は法線マップとして扱われます。</p>
+</div>
+
+</body>
+
+</html>

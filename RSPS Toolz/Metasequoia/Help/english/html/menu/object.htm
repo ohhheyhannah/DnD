@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Object</title>
+</head>
+
+<body>
+
+<div class="header">
+	<a href="file.htm">File</a> &nbsp; <a href="edit.htm">Edit</a> &nbsp;
+	<a href="selattr.htm">Attribute</a> &nbsp; <a href="select.htm">Selected</a> &nbsp;
+	<a href="object.htm">Object</a> &nbsp; <a href="view.htm">View</a> &nbsp;
+	<a href="panel.htm">Panel</a> &nbsp; <a href="help.htm">Help</a> </div>
+<hr />
+<h2>Object</h2>
+<p>It works for the currently selected 
+object.(You can select the current object on <a href="../objpanel.htm">Object 
+Panel</a>.)<br />
+<br />
+</p>
+<div class="menu">
+	<h3>Create - Landscape<font color="#ff0000" size="2"> (only shareware 
+	version)</font></h3>
+	<p>It creates the rough mesh of landscape from an image file or fractal image.</p>
+	<div class="menuimage">
+		<img height="164" src="landscape.gif" width="239" />
+	</div>
+</div>
+<div class="menu">
+	<h3>Create - Create text (Plug-in)<font color="#ff0000" size="2">(only 
+	shareware version)</font></h3>
+	<p>It creates strings using TrueType font.</p>
+</div>
+<div class="menu">
+	<h3>Freeze</h3>
+	<p>It entirely polygonizes the current object on which the patch or mirror is applied.</p>
+	<div class="menuimage">
+		<img height="161" src="../image/freeze.png" width="324" />
+	</div>
+</div>
+<div class="menu">
+	<h3>Shift the position</h3>
+	<p>It arranges the current object at the position which is designated by the 
+	direction of each axis.</p>
+</div>
+<div class="menu">
+	<h3>Join closed vertices</h3>
+	<p>It joins the closed vertices in the same object.<br />
+	It is mainly used to join vertices which seem to be close by appearance but 
+	they really are separated.</p>
+</div>
+<div class="menu">
+	<h3>Reduce polygons</h3>
+	<p>It reduces the vertices of the current object without changing appearance.</p>
+	<p>In this version, the result is not so nice and UV coordination is not kept. 
+	All faces become triangles.</p>
+	<p>Though the using availability is limited because the accuracy is not high, 
+	you had better reduce the number of vertices by 10 to 20 percent for finer 
+	finish after the polygonization of blobs.</p>
+	<div class="menuimage">
+		<img height="139" src="reduction.png" width="340" />
+	</div>
+</div>
+<div class="menu">
+	<h3>Mesh smoothing<font color="#ff0000" size="2"> (only shareware version)</font></h3>
+	<p>It smoothes faces by increasing the number of faces. </p>
+	<p>It sometimes becomes roughly as more improvement is needed in this version.</p>
+</div>
+<div class="menu">
+	<h3>Align faces</h3>
+	<p>It aligns the direction of faces of the current object. But, whether they 
+	turn to the inside or the outside is not fixed, you may need to use <b>[Invert]</b>. 
+	And you cannot unify them well without closing all faces to one perfectly.</p>
+	<p>It is especially effective when a DXF or ROK file is read.</p>
+</div>
+<div class="menu">
+	<h3>Delete overlapped faces</h3>
+	<p>It deletes one of the faces in case two faces are located on the same 
+	position in the current object.</p>
+</div>
+<div class="menu">
+	<h3>Unify faces</h3>
+	<p>It deletes one side of faces which have both front and back sides in the 
+	current object. As which side will be deleted is unknown, you may need to 
+	use <b>[Align faces]</b>.</p>
+	<p>Nothing is done with a double-sided face by the material property because there is one face only.</p>
+</div>
+<div class="menu">
+	<h3>Attach current material to non-material faces</h3>
+	<p>It attaches the current material to the non-material faces in the current 
+	object.</p>
+</div>
+<div class="menu">
+	<h3>Wired (Plug-in) <font color="#ff0000" size="2">(only shareware version)</font></h3>
+	<p>It makes all edges of faces to lines and deletes faces.</p>
+	<p>This may not be practical yet as this is only sample Plug-in. </p>
+</div>
+<div class="menu">
+	<h3>Delete lines (Plug-in) <font color="#ff0000" size="2">(only shareware version)</font></h3>
+	<p>It deletes all lines in the object.</p>
+</div>
+<div class="menu">
+	<h3>Boolean (Plug-in) <font color="#ff0000" size="2">(only shareware version)</font></h3>
+	<p>It picks out or makes up the only overlapping part of two objects using 
+	boolean operation. Please refer to Help in Plug-in for further details.
+	</p>
+	<p>This Plug-in is developed by <a href="http://bomber.xps.jp/" target="_blank">
+	Mr.Bomber</a>, and thanks his kindness.</p>
+</div>
+<div class="menu">
+	<h3>Anguwrap (Plug-in) <font color="#ff0000" size="2">(only shareware version)</font></h3>
+	<p>It generates an unwrapped UV mapping so that the selected lines become borders.</p>
+	<p>UV unwrapping is applied for all faces in the current object. And UV unwrapping will be failed when no line is selected.</p>
+	<div class="menuimage">
+		<img src="anguwrap.png" />
+	</div>
+</div>
+
+</body>
+
+</html>

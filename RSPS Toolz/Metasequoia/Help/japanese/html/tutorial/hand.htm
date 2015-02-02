@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>手を作ってみよう</title>
+</head>
+
+<body>
+
+<h2>手を作ってみよう</h2>
+<p>［面の生成］コマンドを一切使わず、直方体を基に<b>［面を押し出す］</b>と<b>［ナイフで面を切断］</b>により右手を作っていく方法を紹介します。手なら自分のを見ればいいので資料もいりませんし、見慣れているのでモデリングしやすいですね。<br />
+</p>
+<div class="menu">
+	<h3>1. 曲面の設定</h3>
+	<div style="float: right">
+		<img height="108" src="hand1.gif" width="185" /> </div>
+	<p><b>メニュー［パネル］［オブジェクトパネル］</b>を開き、<b>［設定］ボタン</b>を押して、曲面制御を「曲面タイプ２」にします。（「Catmull-Clark」でも構いません）</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+<div class="menu">
+	<h3><b><font size="+1">2. 手のひらの作成</font></b></h3>
+	<div style="float: right">
+		<img height="194" src="hand2.gif" width="272" /> </div>
+	<p>まず始めに、手のひらとなる部分を作成します。</p>
+	<p><b>[基本図形］</b>コマンドで、［詳細設定］ボタンを押してダイアログを開き、直方体の分割数をX=4、Y=1、Z=1、Y方向のサイズを50くらいにして、直方体を作成します。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+<div class="menu">
+	<h3>3. Create four fingers</h3>
+	<div style="float: right">
+		<img height="149" src="hand3_1.gif" width="223" /> </div>
+	<p>まず小指を作ります。</p>
+	<p>図のように面を選択して、<b>メニュー［選択部処理］［面を押し出す］</b>で押し出し量を150程度にします。（<b>［押出］コマンド</b>でも同様のことが出来ます）</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+	<div style="float: right">
+		<img height="179" src="hand3_2.gif" width="250" /> </div>
+	<p>さらに薬指・中指・人差し指についても同様に行います。押し出し量をそれぞれ180、200、180くらいにすると、図のようになるはずです。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+	<div style="float: right">
+		<img height="194" src="hand3_3.gif" width="188" /> </div>
+	<p><b>［移動］コマンド</b>で指先の面を少し移動して４本の指をそれぞれ開いておきます。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+<div class="menu">
+	<h3><b><font size="+1">4. 指の関節の作成</font></b></h3>
+	<div style="float: right">
+		<img height="191" src="hand4.gif" width="209" /> </div>
+	<p>上面図で表示して、<b>［ナイフ］コマンド</b>の<b>［ナイフで面を切断］</b>で切れ目を入れていきます。この時、ワイヤーが他の指に重ならないように気を付けて下さい。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+<div class="menu">
+	<h3><b><font size="+1">5. 親指の作成</font></b></h3>
+	<div style="float: right">
+		<img height="195" src="hand5_1.gif" width="177" /> </div>
+	<p>親指を作成しますが、いきなり手のひらの横の部分を押し出すと付け根が大きくなってしまうので、手のひらを前後に２つに分けておく必要があります。</p>
+	<p><b>［ナイフ］コマンド</b>の<b>［ナイフで面を切断］</b>で、図の位置に切り込みを入れます。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+	<div style="float: right">
+		<img height="170" src="hand5_2.gif" width="213" /> </div>
+	<p>図のように面を選択して、<b>メニュー［選択部処理］［面を押し出す］</b>で面を押し出して、付け根の部分を作ります。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+	<div style="float: right">
+		<img height="171" src="hand5_3.gif" width="207" /> </div>
+	<p>図のように、押し出して出来た面を移動してから、さらに面を選択して押し出して親指を作ります。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+	<div style="float: right">
+		<img height="207" src="hand5_4.gif" width="260" /> </div>
+	<p><b>［ナイフ］コマンド</b>の<b>［ナイフで面を切断］</b>で指に関節を入れて、図のような感じにします。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+<div class="menu">
+	<h3><b><font size="+1">6. 手首の作成</font></b></h3>
+	<div style="float: right">
+		<img height="133" src="hand6_1.gif" width="209" /> </div>
+	<p>今度は手首を作ります。</p>
+	<p>まず、図のように後ろ側の面４つを選択し、<b>メニュー［選択部処理］［面を押し出す］</b>で面を押し出します。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+	<div style="float: right">
+		<img height="153" src="hand6_2.gif" width="231" /> </div>
+	<p>後ろ側の４つの面は必要ないので、<b>［削除］コマンド</b>または面を選択してから<b>メニュー［選択部処理］［頂点・辺・面を削除］</b>で削除します。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+<div class="menu">
+	<h3>7. <b><font size="+1">仕上げ</font></b></h3>
+	<div style="float: right">
+		<img height="180" src="hand7.gif" width="218" /> </div>
+	<p>指の付け根の部分に<b>［押出］コマンド</b>の<b>［ベベル］</b>で骨張った感じを出したり、指先を少し細くしたり、手首をやや丸くして、形を整えていきます。</p>
+	<p>また、<b>メニュー［パネル］［材質パネル］</b>で材質パネルを開き、<b>［新規］ボタン</b>で２つ材質を作り、<b>［設定］ボタン</b>で色を設定します。そして、<b>［材質］コマンド</b>で面に割り当てます。</p>
+	<p>最後に、<b>メニュー［オブジェクト］［曲面・ミラーのフリーズ］</b>で曲面をポリゴンへ変換し、<b>メニュー［表示］［スムージング表示］</b>をチェックすると、図のように非常に綺麗な感じになります。</p>
+	<p>頂点数1781、面数1760。フリーズ前のものがhand.mqoとして添付されています。</p>
+	<div style="clear: both; visibility: hidden">
+	</div>
+</div>
+
+</body>
+
+</html>

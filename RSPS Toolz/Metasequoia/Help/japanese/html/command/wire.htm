@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>ワイヤー</title>
+</head>
+
+<body>
+
+<h2>ワイヤー</h2>
+<p>ワイヤーコマンドは、オプションによりそれぞれ異なる動作を行います。いずれの動作もドラッグまたはシングルクリックだけで済みます。</p>
+<img height="177" src="wire.gif" style="float: left;" width="86" />
+<div style="margin-left: 96px">
+	<p>上から順に<br />
+	<br />
+	<a href="#triangle">［三角形面を張る］</a><br />
+	<a href="#divide">［四角形面を分割］</a><br />
+	<a href="#insert">［辺の間に頂点挿入］</a><br />
+	<a href="#swap">［２三角形を交換］</a><br />
+	<a href="#quadrangle">［辺消去で四角形化］</a><br />
+	</p>
+</div>
+<div style="clear: both; visibility: hidden;">
+</div>
+<hr />
+<div class="menu">
+	<a name="triangle"></a>
+	<h3>三角形面を張る</h3>
+	<p>片方の頂点を共有している２辺の、それぞれのもう<font color="#ff0000">片方の頂点を結ぶようにドラッグ</font>することにより、新たな三角形面を作成します。または、<font color="#ff0000">既存の辺をドラッグ</font>して新しく三角形面を作成します。</p>
+	<div class="menuimage">
+		<img alt="" height="132" src="wire1.gif" width="162" />
+	</div>
+</div>
+<div class="menu">
+	<a name="divide"></a>
+	<h3>四角形面を分割</h3>
+	<p>四角形面の<font color="#ff0000">向かい合う頂点を結ぶようにドラッグ</font>することにより、２つの三角形面に分割します。</p>
+	<div class="menuimage">
+		<img alt="" height="132" src="wire2.gif" width="162" />
+	</div>
+</div>
+<div class="menu">
+	<a name="insert"></a>
+	<h3>辺の間に頂点挿入</h3>
+	<p><font color="#ff0000">既存の辺をクリック</font>することにより、新しく複数の三角形面を作成します。</p>
+	<p>Shiftキーを押しながら辺をクリックすると、頂点はその辺の真ん中に生成されます。Ctrlキーを押しながら辺をクリックすると、頂点はその辺に沿った位置に生成されます。</p>
+	<div class="menuimage">
+		<img height="132" src="wire3.gif" width="162" />
+	</div>
+</div>
+<div class="menu">
+	<a name="swap"></a>
+	<h3>２三角形を交換</h3>
+	<p><font color="#ff0000">２つの三角形が共有している辺をクリック</font>することにより、辺を入れ替えます。</p>
+	<div class="menuimage">
+		<img height="120" src="wire7.gif" width="336" />
+	</div>
+</div>
+<div class="menu">
+	<a name="quadrangle"></a>
+	<h3>辺消去で四角形化</h3>
+	<p><font color="#ff0000">２つの三角形が共有している辺をクリック</font>することにより、その辺を消去して、新たに四角形面を作成します。</p>
+	<div class="menuimage">
+		<img height="126" src="wire8.gif" width="297" />
+	</div>
+</div>
+
+</body>
+
+</html>

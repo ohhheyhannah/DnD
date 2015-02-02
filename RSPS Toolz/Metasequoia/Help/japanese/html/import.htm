@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>ファイル入力</title>
+</head>
+
+<body>
+
+<h2>ファイル入力</h2>
+<p>Metasequoiaでは、独自形式以外にも多くの種類のファイルの入力ができるので、他のソフトで作ったデータを読み込むことが出来ます。しかし、ソフトのバージョンアップに伴って機能が拡張されたりするため、すべての情報を完全にやりとりできるわけではありません。うまくやりとり出来ない場合にはご報告下さい。<br />
+</p>
+<center>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr>
+		<td bgcolor="#e8ffe8" style="height: 23px">○</td>
+		<td bgcolor="#ffffe8" style="height: 23px">ほぼ問題なし</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">△</td>
+		<td bgcolor="#ffffe8">一応出来るが不完全な部分も多い</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">×</td>
+		<td bgcolor="#ffffe8">非対応</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">－</td>
+		<td bgcolor="#ffffe8">フォーマット自体が機能をサポートしていない</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">？</td>
+		<td bgcolor="#ffffe8">未確認</td>
+	</tr>
+</table>
+</center>
+<div class="menu">
+	<h3><b>MQO</b> (Metasequoia)</h3>
+	<p>Metasequoiaの独自形式で、すべての機能に対応しています。</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>－</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>◎</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>SUF</b> (DoGA CGA System)</h3>
+	<p>DOGA-LシリーズやPolyEditなどで使用される形式です。</p>
+	<p>おおむねすべての機能に対応しています。 </p>
+	<p>多角形面が存在する場合は自動的に三角形面または四角形面に変換されます。(*1)<br />
+		　アトリビュート（材質）は拡張子がATRの同名ファイルを処理します。(*2)</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>○(*1)</td>
+				<td>×</td>
+				<td>○(*2)</td>
+				<td>○(*2)</td>
+				<td>○</td>
+				<td>－</td>
+				<td>－</td>
+				<td>○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>DXF</b> (AutoCAD)</h3>
+	<p>"3DFACE"で記述されたもののみ読み込むことが出来ます。DXFファイルを読み込むことができない場合、出力側ソフトがどの情報を出力しているか確認してください。</p>
+	<p>本来はCG向けでなくCAD向けのフォーマットであるために、形状以外のデータを持つことが出来ないので、あまりこの形式でのやりとりはお奨めできません。</p>
+	<p>フォーマットには面の方向というものがないため、面の方向は保証されず、修正が必要になる場合があります。</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>－</td>
+				<td>－</td>
+				<td>×</td>
+				<td>－</td>
+				<td>－</td>
+				<td>－</td>
+				<td>－</td>
+				<td>△</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>LWO</b> (LightWave3D)</h3>
+	<p>LightWave3D 5.6までのLWOB形式、およびLightWave3D 6.0以降のLWO2形式に対応しています。LightWave3D 5.xのレイヤー付き形式で保存されたファイルは読み込めません。</p>
+	<p>多角形面が存在する場合は自動的に三角形面または四角形面に変換されます。(*1)</p>
+	<p>ひとつの面にマルチテクスチャによる複数UVが割り当てられている場合、そのうちの一つしか読み込まれません。(*2)</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td></td>
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td align="right">LWOB</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○(*1)</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○(?)</td>
+				<td>－</td>
+				<td>－</td>
+				<td>－(?)</td>
+				<td>○</td>
+			</tr>
+			<tr bgcolor="#ffffe8">
+				<td align="right">LWO2</td>
+				<td align="center">○</td>
+				<td align="center">○</td>
+				<td align="center">○(*1)</td>
+				<td align="center">×</td>
+				<td align="center">○</td>
+				<td align="center">○</td>
+				<td align="center">○(*2)</td>
+				<td align="center">○</td>
+				<td align="center">×</td>
+				<td align="center">○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>3DS</b> (3D Studio) <font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>3D Studio (3ds Maxの前身となるDOS時代のソフト）で使用されていた形式です。</p>
+	<p>古いフォーマットであるため、面は三角形しか持てず、頂点・面が最大65535までしか扱えないなど制約が多いので、現在では使用をお奨めしません。</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>－</td>
+				<td>－</td>
+				<td>×</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>×(?)</td>
+				<td>－(?)</td>
+				<td>○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>ROK</b> (六角大王)</h3>
+	<p>フォーマット自体に面の方向が定義されていないため、面の方向は保証されず、大抵の場合は修正が必要になります。</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>－</td>
+				<td>－</td>
+				<td>○</td>
+				<td>－</td>
+				<td>－</td>
+				<td>－</td>
+				<td>－</td>
+				<td>○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>COB</b> (trueSpace)</h3>
+	<p>アスキー（テキスト）形式で保存されたファイルは読み込めません。</p>
+	<p>ブーリアンなどで空けられた穴は処理できないため、穴が塞がってしまいます。この場合はあらかじめtrueSpace上で三角形分割処理をして下さい。</p>
+	<p>多角形面が存在する場合は自動的に三角形面または四角形面に変換されます。(*1)</p>
+	<p>メタボールは、簡易形状とポリゴン化されたものがポリゴンオブジェクトとして読み込まれます。(*2)</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>○(*1)</td>
+				<td>×</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>×</td>
+				<td>○(*2)</td>
+				<td>○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>OBJ</b> (Wavefront)</h3>
+	<p>多角形面が存在する場合は自動的に三角形面または四角形面に変換されます。(*1)</p>
+	<p>OBJファイルと同じフォルダにマテリアルライブラリ（MTLファイル）がある場合は、自動的に読み込まれます。MTLファイルがなくても面に割り当てられたマテリアル名のみは維持します。(*2)</p>
+	<p>複数行にわたって記述されたデータが存在すると読み込みに失敗することがあります。</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>○(*1)</td>
+				<td>×</td>
+				<td>○(*2)</td>
+				<td>△(*2)</td>
+				<td>○</td>
+				<td>－</td>
+				<td>－</td>
+				<td>○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<h3><b>RSD</b> (PlayStation) <font color="#ff0000" size="2">（シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>動作確認は不十分なので、あまり保証はできません。</p>
+	<p>UV値を整数ピクセル指定から小数点での比率指定に変換するため、読み込んだRSDファイルのあるフォルダからみて"..\tim"フォルダにあるTIMファイルの解像度(大きさ)を参照する。しかし、マッピング画像として用いられるのはTextureフォルダ内なので、両方に同じファイルを置くのが望ましい。また、大きさの参照用のTIMファイルが見つからない場合は大きさは64として処理される。(*1)</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>多角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>－</td>
+				<td>×</td>
+				<td>○</td>
+				<td>*1(?)</td>
+				<td>*1(?)</td>
+				<td>○(?)</td>
+				<td>－</td>
+				<td>△</td>
+			</tr>
+		</table>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>Configuration</title>
+</head>
+
+<body>
+
+<h2>Configuration</h2>
+<p>The configuration dialog is shown by the <b>menu 'File' - 'Configuration'.</b></p>
+<a name="screen"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>Screen</b></font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Layout</td>
+		<td>
+		<dl>
+			<dt><b>Language</b> </dt>
+			<dd>It selects a language. You can select either Japanese or English. </dd>
+			<dt><b>Style</b> </dt>
+			<dd>It changes position and size of buttons on a command panel to the selected style in 'style' file. The default 
+			layout is set when nothing is selected. </dd>
+			<dt><b>Font</b></dt>
+			<dd>It selects a font used by buttons and so on. The layout may be broken when you select a font except the 
+			default font.</dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Command panel</td>
+		<td>
+		<dl>
+			<dt><b>Alignment</b> </dt>
+			<dd>It selects the alignment of a <a href="command.htm">command panel</a>. </dd>
+			<dt><b>Show a side scroll bar</b> </dt>
+			<dd>It shows a fine scroll bar by a command panel and scrolls when a command panel cannot fit lengthwise in 
+			the screen. (Even if it is not shown, scroll can be done if you drag the corner of a command panel.) </dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Status bar</td>
+		<td>It selects the alignment of a <a href="interface.htm">status bar</a>. Status bar shows how it works according to 
+		the situation.</td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Panel</td>
+		<td>
+		<dl>
+			<dt><b>Show in main window</b> </dt>
+			<dd>It selects whether to show object and material panel in main window. </dd>
+			<dt><b>Save the position and size of main window</b> </dt>
+			<dd>It selects to record the position and the size of main window when you end Metasequoia and selects to return 
+			to the same status when you start up next time. </dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="view"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>Display</b></font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Color</td>
+		<td>It selects the color of each part.<br />
+		[Object] is used for the default color of newly made objects afterwards and it has nothing to do with existing 
+		objects. </td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Point</td>
+		<td>It sets the size of the vertices n the view.</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Line</td>
+		<td>
+		<dl>
+			<dt><b>Back line opacity</b></dt>
+			<dd>It specifys the line opacity that shows in the back of face.</dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="preview"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>Preview</b></font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Direct3D</td>
+		<td>
+		<dl>
+			<dt><b>Enable to use Direct3D</b> </dt>
+			<dd>It selects whether to use Direct3D.<br />
+			If you don't use Direct3D, PC starts a little faster when you unselect this.<br />
+			<br />
+			</dd>
+			<dt><b>Show texture smoothly</b> </dt>
+			<dd>&nbsp;When the texture is shown 
+			in quite large size because of zoom of the view point, it makes the rough shape inconspicuos. It sometimes becomes 
+			dim.<br />
+			<div class="menuimage"><img height="123" src="image/tex_bi.jpg" width="214" /></div>
+			</dd>
+			<dt><b>Max resolution of texture</b> </dt>
+			<dd>When the mapping image 
+			is larger than resolution, it automatically scales down. This can save the consumption of video memory. There 
+			is no change in image data itself except display becomes rough. <br />
+			<div class="menuimage"><img height="123" src="image/tex_res.jpg" width="214" /></div>
+			</dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>OpenGL</td>
+		<td>
+		<dl>
+			<dt><b>Enable to use OpenGL</b> </dt>
+			<dd>It selects whether to use OpenGL.<br />
+			<br />
+			</dd>
+			<dt><b>Reserve DLL</b> </dt>
+			<dd>It makes DLL used in OpenGL stationed in memory. The switching between normal display and OpenGL becomes 
+			fast when you check this. And it becomes to work normally in some video cards.<br />
+			This item becomes available from when you start up the PC next time.<br />
+			<br />
+			</dd>
+			<dt><b>Show texture smoothly</b> </dt>
+			<dd>When the texture is shown in quite large size because of zoom of the view point, it makes the rough shape 
+			inconspicuous. It sometimes becomes dim. It displays quite late in some PCs.<br />
+			<br />
+			</dd>
+			<dt><b>Use glTexSubImage2D </b></dt>
+			<dd>It displays faster when you check this. But please remove the check when something is wrong with texture 
+			display.<br />
+			<br />
+			</dd>
+			<dt><b>Use BGRA_EXT texture</b> </dt>
+			<dd>It displays a little faster in some cases when you use texture of this form. Some video cards are not available 
+			with this.<br />
+			<br />
+			</dd>
+			<dt><b>Maximum resolution of textures </b></dt>
+			<dd>When mapping bitmaps are larger than resolution, it automatically scales down. This can save the consumption 
+			of video memory and it sometimes displays very fast. There is no change in image data itself except display 
+			becomes rough.<br />
+			<br />
+			</dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="file"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>File</b></font></td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Folder of mapping bitmaps</td>
+		<td>It selects where to put folder which controls mapping bitmaps.
+		<dl>
+			<dt><b>Susie</b> </dt>
+			<dd>When you select the folder which stores plug-ins for Susie, Susie plug-ins become available for 
+			loading image files.<br />
+			The image read through Susie plug-in cannot be edited and saved in 3D Paint. </dd>
+			<dt><b>File path</b> </dt>
+			<dd>It selects how the file path for a mapping image is specified. [Auto], [Absolute path] or [Relative path] can be selected.</dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>File</td>
+		<td>
+		<dl>
+			<dt><b>Auto back-up</b> </dt>
+			<dd>It copies the file in the selected folder every time the file is saved. </dd>
+			<dt><b>Increase a file No. manually </b></dt>
+			<dd>When you check this option, &quot;Save As&quot; is show on file menu. It saves as another file increasing 
+			file no. only when you select this. </dd>
+			<dt><b>Size on importing file</b> </dt>
+			<dd>It selects the size setting, scale up rate or scale down rate, when a file is read. </dd>
+			<dt><b>Drag and drop from Explorer</b> </dt>
+			<dd>It selects which operation to carry out when a file is dragged and dropped from Explorer. </dd>
+			<dt><b>Relate file</b> </dt>
+			<dd>It selects whether to start up Metasequoia when you open the file of the form selected in Explorer with 
+			double click. </dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="system"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>System</b></font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Undo</td>
+		<td>It sets up about menu [Edit] [Undo].
+		<dl>
+			<dt><b>Max Undo</b> </dt>
+			<dd>It selects the maximum number of times of Undo. When you put very large numbers, total processing speed 
+			becomes slightly slow. </dd>
+			<dt><b>Max memory (MB) </b></dt>
+			<dd>It sets available memory for undo. When you put very large numbers, total processing speed becomes slightly 
+			slow. </dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Update</td>
+		<td>It automatically checks if the latest version exists. Your PC must be connected to the internet to check this. 
+		You can also set the interval between checks.</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Help</td>
+		<td>It specifys whether the .chm file or .html files are used for display a help.<br />
+		All text search is available when you use .chm file. But .chm file cannot be displayed in some condition such as the .chm is on network, then you should specify .html.
+		</td>
+	</tr>
+</table>
+<br />
+<a name="mouse"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>Mouse</b></font></td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Action of button</td>
+		<td>
+		<dl>
+			<dt><b>R Button</b> </dt>
+			<dd>It selects the operation when the right button is dragged on the 3D view. </dd>
+			<dt><b>M Button</b> </dt>
+			<dd>It selects the operation when the middle button (wheel button) is dragged on the 3D view.</dd>
+			<dt><b>R+L Button</b> </dt>
+			<dd>It selects the operation when the right button is dragged with pushing the left button on the 3D view.
+			</dd>
+			<dt><b>Alt+L Button</b> </dt>
+			<dd>It selects the operation when the left button is dragged with pushing the Alt key on the 3D view. 
+			When you assign an operation to the Alt+L button, an original 
+			operation originally assigned in each command will be re-assigned to 
+			the Ctrl+Shift+L button.</dd>
+			<dt><b>Alt+M Button</b> </dt>
+			<dd>It selects the operation when the middle button (wheel button) is dragged with pushing the Alt key on the 3D view. </dd>
+			<dt><b>Alt+R Button</b> </dt>
+			<dd>It selects the operation when the right button is dragged with pushing the Alt key on the 3D view. </dd>
+			<dt><b>Wheel</b> </dt>
+			<dd>It selects the operation when the wheel is rotated.</dd>
+			<dt><b>Inverse direction of zoom, dolly</b></dt>
+			<dd>It selects whether to inverse the direction of zoom or dolly with dragging mouse</dd>
+			<dt><b>Inverse wheel</b></dt>
+			<dd>It selects whether to inverse the direction of a rotation of a wheel. </dd>
+			<dt><b>Wheel Speed</b> </dt>
+			<dd>It selects with how much magnification it is zoomed in one rotation of a wheel. </dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Figure of cursor</td>
+		<td>
+		<dl>
+			<dt><b>arrow</b> </dt>
+			<dd>It always shows the normal arrow cursor. </dd>
+			<dt><b>command</b> </dt>
+			<dd>It shows an icon under the lower right of a cursor according to the currently selected command. </dd>
+			<dt><b>cross</b> </dt>
+			<dd>It always shows a cross cursor. </dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Edit controls </td>
+		<td>
+		<dl>
+			<dt><b>Auto focus on edit controls </b></dt>
+			<dd>It selects whether to automatically focus on the edit space of characters and figures when the mouse cursor 
+			moves there. </dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="edit"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>Edit</b></font></td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>Select</td>
+		<td>It sets up the operation on [Select] command and other selections.
+		<dl>
+			<dt><b>Reflect EDIT-OPTION to [Edit] of menu</b> </dt>
+			<dd>It selects whether to make commands [Edit] category of menu apply for edit option. If you check this, for 
+			example, only vertices are selected and faces are not when you select [Select All] without [face] option.<br />
+			<br />
+			</dd>
+			<dt><b>Unselect all when nothing is clicked </b></dt>
+			<dd>It selects whether to remove all selections when you click the part other than vertices, lines and faces.<br />
+			<br />
+			</dd>
+			<dt><b>Change the colors of lines in selected faces </b></dt>
+			<dd>It selects whether to change the color of lines surrounding a face or the color of a face itself when you 
+			select a face.<br />
+			<br />
+			</dd>
+			<dt><b>Highlight on mouse over </b></dt>
+			<dd>It selects whether to highlight vertices, lines, and faces with different color from normal color when the 
+			mouse cursor moves there.<br />
+			<br />
+			</dd>
+			<dt><b>Highlight lines surrounding faces</b> </dt>
+			<dd>It selects whether to highlight lines surrounding a face or to highlight a face itself when the mouse cursor 
+			moves on it.<br />
+			<br />
+			</dd>
+			<dt><b>Distance to select</b> </dt>
+			<dd>It sets up how far vertices and lines can be clicked and selected from the currently selected point.<br />
+			It is easier to operate with larger numerical value when resolving power of image is high.<br />
+			<br />
+			</dd>
+			<dt><b>Max distance of symmetry</b> </dt>
+			<dd>[symmetry] It sets up how far a pair of symmetrical vertices can be distant from the other when edit option 
+			is available.<br />
+			<br />
+			</dd>
+			<dt><b>Move non-symmetry vertex</b></dt>
+			<dd>It selects how to move a vertex without a pair of vertices for symmetric editing. A vertex is moved 
+			freely when [Normal] is specified, and it is moved to X=0 and is fixed when [Fix X=0].<br />
+			<br />
+			</dd>
+			<dt><b>Plane of world coordinate</b></dt>
+			<dd>It selects along which face move operation is done in world edit mode.<br />
+			<br />
+			</dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Handle</td>
+		<td>
+		<dl>
+			<dt><b>Shape of rotation handle</b> </dt>
+			<dd>It selects shape of handle in [rotate] command. There are two types of&nbsp; &quot;3-direction arrow&quot; 
+			and &quot;ring&quot;.<br />
+			<br />
+			</dd>
+			<dt><b>Size of handle</b></dt>
+			<dd>It selects a size of a handle.<br />
+			<br />
+			</dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="view"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>View</b></font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>View</td>
+		<td>
+		<dl>
+			<dt><b>Rotation action</b></dt>
+			<dd>It selects the operation for a rotation of the view. There are two types of &quot;Potter's wheel&quot; and &quot;Trackball&quot;.
+			</dd>
+			<dt><b>Rotate 360 degrees along pitch</b> </dt>
+			<dd>The rotation of the viewpoint cannot be limited to an up-and-down of 180 degrees and becomes to rotate 360 
+			degrees unrestrictedly when you check this. </dd>
+			<dt><b>Speed</b> </dt>
+			<dd>It sets up speed of rotation of the viewpoint. It rotates faster as numerical value increases. </dd>
+			<dt><b>Center of rotation</b> </dt>
+			<dd>It sets up where to put the center of rotation of the viewpoint. The viewpoint rotates around the point 
+			selected in [Set center of rotation] in [Fix], the center of the selected part in [Selected part], and the center 
+			of the screen in [Center of screen]. </dd>
+		</dl>
+		</td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td bgcolor="#e8ffff">View icon</td>
+		<td bgcolor="#e8ffff">
+		<dl>
+			<dt><b>Edit mode</b></dt>
+			<dd>It sets the operation of dragging the view operation icon at the title of each figure on 3D screen to 
+			the mode applicable for operation device.
+			<dl>
+			<dt><b>Mouse</b> </dt>
+			<dd>Mouse cursor is hidden when you're dragging the view icon. </dd>
+			<dt><b>Tablet</b> </dt>
+			<dd>Mouse cursor is visible when you're dragging the view icon. But it becomes hard to operate when an icon 
+			itself is at the edge of the screen.<br />
+			This mode is available without a tablet. </dd>
+		</dl>
+			</dd>
+			<dt><b>Zoom icon</b></dt>
+			<dd>It specify the action when dragging a zoom icon. Zoom or Dolly can be specified. </dd>
+		</dl>
+		</td>
+	</tr>
+</table>
+<br />
+<a name="keyboard"></a>
+<table border="1" cellpadding="2" cellspacing="1" width="100%">
+	<tr bgcolor="#e8ffe8">
+		<td align="center" colspan="2"><font size="+1"><b>Keyboard</b></font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>F1-3 Key Action</td>
+		<td>It selects which of 3-direction figures is displayed when you press F1-3 keys.</td>
+	</tr>
+	<tr bgcolor="#e8ffff">
+		<td>F1-F3 Key on perspective view</td>
+		<td>It selects the operation when F1-3 keys are pressed with 3D image which only shows the perspective view.
+		<font color="#ff0000" size="2">(only shareware version)</font></td>
+	</tr>
+	<tr bgcolor="#ffffe8">
+		<td>Customize shortcut keys</td>
+		<td>It selects which function can be called with the specified key.</td>
+	</tr>
+</table>
+
+</body>
+
+</html>

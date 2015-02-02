@@ -1,0 +1,667 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>ファイル出力</title>
+</head>
+
+<body>
+
+<h2>ファイル出力</h2>
+<p><a href="menu/saveas.htm">メニュー［ファイル］［名前を付けて保存］</a>により、独自形式以外にも多くの種類のファイルの出力ができるので、他のソフトへ持っていってレンダリングなどを行うことができます。しかし、完成度が低いものもあれば、またフォーマット自体がサポートしない機能もあるため、一般にはいくつかの情報は欠落してしまいます。後々になってからうまく情報を持っていけないことに気づいて慌てたりしないように、事前にどの程度やりとりできるか色々テストしておくことをお奨めします。<br />
+</p>
+<center>
+<table border="1" cellpadding="2" cellspacing="1">
+	<tr>
+		<td bgcolor="#e8ffe8">○</td>
+		<td bgcolor="#ffffe8">ほぼ問題なし</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">△</td>
+		<td bgcolor="#ffffe8">一応出来るが不完全な部分も多い</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">×</td>
+		<td bgcolor="#ffffe8">非対応</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">－</td>
+		<td bgcolor="#ffffe8">フォーマット自体が機能をサポートしていない</td>
+	</tr>
+	<tr>
+		<td bgcolor="#e8ffe8">？</td>
+		<td bgcolor="#ffffe8">未確認</td>
+	</tr>
+</table>
+</center>
+<p class="noindent">
+<a href="#MQO">MQO - Metasequoia</a><br />
+<a href="#SUF">SUF - DoGA CGA System</a><br />
+<a href="#DXF">DXF - AutoCAD</a><br />
+<a href="#LWO">LWO - LightWave3D</a><br />
+<a href="#COB">COB - trueSpace</a><br />
+<a href="#3DS">3DS - 3D Studio</a><br />
+<a href="#VRML">WRL - VRML</a><br />
+<a href="#X">X - Direct3D</a><br />
+<a href="#SCE">SCE - SoftF/X</a><br />
+<a href="#OBJ">OBJ - Wavefront</a><br />
+<a href="#RDS">RDS - RayDreamStudio</a><br />
+<a href="#RSD">RSD - PlayStation</a><br />
+<a href="#POV">POV - POV-Ray</a><br />
+<a href="#DAE">DAE - COLLADA</a><br />
+<a href="#RIB">RIB - RenderMan</a><br />
+<a href="#STL">STL - Stereolithography</a><br />
+</p>
+<div class="menu">
+	<a name="MQO"></a>
+	<h3><b>MQO</b> (Metasequoia)</h3>
+	<p>Metasequoiaの独自形式で、すべての機能に対応しています。</p>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>◎</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<a name="SUF"></a>
+	<h3><b>SUF</b> (DoGA CGA System)</h3>
+	<p><img height="353" src="image/export_suf.gif" width="375" /></p>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b> </dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。 </dd>
+		<dt><b>ATRファイルを出力</b> </dt>
+		<dd>アトリビュート（材質）を記述するATRファイルをSUFファイルと一緒に出力します。ファイル名はSUFファイルと同名で拡張子がATRに変わったものになります。(*1) </dd>
+		<dt><b>法線</b> </dt>
+		<dd>面の向きの情報が出力されます。このオプションがOFFだと、読み込み先でポリゴンがカクカクになってしまうことがあります。 </dd>
+		<dt><b>UVマッピング</b> </dt>
+		<dd>テクスチャが貼られる座標を出力します。このオプションがOFFだと、読み込み先でテクスチャの貼り方が狂うことがあります。</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>*1</td>
+			<td>*1</td>
+			<td>○</td>
+			<td>－</td>
+			<td>－</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="DXF"></a>
+	<h3><b>DXF</b> (AutoCAD)</h3>
+	<p><img height="352" src="image/export_dxf.gif" width="375" /></p>
+	<p>複数のオブジェクトは一つのオブジェクトに合成されます。</p>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b> </dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。 </dd>
+		<dt><b>オブジェクト名をレイヤー名として保存</b> </dt>
+		<dd>受け側ソフトが対応していれば、各オブジェクトを独立したレイヤーとして取り出すことが出来ます。 </dd>
+		<dt><b>三角形を４点で出力</b> </dt>
+		<dd>三角形面を４つの点を持った3DFACEとして保存します。ソフトによってはこのオプションを有効にしないと正常に読み込めない場合があります。 </dd>
+		<dt><b>改行コード</b> </dt>
+		<dd>受け側ソフトが稼働するOSの改行コードを選ばないと、正常に読み込めないことがあります。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="LWO"></a>
+	<h3><b>LWO</b> (LightWave3D) <font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p><img height="353" src="image/export_lwo.gif" width="375" /></p>
+	<p>LightWave3D 6.0以降でサポートされるLWO2形式と、LightWave3D 5.xでもサポートされているLWOB形式に対応しています。</p>
+		<dl>
+			<dt><b>可視オブジェクトのみ</b></dt>
+			<dd>現在表示状態がONになっているオブジェクトのみ出力されます。</dd>
+			<dt><b>曲面をフリーズしない</b></dt>
+			<dd>Metasequoiaの曲面化方式でなくサブパッチ(LightWave3D 5.xでのMetaNURBS)を利用したい場合には、このオプションを有効にしてLightWave3D側でサブパッチをかけます。</dd>
+			<dt><b>LWO2</b></dt>
+			<dd>LightWave3D 6.0以降でサポートされる形式です。この形式で出力するとUV値を保持できますが、LightWave3D 6.5以降でないとUV値の一部が失われます。<br />
+			このチェックをOFFにしたときはLightWave3D 5.xでも読み込めるようになりますが、複数のオブジェクトは一つのオブジェクトに合成されたり、頂点数・面数は65535までという制限があります。</dd>
+			<dt><b>ファイル名を絶対パスに</b></dt>
+			<dd>このチェックをONにすると、テクスチャ画像のファイル名は絶対パスに展開されて保存されるようになります。OFFにした場合は、材質に割り当てたファイル名がそのまま保存されます（元々絶対パスで指定していたらそのまま絶対パスが保存される）。</dd>
+		</dl>
+		<table border="1" cellpadding="2" cellspacing="1">
+			<tr align="center" bgcolor="#e8ffe8">
+				<td></td>
+				<td>三角形面</td>
+				<td>四角形面</td>
+				<td>スムージング</td>
+				<td>材質（色）</td>
+				<td>マッピング</td>
+				<td>UV値</td>
+				<td>頂点色</td>
+				<td>メタボール</td>
+				<td>完成度</td>
+			</tr>
+			<tr align="center" bgcolor="#ffffe8">
+				<td align="right">LWOB</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>○</td>
+				<td>×(?)</td>
+				<td>－</td>
+				<td>－</td>
+				<td>－</td>
+				<td>○</td>
+			</tr>
+			<tr bgcolor="#ffffe8">
+				<td align="right">LWO2</td>
+				<td align="center">○</td>
+				<td align="center">○</td>
+				<td align="center">×</td>
+				<td align="center">○</td>
+				<td align="center">○</td>
+				<td align="center">○</td>
+				<td align="center">○</td>
+				<td align="center">×</td>
+				<td align="center">○</td>
+			</tr>
+		</table>
+</div>
+<div class="menu">
+	<a name="COB"></a>
+	<h3><b>COB</b> (trueSpace)</h3>
+	<p><img height="352" src="image/export_cob.gif" width="375" /></p>
+	<p>互換性についてはほぼ問題ありません。</p>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b></dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。</dd>
+		<dt><b>テクスチャ/バンプマップのフォルダ</b></dt>
+		<dd>マッピング画像のフォルダを指定します。適切なものを選ぶことにより、trueSpace側で設定し直す必要がなくなります。</dd>
+		<dt><b>大きさの単位</b></dt>
+		<dd>Metasequoiaの単位系をどの単位に換算するかを指定します。</dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>×</td>
+			<td>◎</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="3DS"></a>
+	<h3><a name="3DS0"></a><b>3DS</b> (3D Studio)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p><img height="353" src="image/export_3ds.gif" width="375" /></p>
+	<p>自動的に三角形面に変換されます。(*1)</p>
+	<p>頂点数または面数が65535を越える場合は出力が中断されます。</p>
+	<p>オブジェクト名が9文字、マテリアル名が15文字、テクスチャファイル名が12文字（拡張子含む）を超えると他のソフトで正しく読み込めなくなることがあります。</p>
+	<p>このフォーマットは3ds Maxではなく、MS-DOS時代の3D Studio用のものです。非常に古くて制約が多く、3ds Maxとも互換性が低いため、3ds 
+		Maxへデータへ持っていく場合は別のフォーマットの使用をお奨めします。</p>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b> </dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。 </dd>
+		<dt><b>UVマッピングを出力する</b> </dt>
+		<dd>UVマッピング情報を記録するかどうかを指定します。 </dd>
+		<dt><b>曲面をフリーズする</b> </dt>
+		<dd>3ds Max側でNURMSなどサブディビジョンサーフェスを適用する場合は、このオプションはオフにして下さい。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>*1</td>
+			<td>×</td>
+			<td>○</td>
+			<td>○?</td>
+			<td>○</td>
+			<td>×</td>
+			<td>×</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="VRML"></a>
+	<h3><a name="VRML0"></a><b>WRL</b> (VRML)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>出力される形式はVRML1.0です。</p>
+	<p>複数のオブジェクトは一つのオブジェクトに合成されます。</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>×</td>
+			<td>○</td>
+			<td>×</td>
+			<td>×</td>
+			<td>×(?)</td>
+			<td>－</td>
+			<td>△</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="X"></a>
+	<h3><b>X</b> (Direct3D)</h3>
+	<p><img height="352" src="image/export_x.gif" width="374" /></p>
+	<p>	DirectX 2で導入されたテキスト（アスキー）形式として保存されます。</p>
+	<p>	複数のオブジェクトは一つのオブジェクトに合成されます。</p>
+	<p>	テクスチャはパス（フォルダ名）を含まずファイル名のみ保存します。(*1)</p>
+	<p>	Xファイルでは頂点単位でしかUV値・頂点カラーを保持できないため、頂点を共有している面ごとに異なるUV値・頂点カラーが割り当てられている場合、［UVマッピング］［頂点カラー］をONにして出力すると頂点数が増えることがあります。</p>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b> </dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。 </dd>
+		<dt><b>法線（スムージング）</b> </dt>
+		<dd>法線を出力するかどうかを指定します。読み込みプログラム側でセットし直す場合には、このオプションを外した方がファイルサイズは小さくなります。 </dd>
+		<dt><b>UVマッピング</b> </dt>
+		<dd>テクスチャに必要なUVマッピングを出力するかどうかを指定します。テクスチャを用いない場合や、受け側ソフトでマッピングし直す場合には、このオプションを外した方がファイルサイズは小さくなります。 </dd>
+		<dt><b>頂点カラー</b> </dt>
+		<dd>頂点カラーを出力するかどうかを指定します。頂点カラーを用いない場合には、このオプションを外した方がファイルサイズは小さくなります。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>*1</td>
+			<td>○</td>
+			<td>○</td>
+			<td>－</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="SCE"></a>
+	<h3><b>SCE</b> (SoftF/X)</h3>
+	<p><img height="353" src="image/export_sce.gif" width="375" /></p>
+	<p>複数のオブジェクトは一つのオブジェクトに合成されます。</p>
+	<dl>
+		<dt><b>UVマッピングを出力する</b> </dt>
+		<dd>グルーマッピングによるテクスチャ投影方式を用いる場合に、このオプションを有効にします。テクスチャを用いない場合や、プログラム側でマッピングし直す場合には、このオプションを外した方がファイルサイズは小さくなります。 
+		</dd>
+		<dt><b>テクスチャのフォルダ</b> </dt>
+		<dd>テクスチャマッピング画像のフォルダを指定します。適切なものを選ぶことにより、SoftF/X側で設定し直す必要がなくなります。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>×</td>
+			<td>○</td>
+			<td>○?</td>
+			<td>○?</td>
+			<td>－</td>
+			<td>－</td>
+			<td>△</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="OBJ"></a>
+	<h3><a name="OBJ0"></a><b>OBJ</b> (Wavefront)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p><img height="353" src="image/export_obj.gif" width="375" /></p>
+	<p>複数のオブジェクトは一つのオブジェクトに合成されます。</p>
+	<p>材質はマテリアルライブラリとして同名別拡張子.mtlファイルに保存されます。マテリアルライブラリを出力する際、テクスチャについて以下の点に注意してください。</p>
+	<ul>
+		<li>テクスチャはパス（フォルダ名）を取り除いたファイル名のみが出力されるため、受け側ソフトでOBJファイルと同じフォルダにテクスチャファイルを置く必要があります。 </li>
+		<li>テクスチャのファイル名は空白を含んだものであってはいけません。 </li>
+		<li>テクスチャのファイル名に日本語を含んでいる場合、受け側ソフトで読み込めない場合があります。 </li>
+		<li>受け側ソフトでテクスチャとして読み込めるファイル形式を確認してから出力して下さい。 </li>
+	</ul>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b> </dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。 </dd>
+		<dt><b>グループ情報</b> </dt>
+		<dd>受け側ソフトが対応していれば、各オブジェクトを独立したグループとして取り出すことが出来ます。ただし、<font color="#ff0000">オブジェクト名に日本語を含む場合、受け側ソフトで正しく読めない</font>場合があります。 
+		</dd>
+		<dt><b>法線（スムージング）</b> </dt>
+		<dd>スムージング情報を出力するかどうかを指定します。受け側ソフトでセットし直す場合には、このオプションを外した方がファイルサイズは小さくなります。 </dd>
+		<dt><b>UVマッピング</b> </dt>
+		<dd>テクスチャに必要なUVマッピングを出力するかどうかを指定します。テクスチャを用いない場合や、受け側ソフト側でマッピングし直す場合には、このオプションを外した方がファイルサイズは小さくなります。 </dd>
+		<dt><b>V方向を反転</b> </dt>
+		<dd>ソフトによってはUVマッピングのV（縦）方向の値の扱い方が逆になるので、適切なものを選ぶ必要があります。 </dd>
+		<dt><b>マテリアル(MTLファイル）</b> </dt>
+		<dd>材質・テクスチャ情報を含んだマテリアルライブラリ.mtlファイルを出力します。 </dd>
+		<dt><b>曲面をフリーズする</b> </dt>
+		<dd>受け側ソフトでSubdivision Surfaceなどを用いる場合などは、このオプションはオフにして下さい。 </dd>
+		<dt><b>改行コード</b> </dt>
+		<dd>受け側ソフトが稼働するOSの改行コードを選ばないと、正常に読み込めないことがあります。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○(*1)</td>
+			<td>○</td>
+			<td>－</td>
+			<td>－</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="RDS"></a>
+	<h3><a name="RDS0"></a><b>RDS</b> (RayDreamStudio)</h3>
+	<p>一つの辺が三つ以上の面に共有されているとRayDreamStudioで読み込めません。</p>
+	<dl>
+		<dt><b>UVマッピング</b> </dt>
+		<dd>テクスチャに必要なUVマッピングを出力するかどうかを指定します。テクスチャを用いない場合や、RayDream側でマッピングし直す場合には、このオプションを外した方がファイルサイズは小さくなります。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>×</td>
+			<td>×</td>
+			<td>○</td>
+			<td>－</td>
+			<td>－</td>
+			<td>△</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="RSD"></a>
+	<h3><a name="RSD0"></a><b>RSD</b> (PlayStation)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>動作確認は不十分なため、保証はできません。</p>
+	<p>UV値を小数点での比率指定から整数ピクセル指定に変換するために解像度(大きさ)を参照するファイルは、入力とは異なり、現在ロードされているTextureフォルダ内のものを用いる。TIMファイルがロードされていない場合は大きさは64として処理される。(*1)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○(?)</td>
+			<td>○</td>
+			<td>*1(?)</td>
+			<td>*1(?)</td>
+			<td>○</td>
+			<td>－</td>
+			<td>△</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="POV"></a>
+	<h3><b>POV</b> (POV-Ray)</h3>
+	<p><img height="352" src="image/export_pov.gif" width="375" /></p>
+	<p>四角形面は自動的に三角形面に変換されます。(*1)</p>
+	<dl>
+		<dt><b>可視オブジェクトのみ</b> </dt>
+		<dd>現在表示状態がONになっているオブジェクトのみ出力されます。 </dd>
+		<dt><b>UVマッピング (3.5)</b> </dt>
+		<dd>POV-Ray Ver3.5以降でサポートされたUVマッピングに対応します。ただし、マテリアル情報があまり正しく出力されないため、後で修正が必要にはなることもあります。 </dd>
+		<dt><b>povファイルに直接</b> </dt>
+		<dd>出力されるpovファイル内に形状データが記録されます。形状データが小さい場合にしか使えないと思います。 </dd>
+		<dt><b>incファイルに分離</b> </dt>
+		<dd>povファイルとは別にincファイルを出力し、そこに形状データを記録します。形状を１つの物体として扱えるので、通常はこちらを使うことになると思います。 </dd>
+	</dl>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>*1</td>
+			<td>○</td>
+			<td>△</td>
+			<td>×</td>
+			<td>○</td>
+			<td>－</td>
+			<td>－</td>
+			<td>△</td>
+		</tr>
+	</table>
+</div>
+<div class="menu">
+	<a name="DAE"></a>
+	<h3><a name="DAE0"></a>DAE (COLLADA 1.4)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>COLLADA 1.4の仕様に基づいたファイルが出力されます。</p>
+	<p>ファイル名・オブジェクト名・材質名に同じ名前が含まれていると、外部のソフトで読み込めないことがあります。</p>
+	<p>プラグインとして実装されており、プラグインSDKに完全ソースコードが含まれています。</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>○</td>
+			<td>×</td>
+			<td>－</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+
+<div class="menu">
+	<a name="RIB"></a>
+	<h3><a name="RIB0"></a><b>RIB</b> (RenderMan)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>出力結果は芳しいものではありません。形状を取り出す程度にしか使えないと思います。</p>
+	<p>プラグインとして実装されており、プラグインSDKに完全ソースコードが含まれています。</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>○</td>
+			<td>×(?)</td>
+			<td>×</td>
+			<td>×</td>
+			<td>×(?)</td>
+			<td>－(?)</td>
+			<td>－(?)</td>
+			<td>△</td>
+		</tr>
+	</table>
+</div>
+
+<div class="menu">
+	<a name="STL"></a>
+	<h3><a name="STL0"></a><b>STL</b> (Steleolithography)<font color="#ff0000" size="2"> （シェアウェア版およびCLIPレンタル版のみ）</font></h3>
+	<p>バイナリ形式のSTLファイルが出力されます。</p>
+	<p>四角形面は自動的に三角形面に変換されます。(*1)</p>
+	<table border="1" cellpadding="2" cellspacing="1">
+		<tr align="center" bgcolor="#e8ffe8">
+			<td>三角形面</td>
+			<td>四角形面</td>
+			<td>スムージング</td>
+			<td>材質（色）</td>
+			<td>マッピング</td>
+			<td>UV値</td>
+			<td>頂点色</td>
+			<td>メタボール</td>
+			<td>完成度</td>
+		</tr>
+		<tr align="center" bgcolor="#ffffe8">
+			<td>○</td>
+			<td>*1</td>
+			<td>○</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>－</td>
+			<td>○</td>
+		</tr>
+	</table>
+</div>
+
+</body>
+
+</html>

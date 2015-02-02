@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>面の作成法いろいろ</title>
+</head>
+
+<body>
+
+<h2>面の作成法いろいろ</h2>
+<p>モデリングは面を作るところから始まります。面を作成するにはいくつかの方法がありますが、ここでまとめて紹介します。</p>
+<img height="371" src="face.gif" width="135" style="float:left" />
+<div style="margin-left:145px">
+<div class="menu"	>
+	<h3>1. <a href="../command/create.htm">［面の生成］コマンド</a></h3>
+	<p>３Ｄ画面の好きなところを４点左クリックすると、四角形面が作成されます。また、３点左クリックしてから右ボタンを押すと、三角形面が作成されます。</p>
+	<p>既に点がある近くをクリックした場合、頂点を共有した面が作成されます。Ctrlキーを押しながらだと、確実に頂点を共有するようになります。</p>
+</div>
+<div class="menu"	>
+	<h3>2. <a href="../command/pullface.htm">［面張り］コマンド</a></h3>
+	<p>［面の生成］コマンドは４回のクリックが必要なので、やや面倒です。すでに面が存在しているときには、<b>［面張り］コマンド</b>で辺を選択してからドラッグするだけで、その辺を１辺とする四角形面が作成されるので、とても操作が楽に行えます。</p>
+</div>
+<div class="menu"	>
+	<h3>3. <a href="../command/wire.htm">［ワイヤー］コマンド</a></h3>
+	<p>［面張り］コマンドは四角形面ですが、三角形面を作りたい場合には、<b>［ワイヤー］コマンド</b>で<b>［三角形面を張る］</b>のオプションを選ぶと、既存の辺をドラッグするだけでその辺を１辺とする三角形面が作成されます。</p>
+</div>
+<div class="menu"	>
+	<h3>4. <a href="../command/primitive.htm">［基本図形］コマンド</a></h3>
+	<p><b>［基本図形］コマンド</b>では、クリックするだけで直方体や球、円筒など基本的な図形を配置できます。</p>
+</div>
+<div class="menu"	>
+	<h3>5. <a href="../command/metaball.htm">［メタボール］コマンド</a></h3>
+	<p><b>［メタボール］コマンド</b>を使えば、球体などが互いに引き合うような感じの滑らかな面を生成できます。</p>
+	<p>作成した後は、<b>［ポリゴン化］</b>する必要があります。</p>
+	<div class="menuimage"><img height="164" src="face4.gif" width="277" /></div>
+</div>
+<div class="menu"	>
+	<h3>6. <b>面の曲面指定</b></h3>
+	<p>ポリゴンからリアルタイムに曲面を生成することが出来ます。（Catmull-Clark以外の曲面では基本的に<font color="#C00000">四角形のみで構成される必要があります</font>）</p>
+	<p>メニューから<b>［パネル］［オブジェクトパネル］</b>を選ぶとオブジェクトパネルが開くので、パネル上の［設定］ボタンを押します。すると設定画面が現れるので、曲面制御のところを曲面タイプ１または２を指定し、［OK］ボタンを押して閉じると、オブジェクトが滑らかな曲面に変化します。頂点数が少ないままで操作は従来通りに行えるので、制御はかなりしやすいはずです。</p>
+	<p>曲面をポリゴン化したいときは、<b>メニュー［オブジェクト］［曲面・ミラーのフリーズ］</b>で曲面をチェックしてフリーズさせます。</p>
+	<div class="menuimage"><img height="162" src="face6.gif" width="183" /></div>
+</div>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Create</title>
+</head>
+
+<body>
+
+<h2>Create</h2>
+<p>It puts vertices, and creates a face.</p>
+<p>If you click a left button with Ctrl-key, the new face shares a vertex contained 
+by the existing face. If you don't push Ctrl-key, it's influenced by 'Distance to 
+select' in the <a href="../config.htm#edit">configuration</a>. </p>
+<p>If you click with Shift-key for 2nd or later vertex, a vertex moved only horizontally or vertically from the previous one will be put.</p>
+
+<img height="227" src="create.png" style="float: left" width="106" />
+<div style="margin-left: 116px">
+	<div class="menu">
+		<h3>Front</h3>
+		<p>It creates a front side of face.</p>
+	</div>
+	<div class="menu">
+		<h3>Back</h3>
+		<p>It creates a back side of face.</p>
+	</div>
+	<div class="menu">
+		<h3>Both</h3>
+		<p>It creates a both side of face.</p>
+		<p>Unlike a double-sided face in the material property, two faces are actually created.</p>
+	</div>
+	<div class="menu">
+		<h3>Line</h3>
+		<p>It creates a line when two points are put.</p>
+	</div>
+	<div class="menu">
+		<h3>Tri (Triangle)</h3>
+		<p>It creates a triangle when three points are put.</p>
+	</div>
+	<div class="menu">
+		<h3>Face</h3>
+		<p>It creates a quadrangle when four points are put. And it creates a 
+		line or a triangle when two or three points are put and click the right 
+		button.</p>
+	</div>
+	<div class="menu">
+		<h3>Undo</h3>
+		<p>It erases the point put last.</p>
+	</div>
+</div>
+
+</body>
+
+</html>

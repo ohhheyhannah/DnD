@@ -1,0 +1,121 @@
+﻿@charset   "UTF-8";
+<style type="text/css">
+
+body {
+	background-color : white;
+	color : #000000;
+	line-height : 110%;
+}
+
+h2 {
+	text-align: center;
+	font-size : 140%;
+	font-weight: bold;
+}
+
+h3 {
+	font-size : 120%;
+	font-weight: bold;
+	padding: 2px 4px 2px 4px;
+	margin: 0.75em 0 0.25em 0;
+}
+
+p {
+	text-indent: 0.75em;
+}
+
+p.noindent {
+	text-indent: 0;
+}
+
+span.red {
+	color: red;
+}
+
+div.header {
+	font-size : 80%;
+}
+
+div.menu {
+	background-color: #f8f8f8;
+	padding: 0 0 0.5em 0;
+}
+
+.menu h3 {
+	background-color: #c0c0c0;
+}
+
+.menu p {
+	padding: 0;
+	margin: 0.5em 0 0.25em 0.75em;
+}
+
+.menu dl {
+	padding-left: 0em;
+	margin-left: 2em;
+}
+.menu dt {
+	padding-left: 0em;
+	margin-left: 0em;
+	font-weight: bold;
+}
+.menu dd {
+	padding-left: 2em;
+	padding-bottom: 0.5em;
+	margin-left: 0em;
+}
+
+div.menuimage {
+	text-align: center;
+}
+
+.menuimage img {
+	border: 0;
+}
+
+div.rightimage {
+	float: right;
+}
+.rightimage img {
+	padding: 4px;
+}
+
+table.menutable {
+    border-width: 1px 0 0 1px;
+	border-color: gray;
+	border-style: solid;
+	border-spacing: 0;
+	empty-cells: show;
+}
+
+.menutable td {
+    border-width: 0 1px 1px 0;
+	border-color: gray;
+	border-style: solid;
+	padding: 3px 6px;
+}
+.menutable dl {
+	padding-left: 0em;
+	margin-left: 2em;
+}
+.menutable dt {
+	padding-left: 0em;
+	margin-left: 0em;
+	font-weight: bold;
+}
+.menutable dd {
+	padding-left: 2em;
+	padding-bottom: 0.5em;
+	margin-left: 0em;
+}
+
+tr.tableheader {
+	background-color: #c0c0c0;
+	white-space: nowrap;
+}
+td.tableheader {
+	background-color: #c0c0c0;
+	white-space: nowrap;
+}
+
+</style>

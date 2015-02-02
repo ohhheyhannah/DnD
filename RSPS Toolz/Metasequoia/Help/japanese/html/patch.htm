@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>曲面について</title>
+</head>
+
+<body>
+
+<h2>曲面について</h2>
+<p><a href="objpanel.htm">オブジェクトパネル</a>の設定で、曲面を指定することにより、粗いポリゴンから自動的に滑らかな曲面が生成されるようになります。ポリゴンの曲面化は現バージョンでは３タイプ用意されています。</p>
+<p>［曲面タイプ１］と［曲面タイプ２］については、原則として<span class="red">四角形面のみで構成されている</span>必要があります。三角形面が混ざっている場合、その<span class="red">三方がすべて四角形面で囲まれている</span>必要があります。もし隣の面も三角形であったり、隣あった面がないときには、穴が空いてしまいます。でも、隣り合った２つの三角形は１つの四角形に合成することができるので、実害は低いかと思います。</p>
+<p>［Catmull-Clark］曲面では三角形・四角形の両方とも完全に曲面化することができます。前の２つのタイプに比べるとかなり丸みを帯びた感じになります。他のタイプに比べて表示が若干遅く、また<span class="red">ウェイトは無視されます</span>。</p>
+<div class="menuimage">
+	<img border="0" height="237" src="image/patch.gif" width="494" />
+</div>
+<p>曲面化されたオブジェクトを、普通のポリゴンとして扱いたいときは、<b>メニュー［オブジェクト］［曲面・ミラーのフリーズ］</b>を実行します。MQO以外の形式で保存するときには、大抵は自動的にフリーズが行われます。<br />
+</p>
+<div class="menuimage"><img height="161" src="image/freeze.gif" width="324" /></div>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="ja" http-equiv="Content-Language" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<title>プレビュー</title>
+</head>
+
+<body>
+
+<h2>プレビュー</h2>
+<table cellpadding="8" cellspacing="8">
+	<tr>
+		<td valign="top"><img border="0" height="92" src="image/preview.gif" width="135" /></td>
+		<td valign="top">
+		<p>ソフトウェア、Direct3D、OpenGLのいずれかを利用して、面やテクスチャの表示をすることができます。これにより視覚的に形状が把握しやすくなります。</p>
+		<p>Direct3DまたはOpenGLモードでは、ディスプレイドライバの不具合または相性により、さまざまな問題が発生することがあります。その場合にはまず<a href="qanda/qanda.htm">Ｑ＆Ａ</a>をご覧下さい。チップ・ボードメーカーから提供される最新のドライバを使用することを推奨します。</p>
+		<p>ほとんどのPCで速度・品質の両面でDirect3Dが最も優れているので、特に理由がない限りはDirect3Dを使用してください。</p>
+		</td>
+	</tr>
+</table>
+<div class="menu">
+	<h3>ソフトウェア</h3>
+	<ul>
+		<li>Metasequoia独自のソフトウェアレンダラーです。すべての環境で利用可能です。ソフトウェアで描画を行うため表示は遅いですが、Direct3DやOpenGLに対応していない古いPCではこの表示モードを使用します。</li>
+		<li>凸凹マッピングは画面には表示されません。</li>
+	</ul>
+</div>
+<div class="menu">
+	<h3>Direct3D</h3>
+	<ul>
+		<li>ビデオカードがハードウェア描画に対応している必要があります。2012年現在で発売されているPCのほぼすべてでDirect3Dは利用可能ですが、数年前の古いノートPCなどでDirect3Dに対応していないものや、Direct3Dに対応していない仮想環境内でWindowsを動作させている場合は利用できません。</li>
+		<li>三面図上ではテクスチャは表示できません。</li>
+	</ul>
+</div>
+<div class="menu">
+	<h3>OpenGL</h3>
+	<ul>
+		<li>Intel/ATI/nVIDIA以外のビデオカード（または内蔵チップ）に含まれるディスプレイドライバでは不具合が発生することがあります。出来るだけ主要3DCGソフトの動作認定を受けている信頼性の高いビデオカードを使用して下さい。また、ドライバはメーカーから提供される最新版にアップデートしてお使いください。</li>
+		<li>凸凹マッピングは画面には表示されません。</li>
+	</ul>
+</div>
+
+</body>
+
+</html>

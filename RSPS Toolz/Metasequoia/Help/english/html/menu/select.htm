@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type" />
+<meta content="text/css" http-equiv="Content-Style-Type" />
+<link href="../default.css" rel="stylesheet" type="text/css" />
+<title>Selected</title>
+</head>
+
+<body>
+
+<div class="header">
+	<a href="file.htm">File</a> &nbsp; <a href="edit.htm">Edit</a> &nbsp;
+	<a href="selattr.htm">Attribute</a> &nbsp; <a href="select.htm">Selected</a> &nbsp;
+	<a href="object.htm">Object</a> &nbsp; <a href="view.htm">View</a> &nbsp;
+	<a href="panel.htm">Panel</a> &nbsp; <a href="help.htm">Help</a> </div>
+<hr />
+<h2>Selected</h2>
+<p>It works for the currently selected 
+vertices, lines, and&nbsp; faces.</p>
+<div class="menu">
+	<h3>Cut</h3>
+	<p>It deletes the selected vertices, edges, and faces after copying them to 
+	the clipboard.</p>
+</div>
+<div class="menu">
+	<h3>Copy</h3>
+	<p>It copies the selected vertices, edges, and faces to the clipboard.</p>
+</div>
+<div class="menu">
+	<h3>Paste</h3>
+	<p>The selected vertices, edges, and faces that are on the clipboard can be 
+	copied on the new object.</p>
+</div>
+<div class="menu">
+	<h3>Delete</h3>
+	<p>It deletes the selected vertices, edges, and faces.</p>
+</div>
+<div class="menu">
+	<h3>Invert</h3>
+	<p>It turns over the selected faces.</p>
+</div>
+<div class="menu">
+	<h3>Double sided face</h3>
+	<p>It duplicates the selected faces to be seen from the front and the back.</p>
+</div>
+<div class="menu">
+	<h3>Set material to faces</h3>
+	<p>The current material is assigned to the currently selected faces.</p>
+</div>
+<div class="menu">
+	<h3><b>Extrude faces</b></h3>
+	<p>It extrudes the selected faces to make them stand out.</p>
+	<p>It functions the same as <a href="../command/extrude.htm">[Extrude] command</a>, 
+	but this can numerically set up the extruding amount.<br />
+	</p>
+	<div class="menuimage">
+		<img alt="" height="87" src="pushface.gif" width="270" /> </div>
+</div>
+<div class="menu">
+	<h3>Mirror</h3>
+	<p>It creates the inverted faces of the selected faces putting either of YZ/ZX/XY 
+	face between them.</p>
+	<p>As the vertices are not joint with the existing ones, use <b>[Join closed vertices]</b> 
+	if you need.</p>
+</div>
+<div class="menu">
+	<h3><b>Faces to the new object</b></h3>
+	<p>It creates a new object and moves the selected faces on it.</p>
+</div>
+<div class="menu">
+	<h3>Merge two triangles</h3>
+	<p>It merges the two selected triangle faces to make a quadrangle.</p>
+	<p>You can do the same work with <b>[Merge two triangles into a quadrangle]</b> 
+	in <a href="../command/wire.htm">[Wire] command</a>.</p>
+	<div class="menuimage">
+		<img alt="" height="67" src="quadric.gif" width="131" /> </div>
+</div>
+<div class="menu">
+	<h3>Triangulate</h3>
+	<p>It divides the selected quadrangle to make two triangle faces.</p>
+	<p>You can do the same work with <b>[Merge two triangles into a quadrangle]</b> 
+	in <a href="../command/wire.htm">[Wire] command</a>.<br />
+	</p>
+	<div class="menuimage">
+		<img height="67" src="triangulate.gif" width="131" /> </div>
+</div>
+<div class="menu">
+	<h3>Symmetry</h3>
+	<p>It moves the selected two vertices to the symmetric position.</p>
+</div>
+<div class="menu">
+	<h3>Join vertices</h3>
+	<p>It joins the more than two selected vertices as one vertex. Vertices have 
+	to be in the same object.<br />
+	</p>
+	<div class="menuimage">
+		<img alt="" height="91" src="joinvert.png" width="243" /> </div>
+</div>
+<div class="menu">
+	<h3>Align vertices</h3>
+	<p>It arranges the selected vertices to make a lines in the direction of each 
+	X/Y/Z axis.<br />
+	</p>
+	<div class="menuimage">
+		<img alt="" height="131" src="align.gif" width="178" /> </div>
+</div>
+<div class="menu">
+	<h3>Flatten</h3>
+	<p>It moves vertices to flatten uneven parts or stand them out.</p>
+</div>
+<div class="menu">
+	<h3>Round</h3>
+	<p>It makes the round shape by erasing the selected lines. The shape changes 
+	in real time when you change a numerical value.</p>
+	<div class="menuimage">
+		<img alt="" height="130" src="round.gif" width="276" /> </div>
+</div>
+<div class="menu">
+	<h3>Erase vertex color (Plug-in)</h3>
+	<p>It erases the color assigned to the selected vertices.</p>
+</div>
+<div class="menu">
+	<h3>Separate faces (Plug-in)</h3>
+	<p>It separates the selected faces and keeps the vertices independent from those 
+	of other faces.</p>
+</div>
+
+</body>
+
+</html>
